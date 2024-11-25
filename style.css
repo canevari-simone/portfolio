@@ -1,36 +1,98 @@
+/* Stile generale */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
 }
+
+/* Header */
 header {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
+    background: #222;
+    color: #fff;
+    padding: 20px 10px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* Navigazione */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 10px 0 0;
+    text-align: center;
 }
+
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block;
+    margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
+
+nav ul li a:hover {
+    color: #f4b400;
+}
+
+/* Contenuto principale */
 main {
-    padding: 20px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Footer */
 footer {
+    background: #222;
+    color: #fff;
+    padding: 15px 0;
     text-align: center;
-    background: #333;
-    color: white;
-    padding: 10px 0;
+    font-size: 0.9rem;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #f4b400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Aggiunta di stili responsivi */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    main {
+        padding: 20px;
+    }
 }
