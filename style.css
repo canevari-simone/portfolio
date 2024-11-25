@@ -4,17 +4,17 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4; /* Grigio chiaro */
+    color: #333; /* Grigio scuro per il testo */
+    background-color: #f7f7f7; /* Grigio chiaro per lo sfondo */
 }
 
 /* Header */
 header {
-    background: #4caf50; /* Verde grigio pastello */
+    background: #607d8b; /* Azzurro-grigio */
     color: white;
-    padding: 20px 10px;
+    padding: 40px 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,7 +22,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -31,7 +31,7 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 20px 0 0;
     text-align: center;
 }
 
@@ -45,44 +45,102 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #8bc34a; /* Verde chiaro */
-    border: 2px solid #8bc34a; /* Bordi arrotondati */
+    background-color: #90a4ae; /* Azzurro-grigio */
+    border: 2px solid #90a4ae;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
     color: white;
-    background-color: #388e3c; /* Verde più scuro al passaggio */
-    border-color: #388e3c; /* Cambia colore del bordo */
-    transform: translateY(-3px); /* Effetto sollevato */
+    background-color: #607d8b; /* Azzurro-blu scuro */
+    border-color: #607d8b;
+    transform: translateY(-3px); /* Effetto di sollevamento */
 }
 
-/* Contenuto principale */
+/* Sezione principale */
 main {
-    padding: 30px 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
     background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Sezione chi sono */
+main h2 {
+    font-size: 2.5rem;
+    color: #333; /* Grigio scuro */
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555; /* Grigio medio */
+}
+
+/* Sezione Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill {
+    background: #90a4ae;
+    color: white;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    background: #607d8b;
+    transform: translateY(-3px);
+}
+
+/* Sezione Portfolio */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
 }
 
 /* Footer */
 footer {
-    background: #4caf50; /* Verde grigio simile all'header */
+    background: #607d8b; /* Azzurro-grigio */
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
     font-size: 0.9rem;
     position: fixed;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
-    color: #8bc34a; /* Verde chiaro */
+    color: #90a4ae;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -94,13 +152,24 @@ footer a:hover {
 /* Aggiunta di stili responsivi */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
+
     nav ul li {
         display: block;
         margin: 10px 0;
     }
+
     main {
         padding: 20px;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
     }
 }
