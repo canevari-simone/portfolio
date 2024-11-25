@@ -59,6 +59,13 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
+/* Colore del pulsante attivo */
+nav ul li a.active {
+    background-color: #607d8b;
+    border-color: #607d8b;
+    color: white;
+}
+
 /* Sezione principale */
 main {
     padding: 40px 20px;
