@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background: #607d8b; /* Azzurro-grigio */
+    background: linear-gradient(to right, #607d8b, #90a4ae); /* Gradiente */
     color: white;
     padding: 40px 10px;
     text-align: center;
@@ -23,7 +23,9 @@ header {
 header h1 {
     margin: 0;
     font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 2px;
     font-weight: bold;
 }
 
@@ -45,17 +47,16 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #90a4ae; /* Azzurro-grigio */
+    background-color: #90a4ae;
     border: 2px solid #90a4ae;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: white;
-    background-color: #607d8b; /* Azzurro-blu scuro */
+    background-color: #607d8b;
     border-color: #607d8b;
-    transform: translateY(-3px); /* Effetto di sollevamento */
+    transform: translateY(-5px);
 }
 
 /* Sezione principale */
@@ -72,14 +73,14 @@ main {
 /* Sezione chi sono */
 main h2 {
     font-size: 2.5rem;
-    color: #333; /* Grigio scuro */
+    color: #333;
     margin-bottom: 20px;
 }
 
 main p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555; /* Grigio medio */
+    color: #555;
 }
 
 /* Sezione Skills */
