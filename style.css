@@ -5,12 +5,12 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #e0f7fa; /* Azzurro chiaro pastello */
+    background-color: #f4f4f4; /* Grigio chiaro */
 }
 
 /* Header */
 header {
-    background: #00bcd4; /* Azzurro intenso */
+    background: #4caf50; /* Verde grigio pastello */
     color: white;
     padding: 20px 10px;
     text-align: center;
@@ -45,16 +45,16 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #80deea; /* Azzurro pastello chiaro */
-    border: 2px solid #80deea; /* Bordi arrotondati */
+    background-color: #8bc34a; /* Verde chiaro */
+    border: 2px solid #8bc34a; /* Bordi arrotondati */
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
     color: white;
-    background-color: #00bcd4; /* Azzurro intenso al passaggio */
-    border-color: #00bcd4; /* Cambia colore del bordo */
+    background-color: #388e3c; /* Verde più scuro al passaggio */
+    border-color: #388e3c; /* Cambia colore del bordo */
     transform: translateY(-3px); /* Effetto sollevato */
 }
 
@@ -70,7 +70,7 @@ main {
 
 /* Footer */
 footer {
-    background: #00bcd4; /* Azzurro intenso */
+    background: #4caf50; /* Verde grigio simile all'header */
     color: white;
     padding: 15px 0;
     text-align: center;
@@ -82,7 +82,7 @@ footer {
 }
 
 footer a {
-    color: #80deea; /* Azzurro chiaro */
+    color: #8bc34a; /* Verde chiaro */
     text-decoration: none;
     transition: color 0.3s ease;
 }
