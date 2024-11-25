@@ -5,13 +5,13 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f9f7f0; /* Colore pastello caldo */
+    background-color: #e6f7ff; /* Azzurro chiaro pastello */
 }
 
 /* Header */
 header {
-    background: #ff9a8b; /* Colore caldo pastello */
-    color: #fff;
+    background: #4fd1c5; /* Verde acqua pastello */
+    color: white;
     padding: 20px 10px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -45,17 +45,17 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #f7c7b7; /* Colore pastello caldo */
-    border: 2px solid #f7c7b7; /* Bordi arrotondati */
+    background-color: #80e0d5; /* Verde acqua pastello chiaro */
+    border: 2px solid #80e0d5; /* Bordi arrotondati */
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #fff;
-    background-color: #f4a6a3; /* Colore più intenso al passaggio del mouse */
-    border-color: #f4a6a3; /* Cambia colore del bordo */
-    transform: translateY(-3px); /* Effetto sollevato */
+    color: white;
+    background-color: #33b6a1; /* Verde acqua più intenso */
+    border-color: #33b6a1; /* Colore del bordo cambia */
+    transform: translateY(-3px); /* Effetto di sollevamento */
 }
 
 /* Contenuto principale */
@@ -70,8 +70,8 @@ main {
 
 /* Footer */
 footer {
-    background: #ff9a8b; /* Colore pastello caldo simile all'header */
-    color: #fff;
+    background: #4fd1c5; /* Verde acqua pastello simile all'header */
+    color: white;
     padding: 15px 0;
     text-align: center;
     font-size: 0.9rem;
@@ -82,13 +82,13 @@ footer {
 }
 
 footer a {
-    color: #f7c7b7; /* Colore pastello chiaro */
+    color: #80e0d5; /* Colore verde acqua chiaro */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #fff;
+    color: white;
 }
 
 /* Aggiunta di stili responsivi */
