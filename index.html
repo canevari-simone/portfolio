@@ -8,43 +8,46 @@
 </head>
 <body>
     <header>
-        <h1>Home</h1>
+        <h1 id="home-title">Home</h1>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>               
-                <li><a href="ricerche.html">Progetti e tesi</a></li>   
-                <li><a href="contatti.html">Contatti e CV</a></li>
+                <li><a href="index.html" id="home-link" class="active">Home</a></li>               
+                <li><a href="ricerche.html" id="projects-link">Progetti e tesi</a></li>   
+                <li><a href="contatti.html" id="contacts-link">Contatti e CV</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Chi sono e cosa ho fatto nella vita</h2>
-        <p>Benvenuto! Qui troverai il mio curriculum, i miei lavori di ricerca e altro ancora.</p>
+        <h2 id="welcome-message">Chi sono e cosa ho fatto nella vita</h2>
+        <p id="description">Benvenuto! Qui troverai il mio curriculum, i miei lavori di ricerca e altro ancora.</p>
 
         <section class="skills">
-            <div class="skill">Fisica</div>
-            <div class="skill">Divulgazione</div>
-            <div class="skill">Altro</div>
+            <div class="skill" id="skill-1">Fisica</div>
+            <div class="skill" id="skill-2">Divulgazione</div>
+            <div class="skill" id="skill-3">Altro</div>
         </section>
 
         <section class="portfolio">
             <div class="portfolio-item">
-                <h3>Progetto 1</h3>
-                <p>Descrizione del progetto...</p>
+                <h3 id="project-title-1">Progetto 1</h3>
+                <p id="project-desc-1">Descrizione del progetto...</p>
             </div>
             <div class="portfolio-item">
-                <h3>Progetto 2</h3>
-                <p>Descrizione del progetto...</p>
+                <h3 id="project-title-2">Progetto 2</h3>
+                <p id="project-desc-2">Descrizione del progetto...</p>
             </div>
             <div class="portfolio-item">
-                <h3>Progetto 3</h3>
-                <p>Descrizione del progetto...</p>
+                <h3 id="project-title-3">Progetto 3</h3>
+                <p id="project-desc-3">Descrizione del progetto...</p>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Simone. Tutti i diritti riservati.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Termini di servizio</a>
+        <p id="footer-text">&copy; 2024 Simone. Tutti i diritti riservati.</p>
+        <a href="#" id="privacy-link">Privacy Policy</a> | <a href="#" id="terms-link">Termini di servizio</a>
     </footer>
+    <button onclick="changeLanguage('it')">Italiano</button>
+    <button onclick="changeLanguage('en')">English</button>
+    <script src="language.js"></script>
 </body>
 </html>
