@@ -1,0 +1,9 @@
+<main>
+    <h2>Contatti</h2>
+    <p>Puoi contattarmi tramite i seguenti canali:</p>
+    <ul>
+        <li>Email: <a href="mailto:simone@example.com">simone@example.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/simonecanevari" target="_blank">linkedin.com/in/simonecanevari</a></li>
+        <li>GitHub: <a href="https://github.com/simonecanevari" target="_blank">github.com/simonecanevari</a></li>
+    </ul>
+</main>
