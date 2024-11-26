@@ -5,9 +5,9 @@
         "contacts": "Contatti e CV",
         "welcome": "Chi sono e cosa ho fatto nella vita",
         "description": "Benvenuto! Qui troverai i miei progetti conclusi e in corso, il mio CV e i miei contatti.",
-        "skills": ["Fisica", "Divulgazione", "Altro"],
+        "skills": ["Studio e lavoro", "Divulgazione", "Altro"],
         "projects_title": ["Analisi Raman: Vinalnd Map", "Tesi triennale: Confronto tra tecniche di radiodatazione", "Approfondimento divulgativo: bombe sporche"],
-        "projects_description": ["Descrizione del progetto...", "Descrizione del progetto...", "Descrizione del progetto..."],
+        "projects_description": ["", "", ""],
         "footer": "&copy; 2024 Simone Canevari. Tutti i diritti riservati.",
         "privacy": "Privacy Policy",
         "terms": "Termini di servizio"
@@ -18,9 +18,9 @@
         "contacts": "Contacts and CV",
         "welcome": "Who I am and what I have done in life",
         "description": "Welcome! Here you will find my completed and ongoing projects, my CV and my contacts.",
-        "skills": ["Physics", "Dissemination", "Other"],
+        "skills": ["Studies and work", "Dissemination", "Other"],
         "projects_title": ["Vinalnd Map", "Bachelor's degree: Comparison of radiodata techniques", "Dissemination: dirty bombs"],
-        "projects_description": ["Project description...", "Project description...", "Project description..."],
+        "projects_description": ["", "", ""],
         "footer": "&copy; 2024 Simone Canevari. All rights reserved.",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service"
