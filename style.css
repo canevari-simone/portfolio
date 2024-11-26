@@ -34,21 +34,33 @@ header {
 }
 
 button img.flag-icon {
-    width: 30px; /* Larghezza limitata */
-    height: 20px; /* Altezza proporzionata */
-    object-fit: cover; /* Adatta l'immagine al contenitore */
-    display: block;
-    border: 1px solid #ccc; /* Bordo per separare visivamente */
-    border-radius: 4px; /* Opzionale: rende gli angoli arrotondati */
+    display: inline-block; /* Assicura che l'immagine rimanga visibile */
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px;
     cursor: pointer;
-    margin: 5px auto; /* Centra l'immagine */
-    transition: transform 0.3s ease;
+    background-color: transparent; /* Rimuove eventuali sfondi */
+}
+
+button {
+    background: none; /* Rimuove il background del pulsante */
+    border: none; /* Rimuove i bordi */
+    padding: 0;
+    display: inline-flex; /* Mantiene i pulsanti allineati */
+    align-items: center;
+    justify-content: center;
 }
 
 button img.flag-icon:hover {
     transform: scale(1.1); /* Animazione al passaggio del mouse */
 }
 
+button img:hover {
+    transform: scale(1.1); /* Effetto hover per l'immagine */
+}
 
 header h1 {
     margin: 0;
@@ -91,7 +103,7 @@ header h1 {
 .project-button h3 {
     position: relative;
     z-index: 2;
-    color: white; /* Contrasto con l'immagine */
+    color: black; /* Contrasto con l'immagine */
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Migliora la leggibilità */
     font-size: 1.2rem;
     margin: 0;
