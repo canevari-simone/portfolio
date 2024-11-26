@@ -210,10 +210,10 @@ main p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #170a36;  /* Colore del testo, puoi cambiarlo a tuo piacimento (es. blu chiaro) */
+    color: #90a4ae;  /* Colore del testo, puoi cambiarlo a tuo piacimento (es. blu chiaro) */
     font-size: 1.2rem;
     z-index: 2;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     margin: 0;
 }
 
