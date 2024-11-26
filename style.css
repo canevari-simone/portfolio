@@ -59,39 +59,36 @@ nav {
     width: 100%;  /* Occupa tutta la larghezza disponibile */
 }
 
+/* Stili per la navigazione */
 nav ul {
-    display: flex; /* Usa il layout flessibile */
-    justify-content: center; /* Centra il contenitore */
-    align-items: center;
-    position: relative; /* Necessario per il posizionamento assoluto */
-}
-
-nav ul li:nth-child(2) {
-    position: relative;
-    left: -50px; /* Sposta "Progetti e tesi" verso il centro */
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: center; /* Centra l'intero blocco dei tasti */
 }
 
 nav ul li {
-    margin: 0 10px; /* Margine generico tra i pulsanti */
+    display: inline-block; /* Posiziona i tasti uno accanto all'altro */
+    margin: 0 15px; /* Spaziatura uniforme tra i tasti */
 }
 
 nav ul li a {
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    background-color: #90a4ae; /* Sfondo pulsante */
     color: white;
-    border: 2px solid #90a4ae;
+    text-decoration: none;
     font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px; /* Aggiunge spazio interno ai tasti */
+    background-color: #90a4ae; /* Colore di sfondo */
+    border: 2px solid #90a4ae; /* Bordo dello stesso colore */
+    border-radius: 8px; /* Angoli arrotondati */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animazione al passaggio del mouse */
 }
 
 nav ul li a:hover {
-    background-color: #607d8b;
-    border-color: #607d8b;
-    transform: translateY(-5px);
+    background-color: #607d8b; /* Cambia il colore di sfondo al passaggio del mouse */
+    border-color: #607d8b; /* Cambia il colore del bordo */
+    transform: translateY(-5px); /* Alza il pulsante per un effetto visivo */
 }
+
 
 nav ul li a.active {
     background-color: #607d8b;
