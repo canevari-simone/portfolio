@@ -165,18 +165,29 @@ main p {
 }
 
 .project-button {
-    width: 100%;  /* Rende il pulsante della dimensione del contenitore */
-    height: 150px;  /* Altezza fissa */
+    width: 100%;
+    height: 150px;
     border: none;
     padding: 0;
     position: relative;
-    overflow: hidden;  /* Impedisce che l'immagine esca fuori dal pulsante */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #90a4ae;  /* Colore di fallback */
+    background-color: #90a4ae;
     border-radius: 8px;
     transition: transform 0.3s ease;
+}
+
+.project-button::after {  /* Questo crea l'overlay */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay semi-trasparente sopra l'immagine */
+    z-index: 2;
 }
 
 .project-button:hover {
@@ -189,21 +200,23 @@ main p {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Fa sì che l'immagine copra completamente l'area senza uscire dai bordi */
+    object-fit: cover;
     z-index: 1;
+    opacity: 0.5;  /* Imposta l'opacità dell'immagine */
 }
 
 .project-button h3 {
     position: absolute;
-    top: 50%;  /* Posiziona il testo al centro del pulsante */
-    left: 50%;  /* Posiziona il testo al centro orizzontalmente */
-    transform: translate(-50%, -50%);  /* Centra perfettamente il testo (spostamento di metà della sua larghezza e altezza) */
-    color: white;  /* Colore del testo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #170a36;  /* Colore del testo, puoi cambiarlo a tuo piacimento (es. blu chiaro) */
     font-size: 1.2rem;
-    z-index: 2;  /* Assicura che il testo sia sopra l'immagine */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Aggiungi ombra al testo per migliorarne la leggibilità sopra l'immagine */
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     margin: 0;
 }
+
 
 
 /* Footer */
