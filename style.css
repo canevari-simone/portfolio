@@ -22,8 +22,8 @@ header {
 
 .language-switch {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;  /* Distanza dal top per evitare che siano troppo vicini */
+    right: 20px;  /* Posiziona sulla destra */
     display: flex;
     gap: 10px;
 }
@@ -41,6 +41,7 @@ header {
     transform: scale(1.1);
 }
 
+
 header h1 {
     margin: 0;
     font-size: 3rem;
@@ -50,17 +51,24 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navigazione */
+/* Navigazione *//* Stile per la navigazione */
+nav {
+    display: flex;
+    justify-content: center;  /* Centra il contenuto orizzontalmente */
+    align-items: center;  /* Allinea verticalmente */
+    width: 100%;  /* Occupa tutta la larghezza disponibile */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0 0;
-    text-align: center;
+    margin: 0;
+    display: flex;  /* Usa Flexbox per allineare i tasti in orizzontale */
+    gap: 15px;  /* Distanza tra i tasti */
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 15px;
 }
 
 nav ul li a {
@@ -86,6 +94,7 @@ nav ul li a.active {
     border-color: #607d8b;
     color: white;
 }
+
 
 /* Sezione principale */
 main {
