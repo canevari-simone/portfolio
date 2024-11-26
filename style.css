@@ -33,6 +33,23 @@ header {
     transform: scale(1.1);
 }
 
+button img.flag-icon {
+    width: 30px; /* Larghezza limitata */
+    height: 20px; /* Altezza proporzionata */
+    object-fit: cover; /* Adatta l'immagine al contenitore */
+    display: block;
+    border: 1px solid #ccc; /* Bordo per separare visivamente */
+    border-radius: 4px; /* Opzionale: rende gli angoli arrotondati */
+    cursor: pointer;
+    margin: 5px auto; /* Centra l'immagine */
+    transition: transform 0.3s ease;
+}
+
+button img.flag-icon:hover {
+    transform: scale(1.1); /* Animazione al passaggio del mouse */
+}
+
+
 header h1 {
     margin: 0;
     font-size: 3rem;
