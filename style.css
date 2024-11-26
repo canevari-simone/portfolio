@@ -179,16 +179,7 @@ main p {
     transition: transform 0.3s ease;
 }
 
-.project-button::after {  /* Questo crea l'overlay */
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay semi-trasparente sopra l'immagine */
-    z-index: 2;
-}
+
 
 .project-button:hover {
     transform: scale(1.05); /* Effetto hover */
