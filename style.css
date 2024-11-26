@@ -59,17 +59,42 @@ header h1 {
     font-weight: bold;
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
+.project-button {
+    width: 100%; /* Rende il pulsante della dimensione del contenitore */
+    height: 150px; /* Altezza fissa; puoi personalizzarla */
+    border: none;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #90a4ae; /* Colore di fallback */
     border-radius: 8px;
-    margin: 10px 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-.project-image:hover {
-    transform: scale(1.05);
+.project-button:hover {
+    transform: scale(1.05); /* Effetto hover */
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine alle dimensioni del pulsante */
+    z-index: 1;
+}
+
+.project-button h3 {
+    position: relative;
+    z-index: 2;
+    color: white; /* Contrasto con l'immagine */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Migliora la leggibilità */
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 
