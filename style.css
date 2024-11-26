@@ -193,6 +193,18 @@ main p {
     z-index: 1;
 }
 
+.project-button h3 {
+    position: absolute;
+    top: 50%;  /* Posiziona il testo al centro del pulsante */
+    left: 50%;  /* Posiziona il testo al centro orizzontalmente */
+    transform: translate(-50%, -50%);  /* Centra perfettamente il testo (spostamento di metà della sua larghezza e altezza) */
+    color: white;  /* Colore del testo */
+    font-size: 1.2rem;
+    z-index: 2;  /* Assicura che il testo sia sopra l'immagine */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Aggiungi ombra al testo per migliorarne la leggibilità sopra l'immagine */
+    margin: 0;
+}
+
 
 /* Footer */
 footer {
