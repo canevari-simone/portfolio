@@ -69,6 +69,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
+    margin: 0 25px; /* Aumentato a 25px per maggiore distanza */
 }
 
 nav ul li a {
