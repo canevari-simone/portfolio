@@ -164,6 +164,36 @@ main p {
     transform: translateY(-3px);
 }
 
+.project-button {
+    width: 100%;  /* Rende il pulsante della dimensione del contenitore */
+    height: 150px;  /* Altezza fissa */
+    border: none;
+    padding: 0;
+    position: relative;
+    overflow: hidden;  /* Impedisce che l'immagine esca fuori dal pulsante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #90a4ae;  /* Colore di fallback */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-button:hover {
+    transform: scale(1.05); /* Effetto hover */
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Fa sì che l'immagine copra completamente l'area senza uscire dai bordi */
+    z-index: 1;
+}
+
+
 /* Footer */
 footer {
     background: #607d8b;
