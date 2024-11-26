@@ -202,7 +202,7 @@ main p {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    opacity: 0.5;  /* Imposta l'opacità dell'immagine */
+    opacity: 0.8;  /* Imposta l'opacità dell'immagine */
 }
 
 .project-button h3 {

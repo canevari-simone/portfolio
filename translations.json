@@ -8,7 +8,7 @@
         "skills": ["Fisica", "Divulgazione", "Altro"],
         "projects_title": ["Analisi Raman: Vinalnd Map", "Tesi triennale: Confronto tecniche di radiodatazione", "Approfondimento divulgativo: Bombe sporche"],
         "projects_description": ["Descrizione del progetto...", "Descrizione del progetto...", "Descrizione del progetto..."],
-        "footer": "&copy; 2024 Simone. Tutti i diritti riservati.",
+        "footer": "&copy; 2024 Simone Canevari. Tutti i diritti riservati.",
         "privacy": "Privacy Policy",
         "terms": "Termini di servizio"
     },
@@ -21,7 +21,7 @@
         "skills": ["Physics", "Dissemination", "Other"],
         "projects_title": ["Vinalnd Map", "Bachelor's degree: Comparison of radiodata techniques", "Dissemination: Dirty bombs"],
         "projects_description": ["Project description...", "Project description...", "Project description..."],
-        "footer": "&copy; 2024 Simone. All rights reserved.",
+        "footer": "&copy; 2024 Simone Canevari. All rights reserved.",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service"
     }
