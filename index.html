@@ -11,12 +11,21 @@
         <h1 id="home-title">Home</h1>
         <nav>
             <ul>
-                <li><a href="index.html" id="home-link" class="active"></a></li>               
-                <li><a href="ricerche.html" id="projects-link"></a></li>   
-                <li><a href="contatti.html" id="contacts-link"></a></li>
+                <li><a href="index.html" id="home-link" class="active">Home</a></li>
+                <li><a href="ricerche.html" id="projects-link">Progetti e tesi</a></li>
+                <li><a href="contatti.html" id="contacts-link">Contatti e CV</a></li>
             </ul>
         </nav>
+        <div class="language-switch">
+            <button onclick="changeLanguage('it')">
+                <img src="itaflag.png" alt="Italiano" class="flag-icon">
+            </button>
+            <button onclick="changeLanguage('en')">
+                <img src="usgpflag.png" alt="English" class="flag-icon">
+            </button>
+        </div>
     </header>
+    
     <main>
         <h2 id="welcome-message">Chi sono e cosa ho fatto nella vita</h2>
         <p id="description">Benvenuto! Qui troverai il mio curriculum, i miei lavori di ricerca e altro ancora.</p>
@@ -31,32 +40,27 @@
             <div class="portfolio-item">
                 <button class="project-button">
                     <img src="map.jpg" alt="Map Image" class="project-image">
-                    <h3 id="project-title-1"></h3>
+                    <h3 id="project-title-1">Progetto 1</h3>
                 </button>
                 <p id="project-desc-1">Descrizione del progetto...</p>
             </div>
             
             <div class="portfolio-item">
-                <h3 id="project-title-2"></h3>
+                <h3 id="project-title-2">Progetto 2</h3>
                 <p id="project-desc-2">Descrizione del progetto...</p>
             </div>
             <div class="portfolio-item">
-                <h3 id="project-title-3"></h3>
+                <h3 id="project-title-3">Progetto 3</h3>
                 <p id="project-desc-3">Descrizione del progetto...</p>
             </div>
         </section>
     </main>
+
     <footer>
         <p id="footer-text">&copy; 2024 Simone. Tutti i diritti riservati.</p>
         <a href="#" id="privacy-link">Privacy Policy</a> | <a href="#" id="terms-link">Termini di servizio</a>
     </footer>
-    <button onclick="changeLanguage('it')">
-        <img src="itaflag.png" alt="Italiano" class="flag-icon">
-    </button>
-    <button onclick="changeLanguage('en')">
-        <img src="usgpflag.png" alt="English" class="flag-icon">
-    </button>
-    
+
     <script src="language.js"></script>
 </body>
 </html>
