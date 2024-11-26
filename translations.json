@@ -6,7 +6,7 @@
         "welcome": "Chi sono e cosa ho fatto nella vita",
         "description": "Benvenuto! Qui troverai i miei progetti conclusi e in corso, il mio CV e i miei contatti.",
         "skills": ["Fisica", "Divulgazione", "Altro"],
-        "projects_title": ["Analisi Raman: Vinalnd Map", "Tesi triennale: Confronto tecniche di radiodatazione", "Approfondimento divulgativo: bombe sporche"],
+        "projects_title": ["Analisi Raman: Vinalnd Map", "Tesi triennale: Confronto tra tecniche di radiodatazione", "Approfondimento divulgativo: bombe sporche"],
         "projects_description": ["Descrizione del progetto...", "Descrizione del progetto...", "Descrizione del progetto..."],
         "footer": "&copy; 2024 Simone Canevari. Tutti i diritti riservati.",
         "privacy": "Privacy Policy",
