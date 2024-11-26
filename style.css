@@ -20,6 +20,19 @@ header {
     z-index: 1000;
 }
 
+.flag-icon {
+    width: 30px;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1);
+}
+
 header h1 {
     margin: 0;
     font-size: 3rem;
@@ -28,6 +41,20 @@ header h1 {
     letter-spacing: 2px;
     font-weight: bold;
 }
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+}
+
 
 /* Navigazione */
 nav ul {
