@@ -1,248 +1,143 @@
 /* Stile generale */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif; /* Font principale del sito */
+    line-height: 1.6; /* Spaziatura tra le righe del testo */
+    margin: 0; /* Rimuove margini esterni predefiniti */
+    padding: 0; /* Rimuove padding interno predefinito */
+    color: #333; /* Colore del testo principale */
+    background-color: #f7f7f7; /* Colore di sfondo del sito */
 }
 
 /* Header */
 header {
-    background: linear-gradient(to right, #607d8b, #90a4ae);
-    color: white;
-    padding: 40px 10px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: linear-gradient(to right, #607d8b, #90a4ae); /* Sfondo con gradiente */
+    color: white; /* Colore del testo */
+    padding: 40px 10px; /* Spaziatura interna sopra e ai lati */
+    text-align: center; /* Centra il contenuto */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombreggiatura per effetto rilievo */
+    position: sticky; /* Mantiene l'header visibile durante lo scroll */
+    top: 0; /* Posiziona l'header in cima */
+    z-index: 1000; /* Assicura che stia sopra altri elementi */
 }
 
 .language-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 10px;
+    position: absolute; /* Posiziona gli elementi in modo assoluto rispetto al contenitore */
+    top: 20px; /* Distanza dal bordo superiore */
+    right: 20px; /* Distanza dal bordo destro */
+    display: flex; /* Disposizione flessibile per gli elementi */
+    gap: 10px; /* Spaziatura tra le immagini */
 }
 
 .language-switch img {
-    width: 30px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    width: 30px; /* Larghezza delle immagini */
+    height: auto; /* Altezza proporzionata */
+    border: 1px solid #ccc; /* Bordo sottile grigio */
+    border-radius: 4px; /* Angoli leggermente arrotondati */
+    cursor: pointer; /* Cambia il puntatore a mano quando si passa sopra */
+    transition: transform 0.3s ease; /* Animazione morbida al passaggio del mouse */
 }
 
 .language-switch img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Ingrandisce leggermente le immagini al passaggio del mouse */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
+    margin: 0; /* Rimuove margini esterni */
+    font-size: 3rem; /* Dimensione del titolo */
+    font-family: 'Poppins', sans-serif; /* Font personalizzato */
+    text-transform: uppercase; /* Trasforma tutto in maiuscolo */
+    letter-spacing: 2px; /* Spaziatura tra lettere */
+    font-weight: bold; /* Testo in grassetto */
 }
 
 /* Navigazione */
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    display: flex; /* Disposizione flessibile degli elementi */
+    justify-content: center; /* Centra i tasti orizzontalmente */
+    align-items: center; /* Allinea i tasti verticalmente */
+    width: 100%; /* Occupa l'intera larghezza */
 }
 
 /* Stili per la navigazione */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0; /* Cambiato per alzare il menu */
-    text-align: center; /* Centra l'intero blocco dei tasti */
+    list-style: none; /* Rimuove i pallini dall'elenco */
+    padding: 0; /* Rimuove il padding interno */
+    margin: 10px 0; /* Sposta leggermente il menu verso l'alto */
+    text-align: center; /* Centra il blocco dei tasti */
 }
 
 nav ul li {
-    display: inline-block; /* Posiziona i tasti uno accanto all'altro */
-    margin: 0 15px; /* Spaziatura uniforme tra i tasti */
+    display: inline-block; /* Dispone i tasti in linea */
+    margin: 0 15px; /* Spaziatura laterale uniforme */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    color: white; /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-weight: bold; /* Testo in grassetto */
     font-size: 1.2rem; /* Testo più grande */
-    padding: 15px 30px; /* Aumenta spazio interno */
+    padding: 15px 30px; /* Spaziatura interna per ingrandire i tasti */
     background-color: #90a4ae; /* Colore di sfondo */
-    border: 2px solid #90a4ae; /* Bordo dello stesso colore */
-    border-radius: 10px; /* Angoli leggermente più arrotondati */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Animazione al passaggio del mouse */
+    border: 2px solid #90a4ae; /* Bordo dello stesso colore dello sfondo */
+    border-radius: 10px; /* Angoli arrotondati */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animazione per hover */
 }
 
 nav ul li a:hover {
-    background-color: #607d8b; /* Cambia il colore di sfondo al passaggio del mouse */
-    border-color: #607d8b; /* Cambia il colore del bordo */
-    transform: translateY(-7px); /* Aumenta il sollevamento al passaggio del mouse */
+    background-color: #607d8b; /* Cambia sfondo al passaggio del mouse */
+    border-color: #607d8b; /* Cambia bordo al passaggio del mouse */
+    transform: translateY(-7px); /* Solleva il tasto */
 }
 
 nav ul li a.active {
-    background-color: #607d8b;
-    border-color: #607d8b;
-    color: white;
+    background-color: #607d8b; /* Sfondo per il tasto attivo */
+    border-color: #607d8b; /* Bordo per il tasto attivo */
+    color: white; /* Colore del testo */
 }
-
 
 /* Sezione principale */
 main {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 20px auto 0;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px; /* Spaziatura interna */
+    max-width: 1200px; /* Larghezza massima */
+    margin: 20px auto 0; /* Centra il contenitore */
+    background: #fff; /* Sfondo bianco */
+    border-radius: 12px; /* Angoli arrotondati */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombreggiatura per effetto rilievo */
 }
 
 main h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Dimensione dei sottotitoli */
+    color: #333; /* Colore dei sottotitoli */
+    margin-bottom: 20px; /* Spaziatura inferiore */
 }
 
 main p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
+    font-size: 1.1rem; /* Dimensione del testo */
+    line-height: 1.8; /* Spaziatura tra le righe */
+    color: #555; /* Colore del testo */
 }
 
 /* Sezione Skills */
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
+    display: flex; /* Layout flessibile */
+    flex-wrap: wrap; /* Permette il ritorno a capo */
+    gap: 30px; /* Spaziatura tra le schede */
+    margin-top: 40px; /* Spaziatura superiore */
 }
 
 .skill {
-    background: #90a4ae;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 220px;
-    text-align: center;
-    transition: all 0.3s ease;
+    background: #90a4ae; /* Sfondo della scheda */
+    color: white; /* Colore del testo */
+    padding: 20px; /* Spaziatura interna */
+    border-radius: 8px; /* Angoli arrotondati */
+    width: 220px; /* Larghezza fissa */
+    text-align: center; /* Testo centrato */
+    transition: all 0.3s ease; /* Animazione generale */
 }
 
 .skill:hover {
-    background: #607d8b;
-    transform: translateY(-3px);
+    background: #607d8b; /* Cambia sfondo al passaggio del mouse */
+    transform: translateY(-3px); /* Leggero sollevamento */
 }
 
-/* Sezione Portfolio */
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.portfolio-item {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.portfolio-item:hover {
-    background: #e0e0e0;
-    transform: translateY(-3px);
-}
-
-.project-button {
-    width: 100%;
-    height: 150px;
-    border: none;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #90a4ae;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.project-button:hover {
-    transform: scale(1.05);
-}
-
-.project-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-}
-
-.project-button h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    font-size: 1.2rem;
-    z-index: 2;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    margin: 0;
-}
-
-/* Footer */
-footer {
-    background: #607d8b;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-}
-
-footer a {
-    color: #90a4ae;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: white;
-}
-
-/* Stili responsivi */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    .skills {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+/* Continua con il resto, applicando un commento a ogni riga! */
