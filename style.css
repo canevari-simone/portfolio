@@ -146,3 +146,66 @@ main p {
 }
 
 /* Continua con il resto, applicando un commento a ogni riga! */
+
+
+/* Stili responsivi per smartphone */
+@media (max-width: 768px) {
+    /* Menu di navigazione */
+    nav ul {
+        flex-direction: column; /* Posiziona i tasti uno sotto l'altro */
+        margin: 0; /* Riduce lo spazio del menu */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Spazio tra i tasti */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Riduci la dimensione del testo */
+        padding: 10px 20px; /* Riduci il padding interno */
+    }
+
+    /* Header */
+    header {
+        padding: 20px 10px; /* Riduci il padding per occupare meno spazio */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Riduci il testo dell'intestazione */
+    }
+
+    /* Immagini */
+    .project-image {
+        width: 100%; /* Immagini responsive */
+        height: auto; /* Mantieni le proporzioni */
+    }
+
+    /* Sezione principale */
+    main {
+        padding: 20px; /* Riduci il padding */
+    }
+
+    .skills {
+        flex-direction: column; /* Mostra le skill in una colonna */
+        align-items: center; /* Centra gli elementi */
+    }
+
+    .skill {
+        width: 90%; /* Riduci la larghezza delle skill */
+    }
+
+    /* Portfolio */
+    .portfolio {
+        grid-template-columns: 1fr; /* Mostra un elemento per riga */
+    }
+
+    .portfolio-item {
+        padding: 15px; /* Riduci il padding */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8rem; /* Riduci la dimensione del testo nel footer */
+    }
+}
