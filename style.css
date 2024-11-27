@@ -267,7 +267,7 @@ footer a:hover {
         flex-direction: column; /* Disporre i tasti in colonna per una visualizzazione migliore */
         align-items: center; /* Centra i tasti orizzontalmente */
         padding: 0;
-        margin: 10px 0 0;
+        margin: 8px 0 0;
     }
 
     nav ul li {
@@ -277,8 +277,8 @@ footer a:hover {
     }
 
     nav ul li a {
-        padding: 15px 40px; /* Aumenta lo spazio interno per tasti più grandi */
-        font-size: 1.4rem; /* Aumenta la dimensione del testo sui dispositivi mobili */
+        padding: 8px 15px; /* Aumenta lo spazio interno per tasti più grandi */
+        font-size: 1rem; /* Aumenta la dimensione del testo sui dispositivi mobili */
         background-color: #90a4ae;
         border: 2px solid #90a4ae;
         border-radius: 8px;
