@@ -218,6 +218,8 @@ main p {
     font-size: 3em; /* Puoi regolare la dimensione del testo a tuo piacimento */
     font-style: italic; /* Imposta lo stile in corsivo */
     text-transform: capitalize;
+    color: white; /* Colore interno delle lettere */
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   }
   
 
