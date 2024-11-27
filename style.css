@@ -256,7 +256,7 @@ footer a:hover {
     .language-switch img {
         width: 25px; /* Rende le bandiere un po' più piccole */
     }
-    
+
     nav ul {
         display: flex;
         flex-direction: column; /* Disporre i tasti in colonna per una visualizzazione migliore */
@@ -297,7 +297,7 @@ footer a:hover {
 
     /* Sezione principale */
     main {
-        padding: 20px;
+        padding-bottom: 80px; /* Aggiunge spazio nella parte inferiore del contenuto */
     }
 
     /* Sezione Skills */
@@ -330,8 +330,9 @@ footer a:hover {
         font-size: 1rem; /* Riduci la dimensione del testo nel bottone */
     }
 
-    /* Footer */
+    /* Stile per il footer */
     footer {
-        font-size: 0.8rem; /* Testo più piccolo per i dispositivi mobili */
+        position: relative; /* Rende il footer non fisso */
+        margin-top: 20px; /* Spazio sopra il footer per separarlo dal contenuto */
     }
 }
