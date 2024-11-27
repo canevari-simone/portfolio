@@ -50,6 +50,11 @@ header h1 {
     font-weight: bold; /* Testo in grassetto */
 }
 
+.hidden-home {
+    display: none; /* Rimuove l'elemento dalla visualizzazione senza compromettere il layout */
+}
+
+
 /* Navigazione */
 nav {
     display: flex; /* Disposizione flessibile degli elementi */
