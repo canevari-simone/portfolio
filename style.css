@@ -22,8 +22,8 @@ header {
 
 .language-switch {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 20px;  /* Distanza dal top per evitare che siano troppo vicini */
+    right: 20px;  /* Posiziona sulla destra */
     display: flex;
     gap: 10px;
 }
@@ -41,6 +41,7 @@ header {
     transform: scale(1.1);
 }
 
+
 header h1 {
     margin: 0;
     font-size: 3rem;
@@ -50,55 +51,44 @@ header h1 {
     font-weight: bold;
 }
 
-.hidden-home {
-    display: none;
-}
-
-/* Navigazione */
+/* Navigazione *//* Stile per la navigazione */
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    justify-content: center;  /* Centra il contenuto orizzontalmente */
+    align-items: center;  /* Allinea verticalmente */
+    width: 100%;  /* Occupa tutta la larghezza disponibile */
 }
 
+/* Stili per la navigazione */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
-    text-align: center;
+    margin: 20px 0 0;
+    text-align: center; /* Centra l'intero blocco dei tasti */
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    display: inline-block; /* Posiziona i tasti uno accanto all'altro */
+    margin: 0 15px; /* Spaziatura uniforme tra i tasti */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 15px 30px;
-    background-color: #90a4ae;
-    border: 2px solid #90a4ae;
-    border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Stile specifico per le immagini nei tasti */
-nav ul li a img {
-    max-width: 20px;
-    max-height: 20px;
-    display: inline-block;
-    vertical-align: middle;
+    padding: 10px 20px; /* Aggiunge spazio interno ai tasti */
+    background-color: #90a4ae; /* Colore di sfondo */
+    border: 2px solid #90a4ae; /* Bordo dello stesso colore */
+    border-radius: 8px; /* Angoli arrotondati */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animazione al passaggio del mouse */
 }
 
 nav ul li a:hover {
-    background-color: #607d8b;
-    border-color: #607d8b;
-    transform: translateY(-7px);
+    background-color: #607d8b; /* Cambia il colore di sfondo al passaggio del mouse */
+    border-color: #607d8b; /* Cambia il colore del bordo */
+    transform: translateY(-5px); /* Alza il pulsante per un effetto visivo */
 }
+
 
 nav ul li a.active {
     background-color: #607d8b;
@@ -106,16 +96,20 @@ nav ul li a.active {
     color: white;
 }
 
+
+
 /* Sezione principale */
 main {
     padding: 40px 20px;
     max-width: 1200px;
-    margin: 20px auto 0;
+    margin: 0 auto;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
+/* Sezione chi sono */
 main h2 {
     font-size: 2.5rem;
     color: #333;
@@ -151,39 +145,105 @@ main p {
     transform: translateY(-3px);
 }
 
-/* Stili responsivi per smartphone */
+/* Sezione Portfolio */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    background: #e0e0e0;
+    transform: translateY(-3px);
+}
+
+.project-button {
+    width: 100%;
+    height: 150px;
+    border: none;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #90a4ae;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.project-button:hover {
+    transform: scale(1.05); /* Effetto hover */
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.8;  /* Imposta l'opacità dell'immagine */
+}
+
+.project-button h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;  /* Colore del testo, puoi cambiarlo a tuo piacimento (es. blu chiaro) */
+    font-size: 1.2rem;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    margin: 0;
+}
+
+
+
+/* Footer */
+footer {
+    background: #607d8b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #90a4ae;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Aggiunta di stili responsivi */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    nav ul li a img {
-        max-width: 15px;
-        max-height: 15px;
-    }
-
-    header {
-        padding: 20px 10px;
-    }
-
     header h1 {
         font-size: 2rem;
     }
 
-    .project-image {
-        width: 100%;
-        height: auto;
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 
     main {
@@ -195,19 +255,7 @@ main p {
         align-items: center;
     }
 
-    .skill {
-        width: 90%;
-    }
-
     .portfolio {
         grid-template-columns: 1fr;
-    }
-
-    .portfolio-item {
-        padding: 15px;
-    }
-
-    footer {
-        font-size: 0.8rem;
     }
 }
