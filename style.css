@@ -58,33 +58,35 @@ nav {
     width: 100%;
 }
 
+/* Stili per la navigazione */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0 0;
-    text-align: center;
+    margin: 10px 0; /* Cambiato per alzare il menu */
+    text-align: center; /* Centra l'intero blocco dei tasti */
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    display: inline-block; /* Posiziona i tasti uno accanto all'altro */
+    margin: 0 15px; /* Spaziatura uniforme tra i tasti */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px;
-    background-color: #90a4ae;
-    border: 2px solid #90a4ae;
-    border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.2rem; /* Testo più grande */
+    padding: 15px 30px; /* Aumenta spazio interno */
+    background-color: #90a4ae; /* Colore di sfondo */
+    border: 2px solid #90a4ae; /* Bordo dello stesso colore */
+    border-radius: 10px; /* Angoli leggermente più arrotondati */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animazione al passaggio del mouse */
 }
 
 nav ul li a:hover {
-    background-color: #607d8b;
-    border-color: #607d8b;
-    transform: translateY(-5px);
+    background-color: #607d8b; /* Cambia il colore di sfondo al passaggio del mouse */
+    border-color: #607d8b; /* Cambia il colore del bordo */
+    transform: translateY(-7px); /* Aumenta il sollevamento al passaggio del mouse */
 }
 
 nav ul li a.active {
@@ -92,6 +94,7 @@ nav ul li a.active {
     border-color: #607d8b;
     color: white;
 }
+
 
 /* Sezione principale */
 main {
