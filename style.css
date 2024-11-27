@@ -76,11 +76,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px; /* Aggiunge spazio interno ai tasti */
-    background-color: #90a4ae; /* Colore di sfondo */
-    border: 2px solid #90a4ae; /* Bordo dello stesso colore */
-    border-radius: 8px; /* Angoli arrotondati */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Animazione al passaggio del mouse */
+    padding: 15px 30px; /* Aumenta lo spazio interno per ingrandire i tasti */
+    font-size: 1.2rem; /* Aumenta la dimensione del testo */
+    background-color: #90a4ae;
+    border: 2px solid #90a4ae;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block; /* Per mantenere la disposizione a blocchi dei tasti */
+    margin: 0 10px; /* Aggiungi spazio tra i tasti */
 }
 
 nav ul li a:hover {
@@ -235,8 +238,9 @@ footer a:hover {
     color: white;
 }
 
-/* Aggiunta di stili responsivi */
+/* Stile per la versione mobile */
 @media (max-width: 768px) {
+
 
     /* Header */
     header h1 {
@@ -252,16 +256,36 @@ footer a:hover {
     .language-switch img {
         width: 25px; /* Rende le bandiere un po' più piccole */
     }
+    
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Disporre i tasti in colonna per una visualizzazione migliore */
+        align-items: center; /* Centra i tasti orizzontalmente */
+        padding: 0;
+        margin: 0;
+    }
 
-    /* Navigazione */
     nav ul li {
-        display: block; /* Ogni elemento della lista su una nuova riga */
-        margin: 10px 0;
+        margin: 15px 0; /* Distanza verticale tra i tasti */
+        width: 100%; /* Rende i tasti più larghi su mobile */
+        text-align: center; /* Centra il testo dei tasti */
     }
 
     nav ul li a {
-        padding: 10px; /* Spazio interno più ridotto */
-        font-size: 1rem; /* Riduci la dimensione del testo */
+        padding: 15px 40px; /* Aumenta lo spazio interno per tasti più grandi */
+        font-size: 1.4rem; /* Aumenta la dimensione del testo sui dispositivi mobili */
+        background-color: #90a4ae;
+        border: 2px solid #90a4ae;
+        border-radius: 8px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        display: inline-block; /* Per mantenere la disposizione a blocchi dei tasti */
+        margin: 10px 0; /* Distanza tra i tasti */
+    }
+
+    nav ul li a:hover {
+        background-color: #607d8b;
+        border-color: #607d8b;
+        transform: translateY(-5px);
     }
 
     nav ul li a.active {
@@ -269,6 +293,7 @@ footer a:hover {
         border-color: #607d8b;
         color: white;
     }
+
 
     /* Sezione principale */
     main {
