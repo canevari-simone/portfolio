@@ -22,8 +22,8 @@ header {
 
 .language-switch {
     position: absolute;
-    top: 20px;  /* Distanza dal top per evitare che siano troppo vicini */
-    right: 20px;  /* Posiziona sulla destra */
+    top: 20px;
+    right: 20px;
     display: flex;
     gap: 10px;
 }
@@ -41,7 +41,6 @@ header {
     transform: scale(1.1);
 }
 
-
 header h1 {
     margin: 0;
     font-size: 3rem;
@@ -51,44 +50,42 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navigazione *//* Stile per la navigazione */
+/* Navigazione */
 nav {
     display: flex;
-    justify-content: center;  /* Centra il contenuto orizzontalmente */
-    align-items: center;  /* Allinea verticalmente */
-    width: 100%;  /* Occupa tutta la larghezza disponibile */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-/* Stili per la navigazione */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 20px 0 0;
-    text-align: center; /* Centra l'intero blocco dei tasti */
+    text-align: center;
 }
 
 nav ul li {
-    display: inline-block; /* Posiziona i tasti uno accanto all'altro */
-    margin: 0 15px; /* Spaziatura uniforme tra i tasti */
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px; /* Aggiunge spazio interno ai tasti */
-    background-color: #90a4ae; /* Colore di sfondo */
-    border: 2px solid #90a4ae; /* Bordo dello stesso colore */
-    border-radius: 8px; /* Angoli arrotondati */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Animazione al passaggio del mouse */
+    padding: 10px 20px;
+    background-color: #90a4ae;
+    border: 2px solid #90a4ae;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #607d8b; /* Cambia il colore di sfondo al passaggio del mouse */
-    border-color: #607d8b; /* Cambia il colore del bordo */
-    transform: translateY(-5px); /* Alza il pulsante per un effetto visivo */
+    background-color: #607d8b;
+    border-color: #607d8b;
+    transform: translateY(-5px);
 }
-
 
 nav ul li a.active {
     background-color: #607d8b;
@@ -96,20 +93,16 @@ nav ul li a.active {
     color: white;
 }
 
-
-
 /* Sezione principale */
 main {
     padding: 40px 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto 0;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
-/* Sezione chi sono */
 main h2 {
     font-size: 2.5rem;
     color: #333;
@@ -181,10 +174,8 @@ main p {
     transition: transform 0.3s ease;
 }
 
-
-
 .project-button:hover {
-    transform: scale(1.05); /* Effetto hover */
+    transform: scale(1.05);
 }
 
 .project-image {
@@ -194,8 +185,7 @@ main p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
-    opacity: 0.8;  /* Imposta l'opacità dell'immagine */
+    opacity: 0.8;
 }
 
 .project-button h3 {
@@ -203,14 +193,12 @@ main p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff;  /* Colore del testo, puoi cambiarlo a tuo piacimento (es. blu chiaro) */
+    color: #ffffff;
     font-size: 1.2rem;
     z-index: 2;
-    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     margin: 0;
 }
-
-
 
 /* Footer */
 footer {
@@ -235,7 +223,7 @@ footer a:hover {
     color: white;
 }
 
-/* Aggiunta di stili responsivi */
+/* Stili responsivi */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -253,9 +241,5 @@ footer a:hover {
     .skills {
         flex-direction: column;
         align-items: center;
-    }
-
-    .portfolio {
-        grid-template-columns: 1fr;
     }
 }
