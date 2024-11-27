@@ -237,25 +237,76 @@ footer a:hover {
 
 /* Aggiunta di stili responsivi */
 @media (max-width: 768px) {
+
+    /* Header */
     header h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Riduci la dimensione del titolo */
     }
 
+    .language-switch {
+        top: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+
+    .language-switch img {
+        width: 25px; /* Rende le bandiere un po' più piccole */
+    }
+
+    /* Navigazione */
     nav ul li {
-        display: block;
+        display: block; /* Ogni elemento della lista su una nuova riga */
         margin: 10px 0;
     }
 
+    nav ul li a {
+        padding: 10px; /* Spazio interno più ridotto */
+        font-size: 1rem; /* Riduci la dimensione del testo */
+    }
+
+    nav ul li a.active {
+        background-color: #607d8b;
+        border-color: #607d8b;
+        color: white;
+    }
+
+    /* Sezione principale */
     main {
         padding: 20px;
     }
 
+    /* Sezione Skills */
     .skills {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
+    .skill {
+        width: 80%; /* Usa una larghezza più piccola per le skill */
+        padding: 15px;
+    }
+
+    /* Sezione Portfolio */
     .portfolio {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Mostra una sola colonna per il portfolio */
+        gap: 20px;
+    }
+
+    .portfolio-item {
+        padding: 15px; /* Spazio interno più ridotto per i singoli articoli */
+    }
+
+    .project-button {
+        height: 120px; /* Rende i pulsanti di progetto più piccoli */
+    }
+
+    .project-button h3 {
+        font-size: 1rem; /* Riduci la dimensione del testo nel bottone */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8rem; /* Testo più piccolo per i dispositivi mobili */
     }
 }
