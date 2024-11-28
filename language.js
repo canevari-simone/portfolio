@@ -26,7 +26,13 @@ async function changeLanguage(lang) {
     for (const key in langData) {
         const element = document.getElementById(key);
         if (element) {
-            element.innerHTML = langData[key];
+            if (key.startsWith('skill')) {
+                // Se l'elemento è una skill (id skill-1, skill-2, etc.), inserisci il testo dentro
+                element.innerHTML = langData[key];
+            } else {
+                // Altrimenti, aggiorna come testo
+                element.innerHTML = langData[key];
+            }
         }
     }
 }
