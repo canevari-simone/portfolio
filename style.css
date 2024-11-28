@@ -214,7 +214,7 @@ main p {
 }
 
 #home-title {
-    font-family: 'Arial', serif; /* Specifica il font */
+    font-family: 'Times New Roman', serif; /* Specifica il font */
     font-size: 3em; /* Regola la dimensione del testo */
     font-weight: 600; /* Aggiunge spessore al testo */
     font-style: normal; /* Non serve il corsivo */
@@ -234,10 +234,10 @@ main p {
 footer {
     background: #607d8b;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     font-size: 0.9rem;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
@@ -318,7 +318,7 @@ footer a:hover {
 
     /* Sezione principale */
     main {
-        padding-bottom: 40px; /* Aggiunge spazio nella parte inferiore del contenuto */
+        padding-bottom: 80px; /* Aggiunge spazio nella parte inferiore del contenuto */
     }
 
     /* Sezione Skills */
