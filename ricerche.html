@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetti e tesi - Simone</title>
+    <title>Progetti e Tesi - Simone</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="ricerche">
+    <!-- HEADER -->
     <header>
-        <h1>Progetti e Tesi</h1>
+        <h1 id="projects-title">Progetti e Tesi</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>               
-                <li><a href="ricerche.html" class="active">Progetti e tesi</a></li>                  
-                <li><a href="contatti.html">Contatti e CV</a></li>
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="ricerche.html" id="projects-link" class="active">Progetti e tesi</a></li>
+                <li><a href="contatti.html" id="contacts-link">Contatti e CV</a></li>
             </ul>
         </nav>
         <div class="language-switch">
@@ -25,28 +26,34 @@
             </button>
         </div>
     </header>
+
+    <!-- MAIN -->
     <main>
-        <h2>Le mie ricerche e progetti</h2>
+        <h2 id="projects-intro">Le mie ricerche e progetti</h2>
         <ul>
-            <li><a href="Presentazione_Nanomedicina.pdf" download>Presentazione di Nanomedicina</a></li>
+            <li><a href="Presentazione_Nanomedicina.pdf" id="nanomedicine-link" download>Presentazione di Nanomedicina</a></li>
         </ul>
-        <h2 id="vinland-map">Analisi Raman: Vinland Map</h2>
-        <p>Descrizione dell'analisi Raman della Vinland Map...</p>
+        <section id="vinland-map-section">
+            <h2 id="vinland-map-title">Analisi Raman: Vinland Map</h2>
+            <p id="vinland-map-desc">Descrizione dell'analisi Raman della Vinland Map...</p>
+        </section>
         <section id="carbon-section">
-            <h2>Analisi Carbon</h2>
-            <p>Descrizione o contenuto dell'analisi Carbon.</p>
+            <h2 id="carbon-title">Analisi Carbon</h2>
+            <p id="carbon-desc">Descrizione o contenuto dell'analisi Carbon.</p>
         </section>
-        
         <section id="sporche-section">
-            <h2>Analisi Sporche</h2>
-            <p>Descrizione o contenuto dell'analisi Sporche.</p>
+            <h2 id="sporche-title">Analisi Sporche</h2>
+            <p id="sporche-desc">Descrizione o contenuto dell'analisi Sporche.</p>
         </section>
-        
-   
     </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 Simone. Tutti i diritti riservati.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Termini di servizio</a>
+        <p id="footer-text">&copy; 2024 Simone Canevari. Tutti i diritti riservati.</p>
+        <a href="#" id="privacy-link">Privacy Policy</a> | <a href="#" id="terms-link">Termini di servizio</a>
     </footer>
+
+    <!-- SCRIPT -->
+    <script src="translate.js"></script>
 </body>
 </html>
