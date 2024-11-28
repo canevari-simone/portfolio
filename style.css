@@ -234,10 +234,10 @@ main p {
 footer {
     background: #607d8b;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     font-size: 0.9rem;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
@@ -318,7 +318,7 @@ footer a:hover {
 
     /* Sezione principale */
     main {
-        padding-bottom: 80px; /* Aggiunge spazio nella parte inferiore del contenuto */
+        padding-bottom: 40px; /* Aggiunge spazio nella parte inferiore del contenuto */
     }
 
     /* Sezione Skills */
