@@ -234,13 +234,12 @@ main p {
 footer {
     background: #607d8b;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0; /* Ridotto il padding per diminuire l'altezza */
     text-align: center;
-    font-size: 0.9rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    font-size: 0.8rem; /* Dimensione testo compatta */
+    position: relative; /* Footer non fisso */
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Spazio tra il contenuto e il footer */
 }
 
 footer a {
@@ -252,7 +251,6 @@ footer a {
 footer a:hover {
     color: white;
 }
-
 /* Stile per la versione mobile */
 @media (max-width: 768px) {
 
