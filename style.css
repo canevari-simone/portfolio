@@ -214,17 +214,11 @@ main p {
 }
 
 #home-title {
-    font-family: 'Times New Roman', serif; /* Specifica il font */
     font-size: 3em; /* Regola la dimensione del testo */
     font-weight: 600; /* Aggiunge spessore al testo */
     font-style: normal; /* Non serve il corsivo */
-    text-transform: capitalize; /* Solo la prima lettera maiuscola */
     color: white; /* Colore interno delle lettere */
-    text-shadow: 
-        -1px -1px 0 black, /* Ombra in alto a sinistra */
-         1px -1px 0 black, /* Ombra in alto a destra */
-        -1px  1px 0 black, /* Ombra in basso a sinistra */
-         1px  1px 0 black; /* Ombra in basso a destra */
+
 }
 
 
