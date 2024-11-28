@@ -1,15 +1,15 @@
 {
     "it": {
         "index": {
-            "home_title": "Home",
+            "home_title": "Simone Canevari",
             "home_link": "Home",
             "projects_link": "Progetti e tesi",
-            "contacts_link": "Contatti e CV",
-            "welcome_message": "Chi sono e cosa ho fatto nella vita",
-            "description": "Benvenuto! Qui troverai i miei progetti conclusi e in corso, il mio CV e i miei contatti.",
-            "skills": ["Studio e lavoro", "Divulgazione", "Altro"],
-            "projects_title": ["Analisi Raman: Vinland Map", "Tesi triennale: Confronto tra tecniche di radiodatazione", "Approfondimento divulgativo: Bombe sporche"],
-            "projects_description": ["", "", ""],
+            "contacts_link": "Contatti",
+            "welcome_message": "Benvenuto nel mio portfolio",
+            "description": "Qui troverai informazioni su di me, le mie esperienze lavorative e i progetti a cui ho lavorato.",
+            "skills": ["Studio e lavoro", "Divulgazione scientifica", "Altro"],
+            "projects_title": ["Analisi Raman: Vinland Map", "Tesi triennale: Tecniche di radiodatazione", "Approfondimento: Bombe sporche"],
+            "projects_description": ["Esplora il mondo della Vinland Map tramite l'analisi Raman.", "Scopri come la radiodatazione rivela il passato.", "Un approfondimento sulle bombe sporche."],
             "footer": "&copy; 2024 Simone Canevari. Tutti i diritti riservati.",
             "privacy": "Privacy Policy",
             "terms": "Termini di servizio"
@@ -28,15 +28,15 @@
     },
     "en": {
         "index": {
-            "home_title": "Home",
+            "home_title": "Simone Canevari",
             "home_link": "Home",
             "projects_link": "Projects and Theses",
-            "contacts_link": "Contacts and CV",
-            "welcome_message": "Who I am and what I have done in life",
-            "description": "Welcome! Here you will find my completed and ongoing projects, my CV and my contacts.",
-            "skills": ["Studies and work", "Dissemination", "Other"],
-            "projects_title": ["Raman analysis: Vinland Map", "Bachelor's degree: Comparison of radiodata techniques", "Dissemination: Dirty bombs"],
-            "projects_description": ["", "", ""],
+            "contacts_link": "Contacts",
+            "welcome_message": "Welcome to my portfolio",
+            "description": "Here you'll find information about me, my work experience, and the projects I've worked on.",
+            "skills": ["Studies and work", "Scientific outreach", "Other"],
+            "projects_title": ["Raman Analysis: Vinland Map", "Bachelor's Thesis: Radiodating Techniques", "Exploration: Dirty Bombs"],
+            "projects_description": ["Explore the Vinland Map through Raman analysis.", "Learn how radiodating reveals the past.", "An insight into dirty bombs."],
             "footer": "&copy; 2024 Simone Canevari. All rights reserved.",
             "privacy": "Privacy Policy",
             "terms": "Terms of Service"
