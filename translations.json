@@ -10,7 +10,8 @@
         "projects_description": ["", "", ""],
         "footer": "&copy; 2024 Simone Canevari. Tutti i diritti riservati.",
         "privacy": "Privacy Policy",
-        "terms": "Termini di servizio"
+        "terms": "Termini di servizio",
+        "project-desc-1": "Scopri l'analisi della Vinland Map."
     },
     "en": {
         "home": "Home",
@@ -23,6 +24,7 @@
         "projects_description": ["", "", ""],
         "footer": "&copy; 2024 Simone Canevari. All rights reserved.",
         "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+        "terms": "Terms of Service",
+        "project-desc-1": "Discover the Vinland Map analysis."
     }
 }
