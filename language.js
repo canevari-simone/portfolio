@@ -18,7 +18,7 @@ async function changeLanguage(lang) {
     const langData = translations[lang];
 
     // Aggiorna il testo degli elementi
-    document.getElementById('home-title').innerText = langData.home;
+    
     document.getElementById('home-link').innerText = langData.home;
     document.getElementById('projects-link').innerText = langData.projects;
     document.getElementById('contacts-link').innerText = langData.contacts;
