@@ -85,5 +85,24 @@ document.querySelectorAll('.sidebar a').forEach(link => {
 });
 </script>
 
+
+<script>
+    // Per abilitare espansione su desktop
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    
+    if (!isMobile) {
+        sidebar.addEventListener('mouseenter', () => {
+            sidebar.classList.add('expanded');
+        });
+        sidebar.addEventListener('mouseleave', () => {
+            sidebar.classList.remove('expanded');
+        });
+    }
+    </script>
+    
+
+
+
+
 </body>
 </html>

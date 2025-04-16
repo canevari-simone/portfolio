@@ -82,9 +82,10 @@ main p {
     padding-top: 60px;
 }
 
-.sidebar:hover {
+.sidebar.expanded {
     width: 220px;
 }
+
 
 .sidebar.open {
     width: 220px;
