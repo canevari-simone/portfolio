@@ -13,6 +13,23 @@ html {
     scroll-padding-top: -40px; /* Offset to fix anchor scroll alignment */
 }
 
+
+.section-anchor {
+    position: relative;
+}
+
+.section-anchor::before {
+    content: "";
+    display: block;
+    height: 80px; /* stessa altezza dell'header */
+    margin-top: -80px;
+    visibility: hidden;
+}
+
+
+
+
+
 /* Header */
 header {
     background: linear-gradient(to right, #607d8b, #90a4ae);
