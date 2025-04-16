@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simone Canevari - Full Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simone Canevari - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Simone Canevari</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Research, Projects & Theses</a></li>
-                <li><a href="#contacts">Contacts & CV</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="section-anchor">
-            <h2>Welcome!</h2>
-            <p>This site contains a selection of my favourite projects and research I have carried out during my academic journey, with an emphasis on applied science and public dissemination.</p>
-            <section class="portfolio">
-                <div class="portfolio-item">
-                    <a href="#vinland-map" class="project-button">
-                        <img src="map.jpg" alt="Map Image" class="project-image">
-                        <h3>Raman Analysis: Vinland Map</h3>
-                    </a>
-                    <p>Explore the spectroscopic analysis of the famous Vinland Map.</p>
-                </div>
-                <div class="portfolio-item">
-                    <a href="#bachelor-thesis" class="project-button">
-                        <img src="carbon.jpg" alt="Carbon Image" class="project-image">
-                        <h3>Bachelor Thesis: Radiocarbon Dating</h3>
-                    </a>
-                    <p>A comparative study of different radiocarbon dating techniques in archaeology.</p>
-                </div>
-                <div class="portfolio-item">
-                    <a href="#dirty-bombs" class="project-button">
-                        <img src="sporche.png" alt="Dirty Bomb Image" class="project-image">
-                        <h3>Scientific Outreach: Dirty Bombs</h3>
-                    </a>
-                    <p>A popular science document about the physics and risks of dirty bombs.</p>
-                </div>
-            </section>
-        </section>
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects & Theses</a>
+    <a href="#contacts">Contact</a>
+</div>
 
-        <section id="projects" class="section-anchor">
-            <h2>Research, Projects & Theses</h2>
-            <p>Here are some of the most engaging and significant works I have done during my studies.</p>
+<!-- Hamburger icon (mobile) -->
+<div class="hamburger" id="hamburger">&#9776;</div>
 
-            <h3 id="vinland-map">1. Raman analysis for chronological authentication purposes: Vinland Map</h3>
-            <p>This document includes both technical and scientific background on Raman spectroscopy, followed by a case study on the Vinland Map. Created as part of an applied physics course for cultural heritage.</p>
-            <p><a href="vinland-map.pdf" download>Download PDF</a></p>
+<header>
+    <h1>Simone Canevari</h1>
+</header>
 
-            <h3 id="bachelor-thesis">2. Bachelor Thesis: Radiocarbon dating comparrison C14 vs thermoluminescence</h3>
-            <p>A comparative analysis of different radiocarbon dating techniques, highlighting their strengths and limitations through case studies in archaeology.</p>
-            <p><a href="tesi_triennale.pdf" download>Download PDF</a></p>
+<main>
+    <section id="home">
+        <h2 class="section-anchor">Welcome</h2>
+        <p>This is the personal website of Simone Canevari.</p>
+    </section>
 
-            <h3 id="dirty-bombs">3. Research for Radioactivity exam: Dirty Bombs</h3>
-            <p>An educational document exploring the mechanisms, consequences, and social impact of dirty bombs. Created for a university course on radioactivity.</p>
-            <p><a href="bombe_sporche.pdf" download>Download PDF</a></p>
-        </section>
+    <section id="projects">
+        <h2 class="section-anchor">Research, Projects & Theses</h2>
+        <p>Here are some of my academic works:</p>
 
-        <section id="contacts" class="section-anchor">
-            <h2>Contacts & CV</h2>
-            <p>You can reach me through the following channels:</p>
-            <ul>
-                <li>Email: <a href="mailto:simone@example.com">simone@example.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/simonecanevari" target="_blank">linkedin.com/in/simonecanevari</a></li>
-                <li>GitHub: <a href="https://github.com/simonecanevari" target="_blank">github.com/simonecanevari</a></li>
-            </ul>
+        <h3 id="vinland-map">1. Raman Analysis: Vinland Map</h3>
+        <p>A study using Raman spectroscopy applied to the Vinland Map.</p>
+        <p><a href="vinland-map.pdf" download>Download PDF</a></p>
 
-            <h2>Curriculum Vitae</h2>
-            <p>You can download my CV in PDF format by clicking <a href="CV_Canevari_Simone.pdf" download>here</a>.</p>
-        </section>
-    </main>
+        <h3 id="tesi-triennale">2. Bachelor Thesis: Radiodating Techniques</h3>
+        <p>Comparative analysis of radiodating methods in archaeological contexts.</p>
+        <p><a href="tesi_triennale.pdf" download>Download PDF</a></p>
 
-    <footer>
-        <p>&copy; 2024 Simone Canevari. All rights reserved.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-    </footer>
+        <h3 id="bombe-sporche">3. Dirty Bombs: A Scientific Overview</h3>
+        <p>Popular science article on the implications of dirty bombs.</p>
+        <p><a href="bombe_sporche.pdf" download>Download PDF</a></p>
+    </section>
+
+    <section id="contacts">
+        <h2 class="section-anchor">Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:simone@example.com">simone@example.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/simonecanevari" target="_blank">linkedin.com/in/simonecanevari</a></li>
+            <li>GitHub: <a href="https://github.com/simonecanevari" target="_blank">github.com/simonecanevari</a></li>
+        </ul>
+
+        <h3>Curriculum Vitae</h3>
+        <p><a href="CV_Canevari_Simone.pdf" download>Download my CV</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Simone Canevari. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+</footer>
+
+<!-- Sidebar JS -->
+<script>
+const sidebar = document.getElementById('sidebar');
+const hamburger = document.getElementById('hamburger');
+
+hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+});
+
+document.addEventListener('click', function(event) {
+    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+        sidebar.classList.remove('open');
+    }
+});
+
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+    });
+});
+</script>
+
 </body>
 </html>
