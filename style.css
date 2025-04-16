@@ -22,8 +22,8 @@ header {
 
 .language-switch {
     position: absolute;
-    top: 20px;  /* Distanza dal top per evitare che siano troppo vicini */
-    right: 20px;  /* Posiziona sulla destra */
+    top: 20px;
+    right: 20px;
     display: flex;
     gap: 10px;
 }
@@ -41,7 +41,6 @@ header {
     transform: scale(1.1);
 }
 
-
 header h1 {
     margin: 0;
     font-size: 3rem;
@@ -51,55 +50,51 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navigazione *//* Stile per la navigazione */
+/* Navigazione */
 nav {
     display: flex;
-    justify-content: center;  /* Centra il contenuto orizzontalmente */
-    align-items: center;  /* Allinea verticalmente */
-    width: 100%;  /* Occupa tutta la larghezza disponibile */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-/* Stili per la navigazione */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 20px 0 0;
-    text-align: center; /* Centra l'intero blocco dei tasti */
+    text-align: center;
 }
 
 nav ul li {
-    display: inline-block; /* Posiziona i tasti uno accanto all'altro */
-    margin: 0 15px; /* Spaziatura uniforme tra i tasti */
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 30px; /* Aumenta lo spazio interno per ingrandire i tasti */
-    font-size: 1.2rem; /* Aumenta la dimensione del testo */
+    padding: 15px 30px;
+    font-size: 1.2rem;
     background-color: #90a4ae;
     border: 2px solid #90a4ae;
     border-radius: 8px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    display: inline-block; /* Per mantenere la disposizione a blocchi dei tasti */
-    margin: 0 10px; /* Aggiungi spazio tra i tasti */
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a:hover {
-    background-color: #607d8b; /* Cambia il colore di sfondo al passaggio del mouse */
-    border-color: #607d8b; /* Cambia il colore del bordo */
-    transform: translateY(-5px); /* Alza il pulsante per un effetto visivo */
+    background-color: #607d8b;
+    border-color: #607d8b;
+    transform: translateY(-5px);
 }
-
 
 nav ul li a.active {
     background-color: #607d8b;
     border-color: #607d8b;
     color: white;
 }
-
-
 
 /* Sezione principale */
 main {
@@ -112,7 +107,6 @@ main {
     margin-top: 20px;
 }
 
-/* Sezione chi sono */
 main h2 {
     font-size: 2.5rem;
     color: #333;
@@ -123,29 +117,6 @@ main p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #555;
-}
-
-/* Sezione Skills */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.skill {
-    background: #90a4ae;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 220px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.skill:hover {
-    background: #607d8b;
-    transform: translateY(-3px);
 }
 
 /* Sezione Portfolio */
@@ -184,10 +155,8 @@ main p {
     transition: transform 0.3s ease;
 }
 
-
-
 .project-button:hover {
-    transform: scale(1.05); /* Effetto hover */
+    transform: scale(1.05);
 }
 
 .project-image {
@@ -198,7 +167,7 @@ main p {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    opacity: 0.8;  /* Imposta l'opacità dell'immagine */
+    opacity: 0.8;
 }
 
 .project-button h3 {
@@ -206,37 +175,27 @@ main p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff;  /* Colore del testo, puoi cambiarlo a tuo piacimento (es. blu chiaro) */
+    color: #ffffff;
     font-size: 1.2rem;
     z-index: 2;
     text-shadow: 2px 2px 8px rgb(0, 0, 0);
     margin: 0;
 }
 
-#home-title {
-    font-size: 3em; /* Regola la dimensione del testo */
-    font-weight: 600; /* Aggiunge spessore al testo */
-    font-style: normal; /* Non serve il corsivo */
-    color: white; /* Colore interno delle lettere */
-
-}
-
 html {
     scroll-behavior: smooth;
 }
-
-  
 
 /* Footer */
 footer {
     background: #607d8b;
     color: white;
-    padding: 10px 0; /* Ridotto il padding per diminuire l'altezza */
+    padding: 10px 0;
     text-align: center;
-    font-size: 0.8rem; /* Dimensione testo compatta */
-    position: relative; /* Footer non fisso */
+    font-size: 0.8rem;
+    position: relative;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Spazio tra il contenuto e il footer */
+    margin-top: 20px;
 }
 
 footer a {
@@ -248,19 +207,16 @@ footer a {
 footer a:hover {
     color: white;
 }
-/* Stile per la versione mobile */
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-
-
-    /* Header */
     header {
-        padding: 10px 5px;  /* Ridotto il padding per l'header */
-        position: static; /* Rende l'header non fisso */
-        
+        padding: 10px 5px;
+        position: static;
     }
 
     header h1 {
-        font-size: 1.5rem; /* Riduci la dimensione del titolo */
+        font-size: 1.5rem;
     }
 
     .language-switch {
@@ -270,32 +226,32 @@ footer a:hover {
     }
 
     .language-switch img {
-        width: 25px; /* Rende le bandiere un po' più piccole */
+        width: 25px;
     }
 
     nav ul {
         display: flex;
-        flex-direction: column; /* Disporre i tasti in colonna per una visualizzazione migliore */
-        align-items: center; /* Centra i tasti orizzontalmente */
+        flex-direction: column;
+        align-items: center;
         padding: 0;
         margin: 8px 0 0;
     }
 
     nav ul li {
-        margin: 15px 0; /* Distanza verticale tra i tasti */
-        width: 100%; /* Rende i tasti più larghi su mobile */
-        text-align: center; /* Centra il testo dei tasti */
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
     }
 
     nav ul li a {
-        padding: 8px 15px; /* Aumenta lo spazio interno per tasti più grandi */
-        font-size: 1rem; /* Aumenta la dimensione del testo sui dispositivi mobili */
+        padding: 8px 15px;
+        font-size: 1rem;
         background-color: #90a4ae;
         border: 2px solid #90a4ae;
         border-radius: 8px;
         transition: transform 0.3s ease, background-color 0.3s ease;
-        display: inline-block; /* Per mantenere la disposizione a blocchi dei tasti */
-        margin: 10px 0; /* Distanza tra i tasti */
+        display: inline-block;
+        margin: 10px 0;
     }
 
     nav ul li a:hover {
@@ -310,45 +266,29 @@ footer a:hover {
         color: white;
     }
 
-
-    /* Sezione principale */
     main {
-        padding-bottom: 80px; /* Aggiunge spazio nella parte inferiore del contenuto */
+        padding-bottom: 80px;
     }
 
-    /* Sezione Skills */
-    .skills {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .skill {
-        width: 80%; /* Usa una larghezza più piccola per le skill */
-        padding: 15px;
-    }
-
-    /* Sezione Portfolio */
     .portfolio {
-        grid-template-columns: 1fr; /* Mostra una sola colonna per il portfolio */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .portfolio-item {
-        padding: 15px; /* Spazio interno più ridotto per i singoli articoli */
+        padding: 15px;
     }
 
     .project-button {
-        height: 120px; /* Rende i pulsanti di progetto più piccoli */
+        height: 120px;
     }
 
     .project-button h3 {
-        font-size: 1rem; /* Riduci la dimensione del testo nel bottone */
+        font-size: 1rem;
     }
 
-    /* Stile per il footer */
     footer {
-        position: relative; /* Rende il footer non fisso */
-        margin-top: 20px; /* Spazio sopra il footer per separarlo dal contenuto */
+        position: relative;
+        margin-top: 20px;
     }
 }
