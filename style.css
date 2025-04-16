@@ -1,4 +1,4 @@
-/* Stile generale */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -12,7 +12,7 @@ body {
 header {
     background: linear-gradient(to right, #607d8b, #90a4ae);
     color: white;
-    padding: 30px 10px;
+    padding: 15px 10px; /* Reduced height */
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -20,37 +20,16 @@ header {
     z-index: 1000;
 }
 
-.language-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.language-switch img {
-    width: 30px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.language-switch img:hover {
-    transform: scale(1.1);
-}
-
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.2rem; /* Reduced font size */
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
 }
 
-/* Navigazione */
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -61,27 +40,27 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0 0;
+    margin: 10px 0 0; /* Reduced spacing */
     text-align: center;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 1.1rem;
     background-color: #90a4ae;
     border: 2px solid #90a4ae;
     border-radius: 8px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 nav ul li a:hover {
@@ -96,7 +75,7 @@ nav ul li a.active {
     color: white;
 }
 
-/* Sezione principale */
+/* Main section */
 main {
     padding: 40px 20px;
     max-width: 1200px;
@@ -119,7 +98,7 @@ main p {
     color: #555;
 }
 
-/* Sezione Portfolio */
+/* Portfolio section */
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,7 +187,7 @@ footer a:hover {
     color: white;
 }
 
-/* Mobile responsive */
+/* Responsive */
 @media (max-width: 768px) {
     header {
         padding: 10px 5px;
@@ -217,16 +196,6 @@ footer a:hover {
 
     header h1 {
         font-size: 1.5rem;
-    }
-
-    .language-switch {
-        top: 5px;
-        right: 5px;
-        gap: 5px;
-    }
-
-    .language-switch img {
-        width: 25px;
     }
 
     nav ul {
@@ -249,7 +218,6 @@ footer a:hover {
         background-color: #90a4ae;
         border: 2px solid #90a4ae;
         border-radius: 8px;
-        transition: transform 0.3s ease, background-color 0.3s ease;
         display: inline-block;
         margin: 10px 0;
     }
