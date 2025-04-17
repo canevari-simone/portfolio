@@ -60,26 +60,39 @@ main p {
 }
 
 
+/* Showcase section layout */
+.showcase {
+    margin-top: 60px;
+}
+
+.showcase h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Showcase grid layout */
 .showcase {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 40px;
 }
 
+/* Showcase item appearance */
 .showcase-item {
     background: #f4f4f4;
-    padding: 0;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .showcase-item:hover {
     transform: translateY(-3px);
 }
 
+/* Button with background image */
 .showcase-button {
     position: relative;
     display: flex;
@@ -88,7 +101,6 @@ main p {
     width: 100%;
     height: 180px;
     overflow: hidden;
-    border: none;
     text-decoration: none;
     color: white;
     background-color: transparent;
@@ -96,21 +108,23 @@ main p {
 
 .showcase-image {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
     opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .showcase-button h3 {
     position: relative;
     z-index: 2;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-shadow: 2px 2px 5px black;
     margin: 0;
+    padding: 0 10px;
+    text-align: center;
 }
 
 
