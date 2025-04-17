@@ -64,32 +64,34 @@
 
 <!-- Sidebar JS -->
 <script>
-const sidebar = document.getElementById('sidebar');
-const hamburger = document.getElementById('hamburger');
-
-hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-});
-
-document.addEventListener('click', function(event) {
-    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
-        sidebar.classList.remove('open');
-    }
-});
-
-document.querySelectorAll('.sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-        sidebar.classList.remove('open');
-    });
-});
-</script>
-
-
-<script>
-    // Per abilitare espansione su desktop
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
     
-    if (!isMobile) {
+    // 👉 Apre/chiude la sidebar al clic sull’hamburger
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+    });
+    
+    // 👉 Chiude la sidebar se clicchi fuori (solo se è aperta)
+    document.addEventListener('click', function(event) {
+        const clickedInsideSidebar = sidebar.contains(event.target);
+        const clickedHamburger = hamburger.contains(event.target);
+        if (!clickedInsideSidebar && !clickedHamburger) {
+            sidebar.classList.remove('open');
+        }
+    });
+    
+    // 👉 Chiude la sidebar su mobile se clicchi un link
+    document.querySelectorAll('.sidebar a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('open');
+            }
+        });
+    });
+    
+    // 👉 (facoltativo) Espansione su hover per desktop
+    if (window.innerWidth > 768) {
         sidebar.addEventListener('mouseenter', () => {
             sidebar.classList.add('expanded');
         });
@@ -97,22 +99,7 @@ document.querySelectorAll('.sidebar a').forEach(link => {
             sidebar.classList.remove('expanded');
         });
     }
-    </script>
-    
-    <script>
-        const sidebar = document.getElementById('sidebar');
-        const hamburger = document.getElementById('hamburger');
-        
-        // Chiudi sidebar al clic su un link (solo su mobile)
-        document.querySelectorAll('.sidebar a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    sidebar.classList.remove('open');
-                }
-            });
-        });
-        </script>
-        
+    </script>  
 
 
 
