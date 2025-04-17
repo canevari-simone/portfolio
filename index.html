@@ -83,12 +83,14 @@
     
     // 👉 Chiude la sidebar su mobile se clicchi un link
     document.querySelectorAll('.sidebar a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                sidebar.classList.remove('open');
-            }
-        });
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.remove('open');
+            sidebar.classList.remove('expanded'); // <-- aggiungi questa riga
+        }
     });
+});
+
     
     // 👉 (facoltativo) Espansione su hover per desktop
     if (window.innerWidth > 768) {

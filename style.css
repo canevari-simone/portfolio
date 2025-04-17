@@ -159,10 +159,16 @@ footer a:hover {
     .sidebar {
         width: 0 !important;
         overflow: hidden;
+        transition: width 0.3s ease;
     }
 
     .sidebar.open {
-        width: 220px;
+        width: 220px !important;
+    }
+
+    .sidebar .label {
+        opacity: 0;
+        transform: translateX(-10px);
     }
 
     .sidebar.open .label {
@@ -170,10 +176,15 @@ footer a:hover {
         transform: translateX(0);
     }
 
+
     .hamburger {
         display: block;
     }
 
+    header {
+        padding-left: 60px; /* Sposta leggermente a destra il nome */
+    }
+    
     header h1 {
         font-size: 1.8rem;
     }
