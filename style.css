@@ -12,16 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Fix per ancore nascoste dallo sticky header */
 .section-anchor {
-    position: relative;
-}
-
-.section-anchor::before {
-    content: "";
-    display: block;
-    height: 80px;
-    margin-top: -80px;
-    visibility: hidden;
+    scroll-margin-top: 100px;
 }
 
 /* Header */
@@ -68,7 +61,7 @@ main p {
     color: #555;
 }
 
-/* Sidebar */
+/* Sidebar moderna */
 .sidebar {
     position: fixed;
     top: 0;
@@ -80,31 +73,46 @@ main p {
     transition: width 0.3s ease;
     z-index: 1001;
     padding-top: 60px;
-}
-
-.sidebar.expanded {
-    width: 220px;
-}
-
-
-.sidebar.open {
-    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .sidebar a {
-    display: block;
-    color: white;
-    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
     text-decoration: none;
-    transition: background 0.3s;
-    white-space: nowrap;
+    color: white;
+    width: 100%;
+    transition: background 0.3s ease;
 }
 
 .sidebar a:hover {
     background-color: #90a4ae;
 }
 
-/* Hamburger menu */
+.sidebar .icon {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.sidebar .label {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.sidebar.expanded .label,
+.sidebar.open .label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hamburger menu (solo mobile) */
 .hamburger {
     display: none;
     position: fixed;
@@ -145,6 +153,16 @@ footer a:hover {
 @media (max-width: 768px) {
     .sidebar {
         width: 0;
+        overflow: hidden;
+    }
+
+    .sidebar.open {
+        width: 220px;
+    }
+
+    .sidebar.open .label {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .hamburger {
