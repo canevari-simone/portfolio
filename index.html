@@ -99,7 +99,20 @@ document.querySelectorAll('.sidebar a').forEach(link => {
     }
     </script>
     
-
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const hamburger = document.getElementById('hamburger');
+        
+        // Chiudi sidebar al clic su un link (solo su mobile)
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        });
+        </script>
+        
 
 
 
