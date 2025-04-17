@@ -67,7 +67,7 @@ main p {
     top: 0;
     left: 0;
     height: 100%;
-    width: 60px;
+    width: 220px;
     background-color: #607d8b;
     overflow-x: hidden;
     transition: width 0.3s ease;
