@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f7f7f7;
+    background-color: #f5f5f5;
 }
 
 html {
@@ -19,12 +19,12 @@ html {
 
 /* Header */
 header {
-    background: linear-gradient(to right, #607d8b, #90a4ae);
+    background: linear-gradient(to right, #1c3144, #52796f); /* Blu-verde elegante */
     color: white;
     padding: 15px 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: static; /* ← questo lo rende scorrevole */
+    position: static;
 }
 
 header h1 {
@@ -41,7 +41,7 @@ main {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background: #fff;
+    background: white;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
@@ -49,30 +49,17 @@ main {
 
 main h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: #1c3144;
     margin-bottom: 20px;
 }
 
 main p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: #444;
 }
 
-
-/* Showcase section layout */
-.showcase {
-    margin-top: 60px;
-}
-
-.showcase h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Showcase section layout */
+/* Showcase */
 .showcase {
     margin-top: 60px;
     display: flex;
@@ -81,9 +68,16 @@ main p {
     gap: 30px;
 }
 
-/* Showcase item appearance */
+.showcase h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #1c3144;
+}
+
+/* Showcase item */
 .showcase-item {
-    background: #f4f4f4;
+    background: #cad2c5; /* sfondo carta */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -97,13 +91,14 @@ main p {
     justify-content: space-between;
     gap: 30px;
     margin-top: 30px;
-    flex-wrap: nowrap; /* non andare a capo su desktop */
+    flex-wrap: nowrap;
 }
 
 .showcase-item:hover {
     transform: translateY(-3px);
 }
 
+/* Button + Image */
 .showcase-button {
     position: relative;
     display: flex;
@@ -130,6 +125,7 @@ main p {
     z-index: 1;
     transition: transform 0.4s ease;
 }
+
 .showcase-button h3 {
     position: relative;
     z-index: 2;
@@ -144,22 +140,14 @@ main p {
     transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-/* Sidebar moderna */
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 60px;
-    background-color: #607d8b;
+    background-color: #1c3144;
     overflow-x: hidden;
     transition: width 0.3s ease;
     z-index: 1001;
@@ -173,7 +161,6 @@ main p {
     width: 220px;
 }
 
-
 .sidebar a {
     display: flex;
     align-items: center;
@@ -185,7 +172,7 @@ main p {
 }
 
 .sidebar a:hover {
-    background-color: #607d8b;
+    background-color: #52796f;
 }
 
 .sidebar .icon {
@@ -208,7 +195,7 @@ main p {
     transform: translateX(0);
 }
 
-/* Hamburger menu (solo mobile) */
+/* Hamburger menu */
 .hamburger {
     display: none;
     position: fixed;
@@ -218,14 +205,14 @@ main p {
     cursor: pointer;
     z-index: 1100;
     color: white;
-    background: #607d8b;
+    background: #1c3144;
     padding: 6px 10px;
     border-radius: 4px;
 }
 
 /* Footer */
 footer {
-    background: #607d8b;
+    background: #1c3144;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -236,7 +223,7 @@ footer {
 }
 
 footer a {
-    color: #90a4ae;
+    color: #cad2c5;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -267,15 +254,14 @@ footer a:hover {
         transform: translateX(0);
     }
 
-
     .hamburger {
         display: block;
     }
 
     header {
-        padding-left: 60px; /* Sposta leggermente a destra il nome */
+        padding-left: 60px;
     }
-    
+
     header h1 {
         font-size: 1.8rem;
     }
