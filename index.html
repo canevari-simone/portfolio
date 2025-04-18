@@ -1,132 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simone Canevari - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- FONT: Spectral -->
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simone Canevari - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
-    <a href="#home"><span class="icon">🏠</span><span class="label">Home</span></a>
-    <a href="#projects"><span class="icon">📂</span><span class="label">Projects</span></a>
-    <a href="#contacts"><span class="icon">📧</span><span class="label">Contact</span></a>
-  </div>
+<div class="sidebar" id="sidebar">
+  <a href="#home"><span class="icon">🏠</span><span class="label">Home</span></a>
+  <a href="#projects"><span class="icon">📂</span><span class="label">Projects & Theses</span></a>
+  <a href="#contacts"><span class="icon">📧</span><span class="label">Contact</span></a>
+</div>
 
-  <!-- Hamburger (mobile only) -->
-  <div class="hamburger" id="hamburger">☰</div>
+<!-- Hamburger icon (mobile) -->
+<div class="hamburger" id="hamburger">&#9776;</div>
 
-  <!-- Header -->
-  <header id="home">
+<header>
     <h1>Simone Canevari</h1>
-  </header>
+</header>
 
-  <!-- Toggle Theme Button -->
-  <div class="theme-toggle">
-    <button id="theme-toggle" aria-label="Toggle dark mode">🌓 Toggle Theme</button>
-  </div>
+<main>
+    <section id="home">
+        <h2 class="section-anchor">Welcome</h2>
+        <p>This is the personal website of Simone Canevari.</p>
+    
 
-  <!-- Main Content -->
-  <main>
-    <h2 id="projects" class="section-anchor">Research, Projects & Theses</h2>
+    
+        
+        <h3 class="section-anchor">Most recent projects</h3>
 
-    <section class="showcase-row">
-      <div class="showcase-item">
-        <a href="#vinland-map" class="showcase-button">
-          <img src="map.jpg" alt="Vinland Map" class="showcase-image" />
-          <h3>Raman Analysis: Vinland Map</h3>
-        </a>
-      </div>
+        <div class="showcase-row">
+          <div class="showcase-item">
+            <a href="#vinland-map" class="showcase-button">
+              <img src="map.jpg" alt="Vinland Map" class="showcase-image">
+              <h3>Raman Analysis: Vinland Map</h3>
+            </a>
+          </div>
+        
+          <div class="showcase-item">
+            <a href="#tesi-triennale" class="showcase-button">
+              <img src="carbon.jpg" alt="Radiodating" class="showcase-image">
+              <h3>Bachelor Thesis: Radiodating Techniques Comparison</h3>
+            </a>
+          </div>
+        
+          <div class="showcase-item">
+            <a href="#bombe-sporche" class="showcase-button">
+              <img src="sporche.png" alt="Dirty Bombs" class="showcase-image">
+              <h3>Dirty Bombs: A Scientific Overview</h3>
+            </a>
+          </div>
+        </div>
+        
 
-      <div class="showcase-item">
-        <a href="#tesi-triennale" class="showcase-button">
-          <img src="carbon.jpg" alt="Radiodating" class="showcase-image" />
-          <h3>Bachelor Thesis: Radiodating Techniques</h3>
-        </a>
-      </div>
 
-      <div class="showcase-item">
-        <a href="#bombe-sporche" class="showcase-button">
-          <img src="sporche.png" alt="Dirty Bombs" class="showcase-image" />
-          <h3>Dirty Bombs: Scientific Overview</h3>
-        </a>
-      </div>
+
+
+
+
+
+
+
+
+    
+
+    <section id="projects">
+        <h2 class="section-anchor">Research, Projects & Theses</h2>
+        <p>Here are some of my academic works:</p>
+
+        <h3 id="vinland-map" id="Raman">1. Raman Analysis: Vinland Map</h3>
+        <p>A study using Raman spectroscopy applied to the Vinland Map.</p>
+        <p><a href="vinland-map.pdf" download>Download PDF</a></p>
+
+        <h3 id="tesi-triennale">2. Bachelor Thesis: Radiodating Techniques Comparrison</h3>
+        <p>Comparative analysis of radiodating methods in archaeological contexts.</p>
+        <p><a href="tesi_triennale.pdf" download>Download PDF</a></p>
+
+        <h3 id="bombe-sporche">3. Dirty Bombs: A Scientific Overview</h3>
+        <p>Popular science article on the implications of dirty bombs.</p>
+        <p><a href="bombe_sporche.pdf" download>Download PDF</a></p>
     </section>
 
-    <!-- Projects Content -->
-    <section class="timeline">
-      <div class="timeline-entry" id="vinland-map">
-        <div class="timeline-date">2022</div>
-        <div class="timeline-content">
-          <h3>1. Raman Analysis: Vinland Map</h3>
-          <p>A scientific study of the Vinland Map using Raman spectroscopy.</p>
-          <a href="vinland_map.pdf" class="pdf-button" target="_blank">📄 Download PDF</a>
-        </div>
-      </div>
+    <section id="contacts">
+        <h2 class="section-anchor">Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:simone@example.com">simone@example.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/simonecanevari" target="_blank">linkedin.com/in/simonecanevari</a></li>
+            <li>GitHub: <a href="https://github.com/simonecanevari" target="_blank">github.com/simonecanevari</a></li>
+        </ul>
 
-      <div class="timeline-entry" id="tesi-triennale">
-        <div class="timeline-date">2023</div>
-        <div class="timeline-content">
-          <h3>2. Bachelor Thesis: Radiodating Techniques Comparison</h3>
-          <p>A review of radiodating methods for archaeological contexts.</p>
-          <a href="tesi_triennale.pdf" class="pdf-button" target="_blank">📄 Download PDF</a>
-        </div>
-      </div>
-
-      <div class="timeline-entry" id="bombe-sporche">
-        <div class="timeline-date">2024</div>
-        <div class="timeline-content">
-          <h3>3. Dirty Bombs: A Scientific Overview</h3>
-          <p>Exploring scientific and social aspects of dirty bombs.</p>
-          <a href="bombe_sporche.pdf" class="pdf-button" target="_blank">📄 Download PDF</a>
-        </div>
-      </div>
+        <h3>Curriculum Vitae</h3>
+        <p><a href="CV_Canevari_Simone.pdf" download>Download my CV</a></p>
     </section>
-  </main>
+</main>
 
-  <!-- Footer -->
-  <footer id="contacts">
-    <p>&copy; 2025 Simone Canevari — All rights reserved.</p>
-    <p>Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>.</p>
-  </footer>
+<footer>
+    <p>
+        © 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.<br>
+        Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>.
+      </p>
+      
+</footer>
 
-  <!-- JavaScript for sidebar and theme -->
-  <script>
+<!-- Sidebar JS -->
+<script>
     const sidebar = document.getElementById('sidebar');
     const hamburger = document.getElementById('hamburger');
-    const toggle = document.getElementById('theme-toggle');
-
-    // Toggle sidebar on mobile
+    
+    // 👉 Apre/chiude la sidebar al clic sull’hamburger
     hamburger.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
+        sidebar.classList.toggle('open');
     });
-
-    // Close sidebar on link click (mobile only)
-    document.querySelectorAll('.sidebar a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          sidebar.classList.remove('open');
+    
+    // 👉 Chiude la sidebar se clicchi fuori (solo se è aperta)
+    document.addEventListener('click', function(event) {
+        const clickedInsideSidebar = sidebar.contains(event.target);
+        const clickedHamburger = hamburger.contains(event.target);
+        if (!clickedInsideSidebar && !clickedHamburger) {
+            sidebar.classList.remove('open');
         }
-      });
     });
+    
+    // 👉 Chiude la sidebar su mobile se clicchi un link
+    document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.remove('open');
+            sidebar.classList.remove('expanded'); // <-- aggiungi questa riga
+        }
+    });
+});
 
-    // Theme toggle
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
+    
+    // 👉 (facoltativo) Espansione su hover per desktop
+    if (window.innerWidth > 768) {
+        sidebar.addEventListener('mouseenter', () => {
+            sidebar.classList.add('expanded');
+        });
+        sidebar.addEventListener('mouseleave', () => {
+            sidebar.classList.remove('expanded');
+        });
+    }
+    </script>  
 
-    // Restore theme on load
-    window.addEventListener('DOMContentLoaded', () => {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-      }
-    });
-  </script>
+
 
 </body>
 </html>
