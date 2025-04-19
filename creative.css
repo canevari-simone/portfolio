@@ -157,7 +157,7 @@ main {
   left: 0;
   height: 100%;
   width: 60px;
-  background-color: #6b4226;
+  background-color: #3c1e70;
   overflow-x: hidden;
   transition: width 0.3s ease;
   z-index: 1001;
@@ -214,7 +214,7 @@ main {
 
 /* Footer */
 footer {
-  background: #6b4226;
+  background: #3c1e70;
   color: white;
   text-align: center;
   font-size: 0.8rem;
