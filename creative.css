@@ -1,11 +1,15 @@
 :root {
-  --bg-color: #f8f1e5;
-  --text-color: #3a2e2e;
-  --card-bg: #fff8f0;
-  --accent: #6b4226;
-  --link-hover: #9b4d3a;
+    --bg-color: #f5f3ef;
+    --text-color: #2d2d2d;
+    --card-bg: #ffffff;
+    --accent: #845ec2;
+    --link-hover: #ffc75f;
+  }
+  
+html {
+scroll-behavior: smooth;
 }
-
+  
 body {
   font-family: 'Arial', sans-serif;
   background-color: var(--bg-color);
@@ -29,7 +33,7 @@ a:hover {
 }
 
 header {
-  background: linear-gradient(to right, #6b4226, #9b4d3a);
+  background: linear-gradient(to right, #3c1e70, #845ec2);
   padding: 15px 10px;
   text-align: center;
   color: white;
@@ -203,7 +207,7 @@ main {
   cursor: pointer;
   z-index: 1100;
   color: white;
-  background: #6b4226;
+  background: #3c1e70;
   padding: 6px 10px;
   border-radius: 4px;
 }
