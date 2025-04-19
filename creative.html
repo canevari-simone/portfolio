@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simone Canevari – Creative Projects</title>
+  <link rel="stylesheet" href="creative.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="#home"><span class="icon">🏡</span><span class="label">Home</span></a>
+  <a href="#hobbies"><span class="icon">🎲</span><span class="label">Hobbies</span></a>
+  <a href="#creative-projects"><span class="icon">🖋️</span><span class="label">Creative Projects</span></a>
+  <a href="#downloads"><span class="icon">📄</span><span class="label">Downloads</span></a>
+  <a href="index.html"><span class="icon">🔬</span><span class="label">Back to Science</span></a>
+</div>
+
+<!-- Hamburger icon (mobile) -->
+<div class="hamburger" id="hamburger">&#9776;</div>
+
+<header>
+  <h1>Simone Canevari</h1>
+</header>
+
+<main>
+  <section id="home">
+    <h2 class="section-anchor">Welcome to my creative space</h2>
+    <p>This section of the site collects the projects, hobbies and narratives that represent my personal and imaginative side — from roleplaying games to storytelling and everything in between.</p>
+  </section>
+
+  <section id="hobbies">
+    <h2 class="section-anchor">Hobbies</h2>
+    <ul>
+      <li>🎲 Dungeon Master & player in long-running D&D campaigns</li>
+      <li>📚 Writing short stories and worldbuilding concepts</li>
+      <li>🧩 Puzzle design and narrative mechanics</li>
+    </ul>
+  </section>
+
+  <section id="creative-projects">
+    <h2 class="section-anchor">Creative Projects</h2>
+
+    <div class="showcase-row">
+      <div class="showcase-item">
+        <a href="#nivolath" class="showcase-button">
+          <img src="nivolath.jpg" alt="Nivolath" class="showcase-image">
+          <h3>Nivolath the Veiled Weaver</h3>
+        </a>
+      </div>
+
+      <div class="showcase-item">
+        <a href="#magic-gems" class="showcase-button">
+          <img src="gems.jpg" alt="Magic Gems" class="showcase-image">
+          <h3>Mystery Gems One-shot</h3>
+        </a>
+      </div>
+
+      <div class="showcase-item">
+        <a href="#stonehenge" class="showcase-button">
+          <img src="stonehenge.jpg" alt="Stonehenge Campaign" class="showcase-image">
+          <h3>Stonehenge: Anachronistic Magic</h3>
+        </a>
+      </div>
+    </div>
+
+    <div id="nivolath">
+      <h3 class="section-anchor">1. Nivolath the Veiled Weaver</h3>
+      <p>A sentient cloak character created for D&D — former mage turned into a magical item.</p>
+    </div>
+
+    <div id="magic-gems">
+      <h3 class="section-anchor">2. One-shot: Mystery Gems</h3>
+      <p>A mechanic for mysterious gems with hidden powers (or curses). Designed for fast play.</p>
+      <p><a href="mystery_gems.pdf" download>📄 Download PDF</a></p>
+    </div>
+
+    <div id="stonehenge">
+      <h3 class="section-anchor">3. Stonehenge: Anachronistic Magic (WIP)</h3>
+      <p>An alternate 17th-century England where Stonehenge was a magical seal. Campaign setting in progress.</p>
+    </div>
+  </section>
+
+  <section id="downloads">
+    <h2 class="section-anchor">Downloads</h2>
+    <ul>
+      <li><a href="nivolath_background.pdf" download>📄 Character concept – Nivolath</a></li>
+      <li><a href="magic_gems.pdf" download>📄 One-shot: Mystery Gems</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>
+    © 2025 Simone Canevari. All content here is original unless otherwise specified.<br>
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>.
+  </p>
+</footer>
+
+<!-- Sidebar script (identico a index.html) -->
+<script>
+  const sidebar = document.getElementById('sidebar');
+  const hamburger = document.getElementById('hamburger');
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  document.addEventListener('click', function(event) {
+    const clickedInsideSidebar = sidebar.contains(event.target);
+    const clickedHamburger = hamburger.contains(event.target);
+    if (!clickedInsideSidebar && !clickedHamburger) {
+      sidebar.classList.remove('open');
+    }
+  });
+
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove('open');
+        sidebar.classList.remove('expanded');
+      }
+    });
+  });
+
+  if (window.innerWidth > 768) {
+    sidebar.addEventListener('mouseenter', () => {
+      sidebar.classList.add('expanded');
+    });
+    sidebar.addEventListener('mouseleave', () => {
+      sidebar.classList.remove('expanded');
+    });
+  }
+</script>
+
+</body>
+</html>
