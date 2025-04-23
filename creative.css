@@ -1,10 +1,11 @@
 :root {
-    --bg-color: #fefaf6;
-    --text-color: #403c3a;
-    --card-bg: #ffffff;
-    --accent: #6a4c93;
-    --link-hover: #cdb4db;
-  }
+  --bg-color: #1f1f1f;      /* sfondo scuro */
+  --text-color: #e5dcc5;    /* testo carta antica */
+  --card-bg: #2a2a2a;       /* sfondo card */
+  --accent: #7b3e19;        /* terracotta */
+  --link-hover: #3a5a40;    /* verde foresta */
+}
+
   
   
 html {
@@ -34,7 +35,7 @@ a:hover {
 }
 
 header {
-    background: linear-gradient(to right, #6a4c93, #9d4edd);
+  background: linear-gradient(to right, #3a5a40, #7b3e19);
   padding: 15px 10px;
   text-align: center;
   color: white;
@@ -155,10 +156,11 @@ main {
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: auto;
+  right: 0;
   height: 100%;
   width: 60px;
-  background-color: #6a4c93;
+  background-color: #7b3e19;
   overflow-x: hidden;
   transition: width 0.3s ease;
   z-index: 1001;
@@ -203,19 +205,20 @@ main {
   display: none;
   position: fixed;
   top: 15px;
-  left: 15px;
+  left: auto;
+  right: 15px;
   font-size: 28px;
   cursor: pointer;
   z-index: 1100;
   color: white;
-  background: #6a4c93;
+  background: #7b3e19;
   padding: 6px 10px;
   border-radius: 4px;
 }
 
 /* Footer */
 footer {
-  background: #6a4c93;
+  background: #7b3e19;
   color: white;
   text-align: center;
   font-size: 0.8rem;

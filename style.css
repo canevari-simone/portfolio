@@ -144,7 +144,8 @@ main p {
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: auto;
+    right: 0;
     height: 100%;
     width: 60px;
     background-color: #1c3144;
@@ -200,7 +201,8 @@ main p {
     display: none;
     position: fixed;
     top: 15px;
-    left: 15px;
+    left: auto;
+    right: 15px;
     font-size: 28px;
     cursor: pointer;
     z-index: 1100;
