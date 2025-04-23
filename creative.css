@@ -1,10 +1,11 @@
 :root {
-    --bg-color: #fefaf6;
-    --text-color: #403c3a;
-    --card-bg: #ffffff;
-    --accent: #6a4c93;
-    --link-hover: #cdb4db;
-  }
+  --bg-color: #504949;
+  --text-color: #e5dcc5;
+  --card-bg: #2a2a2a;
+  --accent: #7b3e19;
+  --link-hover: #3a5a40;
+}
+
   
   
 html {
@@ -34,7 +35,7 @@ a:hover {
 }
 
 header {
-    background: linear-gradient(to right, #6a4c93, #9d4edd);
+  background: linear-gradient(to right, #3a5a40, #7b3e19);
   padding: 15px 10px;
   text-align: center;
   color: white;
@@ -158,7 +159,7 @@ main {
   left: 0;
   height: 100%;
   width: 60px;
-  background-color: #6a4c93;
+  background-color: #7b3e19;
   overflow-x: hidden;
   transition: width 0.3s ease;
   z-index: 1001;
@@ -208,14 +209,14 @@ main {
   cursor: pointer;
   z-index: 1100;
   color: white;
-  background: #6a4c93;
+  background: #7b3e19;
   padding: 6px 10px;
   border-radius: 4px;
 }
 
 /* Footer */
 footer {
-  background: #6a4c93;
+  background: #7b3e19;
   color: white;
   text-align: center;
   font-size: 0.8rem;
