@@ -1,11 +1,10 @@
 :root {
-  --bg-color: #1f1f1f;      /* sfondo scuro */
-  --text-color: #e5dcc5;    /* testo carta antica */
-  --card-bg: #2a2a2a;       /* sfondo card */
-  --accent: #7b3e19;        /* terracotta */
-  --link-hover: #3a5a40;    /* verde foresta */
-}
-
+    --bg-color: #fefaf6;
+    --text-color: #403c3a;
+    --card-bg: #ffffff;
+    --accent: #6a4c93;
+    --link-hover: #cdb4db;
+  }
   
   
 html {
@@ -35,7 +34,7 @@ a:hover {
 }
 
 header {
-  background: linear-gradient(to right, #3a5a40, #7b3e19);
+    background: linear-gradient(to right, #6a4c93, #9d4edd);
   padding: 15px 10px;
   text-align: center;
   color: white;
@@ -156,11 +155,10 @@ main {
 .sidebar {
   position: fixed;
   top: 0;
-  left: auto;
-  right: 0;
+  left: 0;
   height: 100%;
   width: 60px;
-  background-color: #7b3e19;
+  background-color: #6a4c93;
   overflow-x: hidden;
   transition: width 0.3s ease;
   z-index: 1001;
@@ -205,31 +203,33 @@ main {
   display: none;
   position: fixed;
   top: 15px;
-  left: auto;
-  right: 15px;
+  left: 15px;
   font-size: 28px;
   cursor: pointer;
   z-index: 1100;
   color: white;
-  background: #7b3e19;
+  background: #6a4c93;
   padding: 6px 10px;
   border-radius: 4px;
 }
 
 /* Footer */
 footer {
-  background: #7b3e19;
+  background: #6a4c93;
   color: white;
   text-align: center;
   font-size: 0.8rem;
   padding: 10px 0;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .sidebar {
+    left: auto;
+    right: 0;
     width: 0 !important;
     overflow: hidden;
+    padding-top: 60px;
+    transition: width 0.3s ease;
   }
 
   .sidebar.open {
@@ -238,6 +238,18 @@ footer {
 
   .hamburger {
     display: block;
+    left: auto;
+    right: 15px;
+  }
+
+  .sidebar .label {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  .sidebar.open .label {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .showcase-row {

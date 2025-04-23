@@ -144,8 +144,7 @@ main p {
 .sidebar {
     position: fixed;
     top: 0;
-    left: auto;
-    right: 0;
+    left: 0;
     height: 100%;
     width: 60px;
     background-color: #1c3144;
@@ -201,8 +200,7 @@ main p {
     display: none;
     position: fixed;
     top: 15px;
-    left: auto;
-    right: 15px;
+    left: 15px;
     font-size: 28px;
     cursor: pointer;
     z-index: 1100;
@@ -234,41 +232,55 @@ footer a:hover {
     color: white;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .sidebar {
-        width: 0 !important;
-        overflow: hidden;
-        transition: width 0.3s ease;
+      left: auto;
+      right: 0;
+      width: 0 !important;
+      overflow: hidden;
+      padding-top: 60px;
+      transition: width 0.3s ease;
     }
-
+  
     .sidebar.open {
-        width: 220px !important;
+      width: 220px !important;
     }
-
-    .sidebar .label {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-
-    .sidebar.open .label {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
+  
     .hamburger {
-        display: block;
+      display: block;
+      left: auto;
+      right: 15px;
     }
-
+  
+    .sidebar .label {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+  
+    .sidebar.open .label {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+    .showcase-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .showcase-item {
+      max-width: 100%;
+    }
+  
     header {
-        padding-left: 60px;
+      padding-left: 60px;
     }
-
+  
     header h1 {
-        font-size: 1.8rem;
+      font-size: 1.8rem;
     }
-
+  
     main {
-        padding-bottom: 80px;
+      padding: 20px 10px;
     }
-}
+  }
+  
