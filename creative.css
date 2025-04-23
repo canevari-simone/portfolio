@@ -35,7 +35,7 @@ a:hover {
 }
 
 header {
-  background: linear-gradient(to right, #3a5a40, #7b3e19);
+  background: linear-gradient(to right, #7b3e19, #3a5a40);
   padding: 15px 10px;
   text-align: center;
   color: white;
