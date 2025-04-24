@@ -1,276 +1,260 @@
 :root {
-  --bg-color: #504949;
-  --text-color: #e5dcc5;
-  --card-bg: #2a2a2a;
-  --accent: #7b3e19;
-  --link-hover: #3a5a40;
+  --bg-color: #fefaf6;
+  --text-color: #403c3a;
+  --card-bg: #ffffff;
+  --accent: #6a4c93;
+  --link-hover: #cdb4db;
 }
 
-  
-  
+
 html {
 scroll-behavior: smooth;
 }
-  
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
+font-family: 'Arial', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+margin: 0;
+padding: 0;
 }
 
 h1, h2, h3 {
-  font-family: 'Spectral', serif;
-  color: var(--text-color);
+font-family: 'Spectral', serif;
+color: var(--text-color);
 }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
+color: var(--accent);
+text-decoration: none;
 }
 a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+color: var(--link-hover);
+text-decoration: underline;
 }
 
 header {
-  background: linear-gradient(to right, #7b3e19, #3a5a40);
-  padding: 15px 10px;
-  text-align: center;
-  color: white;
+  background: linear-gradient(to right, #6a4c93, #9d4edd);
+padding: 15px 10px;
+text-align: center;
+color: white;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.2rem;
-  text-transform: uppercase;
+margin: 0;
+font-size: 2.2rem;
+text-transform: uppercase;
 }
 
 main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: var(--card-bg);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  margin-top: 20px;
+padding: 40px 20px;
+max-width: 1200px;
+margin: 0 auto;
+background: var(--card-bg);
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+margin-top: 20px;
 }
 
 .section-anchor {
-  scroll-margin-top: 100px;
+scroll-margin-top: 100px;
 }
 
 .showcase-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 50px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px;
+margin-bottom: 50px;
 }
 
 .showcase-item {
-  background: var(--card-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  flex: 1;
-  max-width: 33%;
-  transition: transform 0.3s ease;
+background: var(--card-bg);
+border-radius: 8px;
+overflow: hidden;
+flex: 1;
+max-width: 33%;
+transition: transform 0.3s ease;
 }
 
 .showcase-item:hover {
-  transform: translateY(-3px);
+transform: translateY(-3px);
 }
 
 .showcase-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 180px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 180px;
+text-align: center;
+color: white;
+text-decoration: none;
+border-radius: 8px;
 }
 
 .showcase-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transition: transform 0.4s ease;
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0.8;
+top: 0;
+left: 0;
+z-index: 1;
+transition: transform 0.4s ease;
 }
 .showcase-button h3 {
-  z-index: 2;
-  font-size: 1.2rem;
-  text-shadow: 2px 2px 5px black;
-  margin: 0;
-  padding: 0 10px;
+z-index: 2;
+font-size: 1.2rem;
+text-shadow: 2px 2px 5px black;
+margin: 0;
+padding: 0 10px;
 }
 
 .showcase-button:hover .showcase-image {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
 /* Timeline (se la vuoi anche qui) */
 .timeline {
-  border-left: 3px solid var(--accent);
-  margin: 40px 0;
-  padding-left: 20px;
+border-left: 3px solid var(--accent);
+margin: 40px 0;
+padding-left: 20px;
 }
 
 .timeline-entry {
-  position: relative;
-  margin-bottom: 30px;
+position: relative;
+margin-bottom: 30px;
 }
 
 .timeline-date {
-  position: absolute;
-  left: -75px;
-  top: 0;
-  font-weight: bold;
-  color: var(--accent);
-  font-size: 0.95rem;
+position: absolute;
+left: -75px;
+top: 0;
+font-weight: bold;
+color: var(--accent);
+font-size: 0.95rem;
 }
 
 .pdf-button {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 12px;
-  background-color: var(--accent);
-  color: white;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+display: inline-block;
+margin-top: 8px;
+padding: 8px 12px;
+background-color: var(--accent);
+color: white;
+border-radius: 6px;
+font-weight: bold;
+transition: background-color 0.3s ease;
 }
 .pdf-button:hover {
-  background-color: var(--link-hover);
+background-color: var(--link-hover);
 }
 
 /* Sidebar */
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 60px;
-  background-color: #7b3e19;
-  overflow-x: hidden;
-  transition: width 0.3s ease;
-  z-index: 1001;
-  padding-top: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 60px;
+background-color: #6a4c93;
+overflow-x: hidden;
+transition: width 0.3s ease;
+z-index: 1001;
+padding-top: 60px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 }
 
 .sidebar:hover {
-  width: 220px;
+width: 220px;
 }
 
 .sidebar a {
-  display: flex;
-  align-items: center;
-  padding: 12px 15px;
-  color: white;
-  width: 100%;
+display: flex;
+align-items: center;
+padding: 12px 15px;
+color: white;
+width: 100%;
 }
 
 .sidebar .icon {
-  font-size: 1.4rem;
-  margin-right: 10px;
-  min-width: 24px;
-  text-align: center;
+font-size: 1.4rem;
+margin-right: 10px;
+min-width: 24px;
+text-align: center;
 }
 
 .sidebar .label {
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
+opacity: 0;
+transform: translateX(-10px);
+transition: opacity 0.3s ease, transform 0.3s ease;
+white-space: nowrap;
 }
 
 .sidebar:hover .label {
-  opacity: 1;
-  transform: translateX(0);
+opacity: 1;
+transform: translateX(0);
 }
 
 .hamburger {
-  display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 1100;
-  color: white;
-  background: #7b3e19;
-  padding: 6px 10px;
-  border-radius: 4px;
+display: none;
+position: fixed;
+top: 15px;
+left: 15px;
+font-size: 28px;
+cursor: pointer;
+z-index: 1100;
+color: white;
+background: #6a4c93;
+padding: 6px 10px;
+border-radius: 4px;
 }
 
 /* Footer */
 footer {
-  background: #7b3e19;
-  color: white;
-  text-align: center;
-  font-size: 0.8rem;
-  padding: 10px 0;
+background: #6a4c93;
+color: white;
+text-align: center;
+font-size: 0.8rem;
+padding: 10px 0;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
-  .sidebar {
-    left: auto;
-    right: 0;
-    width: 0 !important;
-    overflow: hidden;
-    padding-top: 60px;
-    transition: width 0.3s ease;
-  }
+.sidebar {
+  width: 0 !important;
+  overflow: hidden;
+}
 
-  .sidebar.open {
-    width: 220px !important;
-  }
+.sidebar.open {
+  width: 220px !important;
+}
 
-  .hamburger {
-    display: block;
-    left: auto;
-    right: 15px;
-  }
+.hamburger {
+  display: block;
+}
 
-  .sidebar .label {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
+.showcase-row {
+  flex-direction: column;
+  align-items: center;
+}
 
-  .sidebar.open .label {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.showcase-item {
+  max-width: 100%;
+}
 
-  .showcase-row {
-    flex-direction: column;
-    align-items: center;
-  }
+header {
+  padding-left: 60px;
+}
 
-  .showcase-item {
-    max-width: 100%;
-  }
+header h1 {
+  font-size: 1.8rem;
+}
 
-  header {
-    padding-left: 60px;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  main {
-    padding: 20px 10px;
-  }
+main {
+  padding: 20px 10px;
+}
 }
