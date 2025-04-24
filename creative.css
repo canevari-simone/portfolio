@@ -1,9 +1,9 @@
 :root {
-  --bg-color: #2e1f1c;        /* sfondo pagina */
-  --text-color: #f0e2d0;      /* testo leggibile ma caldo */
-  --card-bg: #3c2b28;         /* sfondo box contenuti */
-  --accent: #a64b2a;          /* link e bottoni principali */
-  --link-hover: #d38e5d;      /* effetto hover arancio chiaro */
+  --bg-color: #FCCC73;
+  --text-color: #2b1e1b;
+  --card-bg: #fff7e9;
+  --accent: #FD6B5D;
+  --link-hover: #FD9D5D;
 }
 
 
@@ -34,7 +34,7 @@ text-decoration: underline;
 }
 
 header {
-background: linear-gradient(to right, #5c3c33, #a64b2a);
+  background: linear-gradient(to right, #D04E6C, #8A5687);
 padding: 15px 10px;
 text-align: center;
 color: white;
@@ -208,14 +208,14 @@ font-size: 28px;
 cursor: pointer;
 z-index: 1100;
 color: white;
-background: #5c3c33;
+background: #8A5687;
 padding: 6px 10px;
 border-radius: 4px;
 }
 
 /* Footer */
 footer {
-background: #5c3c33;
+background: #8A5687;
 color: white;
 text-align: center;
 font-size: 0.8rem;
