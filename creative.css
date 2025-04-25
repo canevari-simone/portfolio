@@ -1,10 +1,11 @@
 :root {
-  --bg-color: #E6B2D4;
-  --text-color: #2d1e38;
-  --card-bg: #D1C6E7;
-  --accent: #A77BCA;
-  --link-hover: #7A4B8A;
+  --bg-color: #bac7be;       /* sfondo principale */
+  --text-color: #2e2f2a;     /* testo leggibile */
+  --card-bg: #c2e1c2;        /* box e contenuti */
+  --accent: #7dcd85;         /* link attivi, hover */
+  --link-hover: #80ab82;     /* hover più tenue */
 }
+
 
 
 
@@ -35,7 +36,7 @@ text-decoration: underline;
 }
 
 header {
-  background: linear-gradient(to right,#4B2C6A ,#9962ac );
+  background: linear-gradient(to right,#778472, #80ab82 );
 padding: 15px 10px;
 text-align: center;
 color: white;
@@ -159,7 +160,7 @@ top: 0;
 left: 0;
 height: 100%;
 width: 60px;
-background-color: #4B2C6A;
+background-color: #778472;
 overflow-x: hidden;
 transition: width 0.3s ease;
 z-index: 1001;
@@ -209,14 +210,14 @@ font-size: 28px;
 cursor: pointer;
 z-index: 1100;
 color: white;
-background: #4B2C6A;
+background: #778472;
 padding: 6px 10px;
 border-radius: 4px;
 }
 
 /* Footer */
 footer {
-background: #4B2C6A;
+background: #778472;
 color: white;
 text-align: center;
 font-size: 0.8rem;
