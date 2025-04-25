@@ -307,24 +307,25 @@ footer p {
 /* Mobile styles */
 @media (max-width: 768px) {
   .sidebar {
-    left: auto;
-    right: 0;
+    left: 0;
+    right: auto;
     width: 0 !important;
     overflow: hidden;
     transition: width 0.3s ease;
     padding-top: 60px;
   }
-  
+
   .sidebar.open {
     width: 220px !important;
   }
-  
+
   .sidebar .label {
     opacity: 0;
-    transform: translateX(10px); /* ← sposta verso sinistra invece che destra */
+    transform: translateX(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
   }
-  
+
   .sidebar.open .label {
     opacity: 1;
     transform: translateX(0);
