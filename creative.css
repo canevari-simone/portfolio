@@ -153,6 +153,12 @@ transition: background-color 0.3s ease;
 background-color: var(--link-hover);
 }
 
+
+p {
+  text-align: justify;
+}
+
+
 /* Sidebar */
 .sidebar {
 position: fixed;
