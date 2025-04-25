@@ -299,6 +299,11 @@ font-size: 0.8rem;
 padding: 10px 0;
 }
 
+footer p {
+  text-align: center;
+}
+
+
 /* Mobile styles */
 @media (max-width: 768px) {
 .sidebar {
