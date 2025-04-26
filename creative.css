@@ -306,6 +306,7 @@ footer {
 
 footer p {
   text-align: center;
+  color: var(--text-color);
 }
 
 /* Mobile Styles */
