@@ -5,7 +5,7 @@
   --link-hover: #ffa500;
   --card-bg: #2d3e50;
   --sidebar-bg: #101820;
-  
+  --bar-text-color: #f4e3b2;
 }
 
 html {
@@ -39,7 +39,7 @@ header {
   background: linear-gradient(to right, var(--sidebar-bg), var(--link-hover));
   padding: 15px 10px;
   text-align: center;
-  color: var(--text-color);
+  color: var(--bar-text-color);
 }
 
 header h1 {
@@ -257,7 +257,7 @@ p {
   display: flex;
   align-items: center;
   padding: 12px 15px;
-  color: var(--text-color);
+  color: var(--bar-text-color);
   width: 100%;
 }
 
@@ -306,7 +306,7 @@ footer {
 
 footer p {
   text-align: center;
-  color: var(--text-color);
+  color: var(--bar-text-color);
 }
 
 /* Mobile Styles */
