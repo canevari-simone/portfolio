@@ -1,10 +1,11 @@
 :root {
-  --bg-color: #f4e3b2;       /* Sfondo pagina principale */
-  --text-color: #050517;      /* Testo principale scuro */
-  --card-bg: #d3d5d7;         /* Sfondo delle card */
-  --accent: #cf5c36;          /* Accenti principali (bottoni, titoli) */
-  --link-hover: #efc88b;      /* Hover su link */
-  --sidebar-bg: #050517;      /* Sidebar, header, footer */
+  --bg-color: #101820;
+  --text-color: #fefefe;
+  --accent: #ffd700;
+  --link-hover: #ffa500;
+  --card-bg: #2d3e50;
+  --sidebar-bg: #101820;
+  
 }
 
 html {
