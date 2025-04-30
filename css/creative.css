@@ -230,6 +230,9 @@ p {
   padding: 15px;
   border-radius: 8px;
   border-left: 3px solid var(--accent);
+  background-image: url("images/bubble_texture.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
 /* Sidebar */
