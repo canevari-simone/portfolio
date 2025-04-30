@@ -231,9 +231,10 @@ p {
   border-radius: 8px;
   border-left: 3px solid var(--accent);
   background-image: url("../images/bubble_texture.jpg");
-
   background-size: cover;
-  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
 /* Sidebar */
