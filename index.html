@@ -161,7 +161,7 @@
       ctx.beginPath();
       ctx.moveTo(this.x, this.y);
       ctx.lineTo(this.x - this.dx, this.y - this.dy);
-      ctx.strokeStyle = `rgba(255, 255, 255, ${this.alpha})`;
+      ctx.strokeStyle = `rgba(50, 50, 50, ${this.alpha})`; // Grigio scuro traslucido
       ctx.lineWidth = 1;
       ctx.stroke();
     }
@@ -171,8 +171,8 @@
 
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if (Math.random() < 0.5) {
-      particles.push(new Particle(75, 0, Math.random() * 0.6 - 0.3, 2));
+    if (Math.random() < 0.25) {
+      particles.push(new Particle(75, 0, Math.random() * 0.4 - 0.2, 1.2));
     }
     particles.forEach((p, i) => {
       p.update();
