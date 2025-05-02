@@ -125,67 +125,6 @@
   }
 </script>
 
-<!-- Cosmic Shower Canvas -->
-<canvas id="cosmicCanvas"></canvas>
-
-<script>
-  const canvas = document.getElementById('cosmicCanvas');
-  const ctx = canvas.getContext('2d');
-  canvas.width = 150;
-  canvas.height = window.innerHeight;
-
-  class Particle {
-    constructor(x, y, dx, dy, depth = 0) {
-      this.x = x;
-      this.y = y;
-      this.dx = dx;
-      this.dy = dy;
-      this.alpha = 1;
-      this.depth = depth;
-      this.split = false;
-    }
-
-    update() {
-      this.x += this.dx;
-      this.y += this.dy;
-      this.alpha -= 0.004;
-
-      if (!this.split && this.depth < 2 && Math.random() < 0.02) {
-        this.split = true;
-        particles.push(new Particle(this.x, this.y, this.dx + 0.3, this.dy, this.depth + 1));
-        particles.push(new Particle(this.x, this.y, this.dx - 0.3, this.dy, this.depth + 1));
-      }
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.moveTo(this.x, this.y);
-      ctx.lineTo(this.x - this.dx, this.y - this.dy);
-      ctx.strokeStyle = `rgba(50, 50, 50, ${this.alpha})`; // Grigio scuro traslucido
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    }
-  }
-
-  let particles = [];
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    if (Math.random() < 0.25) {
-      particles.push(new Particle(75, 0, Math.random() * 0.4 - 0.2, 1.2));
-    }
-    particles.forEach((p, i) => {
-      p.update();
-      p.draw();
-      if (p.alpha <= 0 || p.y > canvas.height) {
-        particles.splice(i, 1);
-      }
-    });
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-</script>
 
 
 
