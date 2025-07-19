@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simone Canevari - Resume</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="index.html#home"><span class="icon">🏠</span><span class="label">Home</span></a>
+  <a href="index.html#projects"><span class="icon">📂</span><span class="label">Projects & Theses</span></a>
+  <a href="index.html#contacts"><span class="icon">📧</span><span class="label">Contacts</span></a>
+  <a href="creative.html"><span class="icon">✨</span><span class="label">Creative Side</span></a>
+  <a href="resume.html"><span class="icon">📄</span><span class="label">Resume</span></a>
+</div>
+
+<div class="hamburger" id="hamburger">&#9776;</div>
+
+<header>
+  <h1>Simone Canevari</h1>
+</header>
+
+<main>
+  <h2 class="section-anchor">Resume</h2>
+  <p><strong>Simone Canevari</strong><br>
+  MSc in Physics – Applied and Nuclear Physics<br>
+  Via Rossini 20, 27010 Linarolo (PV), Italy<br>
+  <a href="tel:+393891625766">+39 389 162 5766</a><br>
+  <a href="mailto:canevari.simone01@gmail.com">canevari.simone01@gmail.com</a><br>
+  <a href="https://simo7462.github.io/portfolio/index.html" target="_blank">Website</a> ·
+  <a href="https://www.linkedin.com/in/simone-canevari-145297366/" target="_blank">LinkedIn</a>
+  </p>
+
+  <h3>Professional Summary</h3>
+  <p>Physics MSc graduate from the University of Pavia with a strong background in science education, data analysis, and problem solving. Passionate about applied and nuclear physics, particularly in biomedical, industrial, and environmental applications. Open to international experience and interdisciplinary collaboration.</p>
+
+  <h3>Education</h3>
+  <ul>
+    <li><strong>2023–2025</strong> – MSc in Physics, University of Pavia, Italy<br>
+      Specialization in Applied and Nuclear Physics<br>
+      Thesis: “Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning”<br>
+      Supervisors: Prof. Pietro Galinetto & Claudio Cusano
+    </li>
+    <li><strong>2018–2023</strong> – BSc in Physics, University of Pavia, Italy<br>
+      Thesis: “Radiocarbon dating via 14C and comparison with other methods (thermoluminescence)”<br>
+      Supervisor: Prof. Paola Salvini
+    </li>
+  </ul>
+
+  <h3>Work Experience</h3>
+  <ul>
+    <li><strong>Jan–Jun 2023</strong> – High School Physics Teacher, Liceo G. Cardano, Pavia<br>
+      Individual and group lesson planning; support for students with DSA; educational models and goal-oriented methods.
+    </li>
+    <li><strong>Jan–Feb 2024</strong> – High School Physics Teacher, Liceo N. Copernico, Pavia<br>
+      Same activities as above.
+    </li>
+  </ul>
+
+  <h3>Skills</h3>
+  <ul>
+    <li><strong>Programming:</strong> Python (intermediate), C++ (basic), HTML/CSS</li>
+    <li><strong>Data Modeling:</strong> Machine Learning for generalization and classification</li>
+    <li><strong>Languages:</strong> Italian (native), English (B2 CEFR), Spanish (basic)</li>
+  </ul>
+
+  <h3>Career Objectives</h3>
+  <ul>
+    <li><strong>Preferred sectors:</strong> Energy, biomedical, chemical-physical, mechanical and precision engineering</li>
+    <li><strong>Professional areas of interest:</strong> Engineering & Design, R&D, IP and Patents, Manufacturing, Quality Control</li>
+    <li><strong>Mobility:</strong> Open to relocation and international opportunities</li>
+  </ul>
+
+  <h3>Portfolio</h3>
+  <ul>
+    <li><strong>Master Thesis:</strong> Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning</li>
+    <li><strong>Bachelor Thesis:</strong> Radiodating Techniques Comparison in archaeological contexts</li>
+    <li><strong>Website:</strong> <a href="https://simo7462.github.io/portfolio/index.html" target="_blank">simo7462.github.io/portfolio</a></li>
+  </ul>
+
+  <h3>Disclaimer</h3>
+  <p>I hereby authorize the processing of my personal data included in this CV pursuant to Regulation (EU) 2016/679 (GDPR).</p>
+</main>
+
+<footer>
+  <p>
+    © 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.<br>
+    Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>.
+  </p>
+</footer>
+
+<script>
+  const sidebar = document.getElementById('sidebar');
+  const hamburger = document.getElementById('hamburger');
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
+
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove('open');
+        sidebar.classList.remove('expanded');
+      }
+    });
+  });
+
+  if (window.innerWidth > 768) {
+    sidebar.addEventListener('mouseenter', () => sidebar.classList.add('expanded'));
+    sidebar.addEventListener('mouseleave', () => sidebar.classList.remove('expanded'));
+  }
+</script>
+
+</body>
+</html>
