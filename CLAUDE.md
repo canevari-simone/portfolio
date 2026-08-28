@@ -72,6 +72,24 @@ Vedi `.claude/REVIEW.md` per l'analisi completa. Restano da decidere (richiedono
    `itaflag.png` e `usgbflag.png` erano per un selettore di lingua: ora c'è, ma usa
    etichette testuali EN/IT invece delle bandiere (più accessibile e meno ambiguo).
 
+## Crediti immagini
+
+Tutte le foto del sito vengono da **Wikimedia Commons**, con licenza verificata via API
+(`prop=imageinfo&iiprop=extmetadata`). L'elenco completo con autore, licenza e URL sta
+in `CREDITS.md`.
+
+**Due immagini sono sotto CC BY** (`microplastics.jpg` CC BY 4.0, `tree-rings.jpg`
+CC BY 2.0): l'attribuzione visibile nella sezione "Crediti immagini" in fondo a
+`index.html` **e' obbligatoria per licenza**. Non rimuoverla.
+
+Aggiungendo una foto: prenderla da Commons, verificare la licenza con l'API (non fidarsi
+delle descrizioni dei motori di ricerca), aggiungere la riga in `CREDITS.md` e, se la
+licenza lo richiede, la voce nella sezione crediti.
+
+**Non dedurre ne' inventare fonti.** L'URL di una pagina dove l'immagine e' stata trovata
+non e' la fonte: citare chi ridistribuisce non mette al riparo. I ritratti D&D in
+`creative.html` hanno origine ancora non documentata (vedi `CREDITS.md`).
+
 ## Aggiornare il CV
 
 Il PDF del CV **non si modifica a mano**: si rigenera da `cv.tex`.

@@ -285,3 +285,140 @@ Richiesta: schede e pulsanti con angoli retti invece che arrotondati.
 
 **Verifica:** ispezione del `getComputedStyle` di ogni elemento visibile delle tre pagine a
 500 e 1280 px — **nessun elemento con raggio diverso da 0**, nessun overflow.
+
+---
+
+# Quinto intervento — 2026-08-28 (crediti immagini + pulizia CV)
+
+## Rimossa la riga "Mobilità"
+Tolta da `resume.html` e dalle chiavi i18n (`resume.career.mob`, `.mob.v`).
+Nel `cv.tex` non era presente. **Nota:** la stessa idea sopravvive nel Professional
+Summary ("aperto a collaborazioni internazionali"), non rimossa perche' non richiesto.
+
+## Crediti immagini
+
+Approccio scelto: **attribuzione**, non sostituzione delle immagini.
+
+Verificato che i 7 file non hanno metadati EXIF di autore o copyright: la provenienza e'
+nota solo all'utente, che la ricostruira' con Google Lens. Per questo **non sono state
+inventate fonti**: dichiarare una licenza sbagliata e' peggio che non dichiararne nessuna.
+
+Predisposto:
+- `CREDITS.md` — tabella con una riga per immagine e campi `??` da compilare, piu' le
+  istruzioni per i casi tipici (foto propria, banca immagini, generata da AI, commissionata,
+  provenienza ignota). Include anche le 4 immagini non ancora referenziate.
+- Sezione "Crediti immagini" in fondo a `index.html` e `creative.html`, con testo generico
+  bilingue che dichiara la provenienza da terzi e offre un contatto per accredito/rimozione.
+  Stile volutamente discreto (separatore, testo piccolo, colore attenuato).
+- TODO nell'HTML che indicano dove sostituire il paragrafo con l'elenco reale.
+
+**Osservazione utile per dopo:** le dimensioni suggeriscono origini diverse —
+2560x1700 e 1920x1200 sono formati tipici da banca immagini (Unsplash/Pexels),
+mentre i ritratti 675x675 e 291x291 quadrati sembrano avatar generati o commissionati.
+
+Verifica: 147 chiavi i18n con corrispondenza esatta, nessun overflow, sezione crediti
+tradotta correttamente su entrambe le pagine.
+
+---
+
+# Sesto intervento — 2026-08-28 (immagini da Wikimedia Commons)
+
+## Verifica delle fonti fornite
+
+L'utente ha fornito 5 URL trovati con Google Lens. Verificati uno per uno:
+
+| Immagine | URL fornito | Esito |
+| --- | --- | --- |
+| `map.jpg` | it.wikipedia File:Vinland_Map_HiRes | ✅ **pubblico dominio** confermato |
+| `sporche.png` | hpcwire.com | ⚠️ 403; testata giornalistica, foto verosimilmente stock su licenza |
+| `carbon.jpg` | answersingenesis.org | ⚠️ **l'immagine non e' su quella pagina**; nessuna attribuzione |
+| `Microplastics.jpg` | studycentrekos.org | ⚠️ **l'immagine non e' su quella pagina** |
+| `bubble_texture.jpg` | goodfon.com | ❌ wallpaper caricato da utente anonimo, nessuna licenza |
+
+**Punto chiave comunicato all'utente:** quattro URL su cinque erano *dove l'immagine era
+stata trovata*, non *chi l'ha creata*. Citare chi ridistribuisce non mette al riparo.
+
+## Sostituzioni
+
+Su proposta dell'utente ("e se usassimo solo Wikipedia come fonte?"), le 4 immagini a
+rischio sono state sostituite con equivalenti da Wikimedia Commons, licenza verificata
+via API di Commons (non tramite descrizioni dei motori di ricerca, che sono inaffidabili):
+
+| Nuovo file | Autore | Licenza |
+| --- | --- | --- |
+| `microplastics.jpg` | European Commission (Lukasz Kobus) | CC BY 4.0 |
+| `tree-rings.jpg` | James St. John | CC BY 2.0 |
+| `nuclear-waste.jpg` | National Nuclear Security Administration | pubblico dominio |
+| `bubbles.jpg` | Paolo Neo | pubblico dominio |
+
+`map.jpg` rinominata `vinland-map.jpg` e mantenuta: e' gia' pubblico dominio.
+
+**Scelte non banali:** ogni candidata e' stata *guardata* prima di installarla, non scelta
+dalla descrizione testuale. Due scartate per questo motivo:
+- una foto AMS (Univ. Tokyo) risultava una vetrina di museo, scura e illeggibile a 320px;
+- fusti "residuos peligrosos" erano rifiuti tossici generici, non radioattivi: fuorviante
+  per un lavoro sulle bombe sporche.
+
+Per la tesi triennale la scelta e' caduta sugli **anelli di accrescimento**: la
+dendrocronologia e' letteralmente un metodo di datazione, quindi piu' pertinente
+dell'orologio nella roccia che c'era prima.
+
+**Peso:** le 4 immagini passano da 3,3 MB a 1,2 MB.
+
+## Attribuzione
+
+- `CREDITS.md` riscritto con la tabella completa e la distinzione fra licenze che
+  **obbligano** all'attribuzione (le due CC BY) e quelle che non lo fanno.
+- Sezione "Crediti immagini" in fondo a `index.html` con l'elenco reale e i link a
+  Commons e ai testi di licenza. **Necessaria per conformita' CC BY.**
+- `creative.html`: le bolle sono accreditate; i due ritratti D&D restano con testo
+  generico perche' la loro origine e' ancora ignota.
+
+## Incidente durante il lavoro
+
+`rm images/Microplastics.jpg` ha cancellato anche `images/microplastics.jpg` appena
+installata: il filesystem Windows e' case-insensitive. Rilevato dal controllo delle
+risorse mancanti e ripristinato dal backup. **Attenzione ai nomi che differiscono solo
+per maiuscole.**
+
+## Verifiche
+
+- Tutte le immagini rispondono 200; nessun riferimento rotto.
+- 147 chiavi i18n, corrispondenza esatta.
+- Rendering della home verificato: le nuove foto funzionano bene nel formato card.
+
+---
+
+# Settimo intervento — 2026-08-28 (foto per le ultime due card)
+
+Le card "Ruolo attuale" (Eucentre) e "Forza 4" avevano un glyph emoji invece di una foto.
+
+| Card | Immagine | Autore | Licenza |
+| --- | --- | --- | --- |
+| Eucentre | `seismogram.jpg` — sismogramma su tamburo rotante | Z22 | CC BY-SA 3.0 |
+| Forza 4 | `connect-four.jpg` — griglia riempita | Popperipopp | CC BY 3.0 |
+
+Rimosse le regole CSS `.project-media--plain` e `.project-glyph`, ora morte (-17 righe).
+
+## Scelte editoriali, non solo tecniche
+
+Per la card Eucentre erano disponibili foto di edifici crollati (Turchia 2023, Cile 2010).
+**Scartate deliberatamente:** illustrare il proprio lavoro con una tragedia recente e
+identificabile — la foto turca mostra soccorritori tra le macerie di un sisma con oltre
+50.000 vittime — e' un problema di tatto, non di licenza. Il sismogramma mostra lo
+strumento invece del disastro, ed e' anche piu' leggibile a 320px.
+
+Scartate anche, dopo averle **guardate**: una shake table (foto fisheye, affollata di
+persone) e una seconda foto di Forza 4 (griglia vuota, in un contesto irrilevante).
+La lezione: le descrizioni testuali dei risultati di ricerca non bastano per scegliere
+un'immagine — vanno aperte.
+
+## Stato attuale
+
+Tutte e 6 le card hanno una foto da Wikimedia Commons con licenza verificata.
+**Quattro immagini sono sotto CC BY/CC BY-SA** e la sezione crediti in fondo a
+`index.html` e' obbligatoria per conformita'.
+
+Verifica finale: nessun overflow, **nessuna immagine rotta**, nessun nodo tradotto vuoto,
+a 500 e 1280 px su tutte e tre le pagine. 147 chiavi i18n, corrispondenza esatta.
+Cartella `images/` a 2,6 MB.

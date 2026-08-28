@@ -28,6 +28,13 @@
       it: '© 2025 Simone Canevari. I contenuti creativi e i testi di questa pagina sono protetti da copyright e condivisi con licenza'
     },
     'pdf.download': { en: 'Download PDF', it: 'Scarica PDF' },
+
+    'credits.h': { en: 'Image credits', it: 'Crediti immagini' },
+    'credits.pd': { en: 'public domain', it: 'pubblico dominio' },
+    'credits.p.portraits': {
+      en: 'Character portraits: attribution is being compiled. If you are the author of one of these images and would like it credited or removed, please get in touch.',
+      it: 'Ritratti dei personaggi: l’attribuzione è in corso di raccolta. Se sei l’autore di una di queste immagini e vuoi che venga accreditata o rimossa, scrivimi pure.'
+    },
     'pdf.soon':     { en: 'PDF coming soon.', it: 'PDF in arrivo.' },
 
     /* ---------- competenze (condivise) ---------- */
@@ -171,8 +178,6 @@
     'resume.career.sectors.v': { en: 'Energy, biomedical, chemical-physical, mechanical and precision engineering', it: 'Energia, biomedicale, chimico-fisico, meccanica e ingegneria di precisione' },
     'resume.career.areas':     { en: 'Professional areas of interest:', it: 'Aree professionali di interesse:' },
     'resume.career.areas.v':   { en: 'Engineering & Design, R&D, IP and Patents, Manufacturing, Quality Control', it: 'Ingegneria e progettazione, R&S, proprietà intellettuale e brevetti, produzione, controllo qualità' },
-    'resume.career.mob':       { en: 'Mobility:', it: 'Mobilità:' },
-    'resume.career.mob.v':     { en: 'Open to relocation and international opportunities', it: 'Disponibile a trasferimenti e opportunità internazionali' },
 
     'resume.portfolio.h':        { en: 'Portfolio', it: 'Portfolio' },
     'resume.portfolio.master':   { en: 'Master Thesis:', it: 'Tesi Magistrale:' },
