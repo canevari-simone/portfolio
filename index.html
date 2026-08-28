@@ -1,138 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="index.title">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Simone Canevari, applied physicist: Raman spectroscopy, machine learning, radiodating research, theses and projects." />
   <title>Simone Canevari - Portfolio</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="sidebar" id="sidebar">
-  <a href="#home"><span class="icon">🏠</span><span class="label">Home</span></a>
-  <a href="#projects"><span class="icon">📂</span><span class="label">Projects & Theses</span></a>
-  <a href="#contacts"><span class="icon">📧</span><span class="label">Contacts</span></a>
-  <a href="resume.html"><span class="icon">📄</span><span class="label">Resume</span></a>
-  <a href="creative.html"><span class="icon">✨</span><span class="label">Creative Side</span></a>
+  <a href="#home"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
+  <a href="#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
+  <a href="resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
 </div>
 
-<div class="hamburger" id="hamburger">&#9776;</div>
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
 
-<header>
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
+
+<header class="site-header">
   <h1>Simone Canevari</h1>
+  <p class="tagline" data-i18n="index.tagline">Researcher at Fondazione Eucentre · AI &amp; Machine Learning applied to earthquake engineering</p>
+  <div class="header-actions">
+    <a href="pdf/CV_Canevari.pdf" class="btn btn-primary" download data-i18n="index.cv.link">Download my CV</a>
+    <a href="resume.html" class="btn btn-ghost" data-i18n="index.header.resume">Read resume</a>
+  </div>
 </header>
 
 <main>
-  <section id="home">
-    <h2 class="section-anchor">About me</h2>
-    <p>
-      I'm a physicist with a master's degree focused on the practical and applied aspects of physics and its intersection with material chemistry.
-      My academic journey has explored the impact of physics on everyday life — from medical and environmental applications to material analysis and scientific outreach.
-      This site is a personal, professional, and educational space: a collection of projects, research, and reflections shaped by curiosity, analytical thinking, and a drive to explore what I don’t yet understand.
-    </p>
+  <section class="reveal" id="home">
+    <h2 class="section-anchor" data-i18n="index.about.h">About me</h2>
+    <p class="lead" data-i18n="index.about.p">I'm an applied physicist and researcher at Fondazione Eucentre in Pavia, where I develop software and apply AI and machine learning to earthquake engineering, with a focus on computer vision. Before that, my academic work spanned Raman and SERS spectroscopy, machine learning on experimental data and nuclear physics — plus two years teaching physics in high schools.</p>
 
-    <h3 class="section-anchor">Main projects</h3>
+    <h3 class="section-anchor" data-i18n="index.skills.h">Skills &amp; methods</h3>
+    <ul class="skill-tags">
+      <li data-i18n="skill.raman">Raman spectroscopy</li>
+      <li data-i18n="skill.sers">SERS</li>
+      <li data-i18n="skill.ml">Machine Learning</li>
+      <li data-i18n="skill.cv">Computer Vision</li>
+      <li data-i18n="skill.nn">Neural networks</li>
+      <li data-i18n="skill.stats">Advanced statistics</li>
+      <li data-i18n="skill.python">Python</li>
+      <li data-i18n="skill.sql">SQL</li>
+      <li data-i18n="skill.java">Java</li>
+      <li data-i18n="skill.js">JavaScript</li>
+      <li data-i18n="skill.cpp">C++</li>
+      <li data-i18n="skill.nuclear">Nuclear physics</li>
+      <li data-i18n="skill.radioprot">Radiation protection</li>
+      <li data-i18n="skill.matter">Condensed matter</li>
+    </ul>
+  </section>
 
-    <div class="showcase-row">
-      <div class="showcase-item">
-       <a href="#tesi-magistrale" class="showcase-button">
-        <img src="images/Microplastics.jpg" alt="Microplastics" class="showcase-image">
-        <h3>Master Thesis: Raman and ML Analysis for Domestic Microplastics</h3>
-      </a>
-      </div>
-      <div class="showcase-item">
-        <a href="#tesi-triennale" class="showcase-button">
-          <img src="images/carbon.jpg" alt="Radiodating" class="showcase-image">
-          <h3>Bachelor Thesis: Radiodating Techniques Comparison</h3>
-        </a>
-      </div>
-      <div class="showcase-item">
-        <a href="#bombe-sporche" class="showcase-button">
-          <img src="images/sporche.png" alt="Dirty Bombs" class="showcase-image">
-          <h3>Dirty Bombs: A Scientific Overview</h3>
-        </a>
-      </div>
+  <section class="reveal" id="projects">
+    <h2 class="section-anchor" data-i18n="index.projects.h">Research, Projects &amp; Theses</h2>
+    <p data-i18n="index.projects.p">Here are some of my projects and academic works. Some are in Italian, others in English.</p>
+
+    <div class="project-grid">
+
+      <article class="project-card project-card--current" id="eucentre">
+        <div class="project-media project-media--plain">
+          <span class="project-glyph" aria-hidden="true">🌍</span>
+        </div>
+        <div class="project-body">
+          <p class="project-meta"><span class="project-year" data-i18n="index.p0.year">2025 &ndash; present</span> <span class="project-kind" data-i18n="kind.work">Current role</span></p>
+          <h3 data-i18n="index.p0.h">AI &amp; Computer Vision for Earthquake Engineering</h3>
+          <p data-i18n="index.p0.p">Research and software development at Fondazione Eucentre: applying artificial intelligence and machine learning to earthquake engineering, with a focus on computer vision models supporting post-disaster assessment.</p>
+          <ul class="project-tags">
+            <li data-i18n="skill.cv">Computer Vision</li>
+            <li data-i18n="skill.ml">Machine Learning</li>
+            <li data-i18n="skill.python">Python</li>
+            <li data-i18n="skill.sql">SQL</li>
+            <li data-i18n="skill.java">Java</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card" id="tesi-magistrale">
+        <div class="project-media">
+          <img src="images/Microplastics.jpg" alt="" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-meta"><span class="project-year">2025</span> <span class="project-kind" data-i18n="kind.master">Master thesis</span> <span class="project-lang">ENG</span></p>
+          <h3 data-i18n="index.p5.h">Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning</h3>
+          <p data-i18n="index.p5.p">A data-driven approach to identify microplastics using spectroscopic fingerprints and machine learning to face a modern environmental crisis.</p>
+          <ul class="project-tags">
+            <li data-i18n="skill.raman">Raman spectroscopy</li>
+            <li data-i18n="skill.sers">SERS</li>
+            <li data-i18n="skill.ml">Machine Learning</li>
+            <li data-i18n="skill.stats">Advanced statistics</li>
+            <li data-i18n="skill.python">Python</li>
+          </ul>
+          <a href="pdf/Tesi_Magistrale_Canevari_v8.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+        </div>
+      </article>
+
+      <article class="project-card" id="tesi-triennale">
+        <div class="project-media">
+          <img src="images/carbon.jpg" alt="" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-meta"><span class="project-year">2022</span> <span class="project-kind" data-i18n="kind.bachelor">Bachelor thesis</span> <span class="project-lang">ITA</span></p>
+          <h3 data-i18n="index.p2.h">Bachelor Thesis: Radiodating Techniques Comparison</h3>
+          <p data-i18n="index.p2.p">Comparative analysis of radiodating methods in archaeological contexts.</p>
+          <ul class="project-tags">
+            <li data-i18n="skill.radiodating">Radiodating techniques</li>
+            <li data-i18n="skill.nuclear">Nuclear physics</li>
+          </ul>
+          <a href="pdf/tesi_triennale.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+        </div>
+      </article>
+
+      <article class="project-card" id="forza_4">
+        <div class="project-media project-media--plain">
+          <span class="project-glyph" aria-hidden="true">🔴</span>
+        </div>
+        <div class="project-body">
+          <p class="project-meta"><span class="project-year">2025</span> <span class="project-kind" data-i18n="kind.report">Course project</span> <span class="project-lang">ENG</span></p>
+          <h3 data-i18n="index.p4.h">ML analysis of Connect Four</h3>
+          <p data-i18n="index.p4.p">Machine Learning report I did for an exam in which I analyzed connect four tournament results.</p>
+          <ul class="project-tags">
+            <li data-i18n="skill.nn">Neural networks</li>
+            <li data-i18n="skill.stats">Advanced statistics</li>
+            <li data-i18n="skill.python">Python</li>
+          </ul>
+          <a href="pdf/Report_connect_four.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+        </div>
+      </article>
+
+      <article class="project-card" id="vinland-map">
+        <div class="project-media">
+          <img src="images/map.jpg" alt="" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-meta"><span class="project-year">2020</span> <span class="project-kind" data-i18n="kind.study">Study</span> <span class="project-lang">ITA</span></p>
+          <h3 data-i18n="index.p1.h">Raman Analysis: the Vinland Map</h3>
+          <p data-i18n="index.p1.p">A study using Raman spectroscopy to evaluate dating of the Vinland Map.</p>
+          <ul class="project-tags">
+            <li data-i18n="skill.heritage">Cultural heritage physics</li>
+            <li data-i18n="skill.matter">Condensed matter</li>
+            <li data-i18n="skill.raman">Raman spectroscopy</li>
+            <li data-i18n="skill.sers">SERS</li>
+          </ul>
+          <a href="pdf/vinland_map.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+        </div>
+      </article>
+
+      <article class="project-card" id="bombe-sporche">
+        <div class="project-media">
+          <img src="images/sporche.png" alt="" loading="lazy">
+        </div>
+        <div class="project-body">
+          <p class="project-meta"><span class="project-year">—</span> <span class="project-kind" data-i18n="kind.study">Study</span> <span class="project-lang">ITA</span></p>
+          <h3 data-i18n="index.p3.h">Dirty Bombs: A Scientific Overview</h3>
+          <p data-i18n="index.p3.p">Science work on the implications of dirty bombs.</p>
+          <ul class="project-tags">
+            <li data-i18n="skill.radiobio">Radiobiology</li>
+            <li data-i18n="skill.radioprot">Radiation protection</li>
+            <li data-i18n="skill.nuclear">Nuclear physics</li>
+          </ul>
+          <!-- TODO: caricare pdf/bombe_sporche.pdf e sostituire questa riga con:
+               <a href="pdf/bombe_sporche.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a> -->
+          <p class="project-pending" data-i18n="pdf.soon">PDF coming soon.</p>
+        </div>
+      </article>
+
     </div>
   </section>
 
-  <section id="projects">
-    <h2 class="section-anchor">Research, Projects & Theses</h2>
-    <p>Here are some of my projects and/or academic works. Mind that some of them are in italian while others are in english.</p>
-
-    <h3 id="vinland-map">1. Raman Analysis: Vinland Map (ITA)</h3>
-    <p>A study using Raman spectroscopy to evaluate dating of the Vinland Map.</p>
-    <p><a href="pdf/vinland_map.pdf" download>Download PDF</a></p>
-
-    <h3 id="tesi-triennale">2. Bachelor Thesis: Radiodating Techniques Comparison (ITA)</h3>
-    <p>Comparative analysis of radiodating methods in archaeological contexts.</p>
-    <p><a href="pdf/tesi_triennale.pdf" download>Download PDF</a></p>
-
-    <h3 id="bombe-sporche">3. Dirty Bombs: A Scientific Overview (ITA)</h3>
-    <p>Science work on the implications of dirty bombs.</p>
-    <p><a href="pdf/bombe_sporche.pdf" download>Download PDF</a></p>
-
-    <h3 id="forza_4">4. ML analysis of Connect Four (ENG)</h3>
-    <p>Machine Learning report i did for an exam in which i analyzed connect four tournament results.</p>
-    <p><a href="pdf/Report_connect_four.pdf" download>Download PDF</a></p>
-
-    <h3 id="tesi-magistrale">5. Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning (ENG)</h3>
-    <p>A data-driven approach to identify microplastics using spectroscopic fingerprints and machine learning to face a modern environmental crisis.</p>
-    <p><a href="pdf/Tesi_Magistrale_Canevari_v8.pdf" download>Download PDF</a></p>
-
+  <section class="reveal" id="creative-teaser">
+    <div class="teaser">
+      <h2 data-i18n="index.teaser.h">Beyond the lab</h2>
+      <p data-i18n="index.teaser.p">Outside research I write, design tabletop role-playing adventures and play guitar — the same curiosity, applied to stories instead of spectra.</p>
+      <a href="creative.html" class="teaser-link" data-i18n="index.teaser.link">Personal interests →</a>
+    </div>
   </section>
 
-  <section id="contacts">
-    <h2 class="section-anchor">Contacts</h2>
-    <ul>
-      <li>Email: <a href="mailto:canevari.simone01@gmail.com">canevari.simone01@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/simone-canevari/" target="_blank">www.linkedin.com/in/simone-canevari</a></li>
+  <section class="reveal" id="contacts">
+    <h2 class="section-anchor" data-i18n="index.contacts.h">Contacts</h2>
+    <ul class="contact-list">
+      <li><a href="mailto:canevari.simone01@gmail.com">canevari.simone01@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/simone-canevari/" target="_blank" rel="noopener noreferrer">linkedin.com/in/simone-canevari</a></li>
     </ul>
-
-    <h3>Curriculum Vitae</h3>
-    <p><a href="pdf/CV_Canevari.pdf" download>Download my CV</a></p>
   </section>
 </main>
 
 <footer>
   <p>
-    © 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.<br>
-    Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>.
+    <span data-i18n="footer.rights">© 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.</span><br>
+    <span data-i18n="footer.licensed">Licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
   </p>
 </footer>
-
-<script>
-  const sidebar = document.getElementById('sidebar');
-  const hamburger = document.getElementById('hamburger');
-
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-  });
-
-  document.addEventListener('click', function(event) {
-    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
-      sidebar.classList.remove('open');
-    }
-  });
-
-  document.querySelectorAll('.sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        sidebar.classList.remove('open');
-        sidebar.classList.remove('expanded');
-      }
-    });
-  });
-
-  if (window.innerWidth > 768) {
-    sidebar.addEventListener('mouseenter', () => sidebar.classList.add('expanded'));
-    sidebar.addEventListener('mouseleave', () => sidebar.classList.remove('expanded'));
-  }
-</script>
-
-
-
-
-
-
+<script src="js/i18n.js" defer></script>
+<script src="js/reveal.js" defer></script>
+<script src="js/sidebar.js" defer></script>
 </body>
 </html>

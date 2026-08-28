@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Claude Code (impostazioni locali, non condivise)
+.claude/settings.local.json
+
+# Temporanei
+*.tmp
+*~

@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="creative.title">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Creative work by Simone Canevari: Dungeons & Dragons characters, one-shots and homebrew mechanics, writing and reading." />
   <title>Simone Canevari – Creative Projects</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="css/creative.css">
 </head>
 <body>
 
 <div class="sidebar" id="sidebar">
-  <a href="#home"><span class="icon">🏰</span><span class="label">Home</span></a>
-  <a href="#dnd"><span class="icon">🐉</span><span class="label">D&D</span></a>
-  <a href="#writing"><span class="icon">✍🏻</span><span class="label">Writing</span></a>
-  <a href="#reading"><span class="icon">📚</span><span class="label">Reading</span></a>
-  <a href="resume.html"><span class="icon">📄</span><span class="label">Resume</span></a>
-  <a href="index.html"><span class="icon">🔬</span><span class="label">Scientific Side</span></a>
+  <a href="#home"><span class="icon" aria-hidden="true">🏰</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="#dnd"><span class="icon" aria-hidden="true">🐉</span><span class="label" data-i18n="nav.dnd">D&amp;D</span></a>
+  <a href="#writing"><span class="icon" aria-hidden="true">✍🏻</span><span class="label" data-i18n="nav.writing">Writing</span></a>
+  <a href="#reading"><span class="icon" aria-hidden="true">📚</span><span class="label" data-i18n="nav.reading">Reading</span></a>
+  <a href="resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="index.html"><span class="icon" aria-hidden="true">📁</span><span class="label" data-i18n="nav.scientific">Portfolio</span></a>
 </div>
 
-<div class="hamburger" id="hamburger">&#9776;</div>
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
 
 <header>
   <h1>Simone Canevari</h1>
 </header>
 
 <main>
-  <section id="home" class="about-creative">
-    <h2 class="section-anchor">Welcome to my creative space</h2>
-    <p>
+  <section class="reveal" id="home" class="about-creative">
+    <h2 class="section-anchor" data-i18n="creative.welcome.h">Welcome to my creative space</h2>
+    <p data-i18n="creative.welcome.p1">
       This part of the site is where I collect the more creative side of my work — a mix of narrative design, game mechanics, character creation, fiction writing, music, and whatever else captures my imagination.
     </p>
-    <p>
+    <p data-i18n="creative.welcome.p2">
       Over the years, I’ve written original one-shots and homebrew content for D&D 5e, exploring different themes, characters, and scenarios that often stretch beyond traditional archetypes. I enjoy building things that feel alive — whether it's a peculiar item with a hidden story or a dilemma woven into an adventure.
     </p>
-    <p>
+    <p data-i18n="creative.welcome.p3">
       Beyond tabletop games, I spend time writing fiction across different genres, from fantasy settings to more introspective stories. I also play electric guitar, sketch out ideas for future projects, and read a lot — not just for inspiration, but as a way to reconnect with how stories take shape.
     </p>
   </section>
 
-  <section id="dnd">
-    <h2 class="section-anchor">Dungeons & Dragons</h2>
-    <p>I explore D&D 5e through characters, one-shots, and homebrew mechanics.</p>
+  <section class="reveal" id="dnd">
+    <h2 class="section-anchor" data-i18n="creative.dnd.h">Dungeons &amp; Dragons</h2>
+    <p data-i18n="creative.dnd.p">I explore D&amp;D 5e through characters, one-shots, and homebrew mechanics.</p>
 
     <!-- Characters -->
     <div class="dnd-subsection" id="dnd-characters">
-      <h3><span class="icon">🧙</span> Characters</h3>
-      <p>Original characters combining narrative intent and mechanical creativity.</p>
+      <h3><span class="icon" aria-hidden="true">🧙</span> <span data-i18n="creative.chars.h">Characters</span></h3>
+      <p data-i18n="creative.chars.p">Original characters combining narrative intent and mechanical creativity.</p>
       <div class="character-card">
         <img src="images/diana_outfit.jpeg" alt="Portrait of Diana Maréehaute">
         <div class="char-info">
           <h4>Diana Maréehaute</h4>
-          <p>
-            Diana was my first character played in a long campaign (2 years). She is a <b>Halfling multiclass Blood Hunter 9/ Rogue 8</b> who was an all pourpuse fighter 
+          <p data-i18n="creative.diana.p">
+            Diana was my first character played in a long campaign (2 years). She is a <b>Halfling multiclass Blood Hunter 9/ Rogue 8</b> who was an all-purpose fighter 
             (strong in both close and ranged combat) with no magic whatsoever which also led to quite a few problems for the party due to her recklessness and tendency to bite dying demons. 
           </p>
           <p>
-            <a href="pdf/Marlo.pdf" class="pdf-button" download>Character Sheet</a>
-            <a href="pdf/La_rinascita_bardica.pdf" class="pdf-button" download>Backstory</a>
+            <a href="pdf/diana_lv_17.pdf" class="pdf-button" download data-i18n="creative.sheet">Character Sheet</a>
+            <a href="pdf/diana_backstory.pdf" class="pdf-button" download data-i18n="creative.backstory">Backstory</a>
           </p>
         </div>
       </div>
@@ -65,65 +76,65 @@
         <img src="images/marlo.jpg" alt="Portrait of Marlo Zeller">
         <div class="char-info">
           <h4>Marlo Zeller</h4>
-          <p>
-            Marlo is my second important character that i created for a recently started campaign. He is a <b>Goblin multiclass Bard 2/Warlock 2</b> who is a fearful young man who tries hard to avoid violence and tries as best he can to defend the last.
-            He has done little in his life except loiter, work his day job and play with his new banjo which, <b>for some reason</b>, has made him a suprisingly talented musician.  
+          <p data-i18n="creative.marlo.p">
+            Marlo is my second important character that I created for a recently started campaign. He is a <b>Goblin multiclass Bard 2/Warlock 2</b> who is a fearful young man who tries hard to avoid violence and tries as best he can to defend the last.
+            He has done little in his life except loiter, work his day job and play with his new banjo which, <b>for some reason</b>, has made him a surprisingly talented musician.  
           </p>
           <p>
-            <a href="pdf/diana_lv_17.pdf" class="pdf-button" download>Character Sheet</a>
-            <a href="pdf/diana_backstory.pdf" class="pdf-button" download>Backstory</a>
+            <a href="pdf/Marlo.pdf" class="pdf-button" download data-i18n="creative.sheet">Character Sheet</a>
+            <a href="pdf/La_rinascita_bardica.pdf" class="pdf-button" download data-i18n="creative.backstory">Backstory</a>
           </p>
         </div>
       </div>
-      
+
     </div>
 
     <!-- One-Shots -->
     <div class="dnd-subsection" id="dnd-oneshots">
-      <h3><span class="icon">📜</span> One-Shots</h3>
-      <p>Short adventures I've written, each with its own tone and structure.</p>
+      <h3><span class="icon" aria-hidden="true">📜</span> <span data-i18n="creative.oneshots.h">One-Shots</span></h3>
+      <p data-i18n="creative.oneshots.p">Short adventures I've written, each with its own tone and structure.</p>
       <ul class="oneshot-list">
-        <li><span class="icon">🎲</span> <strong>Whispers in the Fog</strong></li>
-        <li><span class="icon">🔥</span> <strong>The Ember Pact</strong></li>
-        <li><span class="icon">⏳</span> <strong>Echoes of Tomorrow</strong></li>
+        <li><span class="icon" aria-hidden="true">🎲</span> <strong data-i18n="creative.os1">Whispers in the Fog</strong></li>
+        <li><span class="icon" aria-hidden="true">🔥</span> <strong data-i18n="creative.os2">The Ember Pact</strong></li>
+        <li><span class="icon" aria-hidden="true">⏳</span> <strong data-i18n="creative.os3">Echoes of Tomorrow</strong></li>
       </ul>
     </div>
 
     <!-- Homebrew Mechanics -->
     <div class="dnd-subsection" id="dnd-mechanics">
-      <h3><span class="icon">⚙️</span> Homebrew Mechanics</h3>
-      <p>Custom systems, features and tweaks to expand storytelling potential.</p>
+      <h3><span class="icon" aria-hidden="true">⚙️</span> <span data-i18n="creative.mech.h">Homebrew Mechanics</span></h3>
+      <p data-i18n="creative.mech.p">Custom systems, features and tweaks to expand storytelling potential.</p>
       <div class="mechanic-grid">
         <div class="mechanic-box underwater-rules">
 
-          <h4><span class="icon">🌊</span> Underwater Mechanics</h4>
-          <p>Ruleset for handling combat, movement, and acting in underwater environments. Useful for adventures set beneath the surface — both magical and mundane.</p>
-          <a href="pdf/underwater_rules.pdf" class="pdf-button" download>Download PDF</a>
+          <h4><span class="icon" aria-hidden="true">🌊</span> <span data-i18n="creative.uw.h">Underwater Mechanics</span></h4>
+          <p data-i18n="creative.uw.p">Ruleset for handling combat, movement, and acting in underwater environments. Useful for adventures set beneath the surface — both magical and mundane.</p>
+          <a href="pdf/underwater_rules.pdf" class="pdf-button" download data-i18n="pdf.download">Download PDF</a>
         </div>
              
         <div class="mechanic-box">
-          <h4>Layered Backgrounds</h4>
-          <p>Custom background builder to deepen character motivation.</p>
+          <h4 data-i18n="creative.lb.h">Layered Backgrounds</h4>
+          <p data-i18n="creative.lb.p">Custom background builder to deepen character motivation.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="writing">
-    <h2 class="section-anchor">Writing</h2>
-    <p>I enjoy experimenting with fiction, both short stories and novel-length ideas. Some projects are private drafts, others may become sharable content soon.</p>
+  <section class="reveal" id="writing">
+    <h2 class="section-anchor" data-i18n="creative.writing.h">Writing</h2>
+    <p data-i18n="creative.writing.p">I enjoy experimenting with fiction, both short stories and novel-length ideas. Some projects are private drafts, others may become sharable content soon.</p>
   </section>
 
-  <section id="reading">
-    <h2 class="section-anchor">Reading</h2>
-    <p>I love reading despite the fact that I take long breaks (even months) between one book and another. I find reading (both in English and Italian) very engaging and stimulating especially when I find books that are unusual and alien to my interests or habits 
+  <section class="reveal" id="reading">
+    <h2 class="section-anchor" data-i18n="creative.reading.h">Reading</h2>
+    <p data-i18n="creative.reading.p">I love reading despite the fact that I take long breaks (even months) between one book and another. I find reading (both in English and Italian) very engaging and stimulating especially when I find books that are unusual and alien to my interests or habits 
       that make me see narrative universes or ways of telling a story that I have never seen before. I list below my 5 favourite books (or series of books) in no particular order:</p>
       <ul class="reading-list">
-        <li><a href="https://www.goodreads.com/book/show/36140235-blackwater" target="_blank">Blackwater: The Complete Saga – Michael McDowell</a></li>
-        <li><a href="https://www.goodreads.com/book/show/5129.Brave_New_World?ref=nav_sb_noss_l_7" target="_blank">Brave New World – Aldous Huxley</a></li>
-        <li><a href="https://www.goodreads.com/book/show/216363.The_Man_in_the_High_Castle?ref=nav_sb_ss_1_14" target="_blank">The Man in the High Castle – Philip K. Dick</a></li>
-        <li><a href="https://www.goodreads.com/series/54817-rams-s" target="_blank">Ramsès Series – Christian Jacq</a></li>
-        <li><a href="https://www.goodreads.com/book/show/220937.The_House_on_the_Borderland" target="_blank">The House on the Borderland – William Hope Hodgson</a></li>
+        <li><a href="https://www.goodreads.com/book/show/36140235-blackwater" target="_blank" rel="noopener noreferrer">Blackwater: The Complete Saga – Michael McDowell</a></li>
+        <li><a href="https://www.goodreads.com/book/show/5129.Brave_New_World?ref=nav_sb_noss_l_7" target="_blank" rel="noopener noreferrer">Brave New World – Aldous Huxley</a></li>
+        <li><a href="https://www.goodreads.com/book/show/216363.The_Man_in_the_High_Castle?ref=nav_sb_ss_1_14" target="_blank" rel="noopener noreferrer">The Man in the High Castle – Philip K. Dick</a></li>
+        <li><a href="https://www.goodreads.com/series/54817-rams-s" target="_blank" rel="noopener noreferrer">Ramsès Series – Christian Jacq</a></li>
+        <li><a href="https://www.goodreads.com/book/show/220937.The_House_on_the_Borderland" target="_blank" rel="noopener noreferrer">The House on the Borderland – William Hope Hodgson</a></li>
       </ul>
       
   </section>
@@ -131,38 +142,11 @@
 
 <footer>
   <p>
-    © 2025 Simone Canevari. Creative content and texts on this page are protected by copyright and shared under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0 license</a>.
+    <span data-i18n="footer.creative">© 2025 Simone Canevari. Creative content and texts on this page are protected by copyright and shared under a</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0 license</a>.
   </p>
 </footer>
-
-<script>
-  const sidebar = document.getElementById('sidebar');
-  const hamburger = document.getElementById('hamburger');
-
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-  });
-
-  document.addEventListener('click', function(event) {
-    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
-      sidebar.classList.remove('open');
-    }
-  });
-
-  document.querySelectorAll('.sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        sidebar.classList.remove('open');
-        sidebar.classList.remove('expanded');
-      }
-    });
-  });
-
-  if (window.innerWidth > 768) {
-    sidebar.addEventListener('mouseenter', () => sidebar.classList.add('expanded'));
-    sidebar.addEventListener('mouseleave', () => sidebar.classList.remove('expanded'));
-  }
-</script>
-
+<script src="js/i18n.js" defer></script>
+<script src="js/reveal.js" defer></script>
+<script src="js/sidebar.js" defer></script>
 </body>
 </html>

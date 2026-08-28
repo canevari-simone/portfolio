@@ -1,132 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="resume.title">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of Simone Canevari, MSc in Applied and Nuclear Physics, University of Pavia." />
   <title>Simone Canevari - Resume</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="sidebar" id="sidebar">
-  <a href="index.html#home"><span class="icon">🏠</span><span class="label">Home</span></a>
-  <a href="index.html#projects"><span class="icon">📂</span><span class="label">Projects & Theses</span></a>
-  <a href="index.html#contacts"><span class="icon">📧</span><span class="label">Contacts</span></a>
-  <a href="creative.html"><span class="icon">✨</span><span class="label">Creative Side</span></a>
-  <a href="resume.html"><span class="icon">📄</span><span class="label">Resume</span></a>
+  <a href="index.html#home"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="index.html#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
+  <a href="index.html#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
+  <a href="resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
 </div>
 
-<div class="hamburger" id="hamburger">&#9776;</div>
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
 
 <header>
   <h1>Simone Canevari</h1>
 </header>
 
 <main>
-  <h2 class="section-anchor">Resume</h2>
+  <h2 class="section-anchor" data-i18n="resume.h">Resume</h2>
   <p><strong>Simone Canevari</strong><br>
-  MSc in Physics – Applied and Nuclear Physics<br>
-  Via Rossini 20, 27010 Linarolo (PV), Italy<br>
-  <a href="tel:+393891625766">+39 389 162 5766</a><br>
+  <span data-i18n="resume.degree">Researcher – AI &amp; Machine Learning applied to Earthquake Engineering</span><br>
+  <span data-i18n="resume.location">Binasco (MI), Italy</span><br>
   <a href="mailto:canevari.simone01@gmail.com">canevari.simone01@gmail.com</a><br>
-  <a href="https://www.linkedin.com/in/simone-canevari-145297366/" target="_blank">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/simone-canevari/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+  <span class="contact-note" data-i18n="resume.note">Full address and phone number are available in the downloadable CV.</span>
   </p>
 
-  <h3>Professional Summary</h3>
-  <p>Applied Physics MSc graduate from the University of Pavia with a strong background in science education, data analysis, and problem solving. Passionate about applied and nuclear physics, particularly in biomedical, industrial, and environmental applications. Open to international experience and interdisciplinary collaboration.</p>
+  <h3 data-i18n="resume.summary.h">Professional Summary</h3>
+  <p data-i18n="resume.summary.p">Applied Physics MSc graduate from the University of Pavia with a strong background in science education, data analysis, and problem solving. Passionate about applied and nuclear physics, particularly in biomedical, industrial, and environmental applications. Open to international experience and interdisciplinary collaboration.</p>
 
-  <h3>Education</h3>
-  <ul>
-    <li><strong>2023–2025</strong> – MSc in Physics, University of Pavia, Italy<br>
-      Specialization in Applied and Nuclear Physics<br>
-      Thesis: “Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning”<br>
-      Supervisors: Prof. Pietro Galinetto & Claudio Cusano
-    </li>
-    <li><strong>2018–2023</strong> – BSc in Physics, University of Pavia, Italy<br>
-      Thesis: “Radiocarbon dating via 14C and comparison with other methods (thermoluminescence)”<br>
-      Supervisor: Prof. Paola Salvini
-    </li>
-  </ul>
-
- <h3>Work Experience</h3>
+ <h3 data-i18n="resume.work.h">Work Experience</h3>
 <ul>
-  <li><strong>Jan – Jun 2023</strong> – High School Physics Teacher, Liceo Scientifico G. Cardano, Pavia<br>
-    Planned and delivered individual and group physics lessons. Designed support activities for students with learning disabilities (DSA). Applied educational models focused on problem-solving and goal-oriented learning.
+  <li><strong data-i18n="resume.work.0.date">Nov 2025 – present</strong> – <span data-i18n="resume.work.0.role">Researcher – Software Development &amp; AI, Fondazione Eucentre, Pavia</span><br>
+    <span data-i18n="resume.work.0.desc">Software development with a particular, though not exclusive, focus on artificial intelligence and machine learning methods applied to earthquake engineering. Development of computer vision models supporting post-disaster assessment.</span><br>
+    <span class="work-tech" data-i18n="resume.work.0.tech">Technologies: Python, SQL, Java, JavaScript, HTML, CSS</span>
   </li>
-  <li><strong>Jan – Feb 2024</strong> – High School Physics and Math Teacher, Liceo Scientifico N. Copernico, Pavia<br>
-    Same responsibilities as above: lesson planning, DSA support, and implementation of problem-based educational methods.
+  <li><strong data-i18n="resume.work.1.date">Jan – Jun 2023</strong> – <span data-i18n="resume.work.1.role">High School Physics Teacher, Liceo Scientifico G. Cardano, Pavia</span><br>
+    <span data-i18n="resume.work.1.desc">Planned and delivered individual and group physics lessons. Designed support activities for students with learning disabilities (DSA). Applied educational models focused on problem-solving and goal-oriented learning.</span>
+  </li>
+  <li><strong data-i18n="resume.work.2.date">Jan – Feb 2024</strong> – <span data-i18n="resume.work.2.role">High School Physics and Math Teacher, Liceo Scientifico N. Copernico, Pavia</span><br>
+    <span data-i18n="resume.work.2.desc">Same responsibilities as above: lesson planning, DSA support, and implementation of problem-based educational methods.</span>
   </li>
 </ul>
 
-
-  <h3>Skills</h3>
+  <h3 data-i18n="resume.edu.h">Education</h3>
   <ul>
-    <li><strong>Programming:</strong> Python, C++, HTML, CSS, Microsoft Office tools</li>
-    <li><strong>Data Modeling:</strong> Machine Learning and Data Analysis</li>
-    <li><strong>Languages:</strong> Italian (native), English (C1), Spanish (basic)</li>
+    <li><strong>2023–2025</strong> – <span data-i18n="resume.edu.msc">MSc in Physics, University of Pavia, Italy</span><br>
+      <span data-i18n="resume.edu.msc.spec">Specialization in Applied and Nuclear Physics</span><br>
+      <span data-i18n="resume.edu.msc.thesis">Thesis: “Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning”</span><br>
+      <span data-i18n="resume.edu.msc.sup">Supervisors: Prof. Pietro Galinetto &amp; Claudio Cusano</span>
+    </li>
+    <li><strong>2018–2023</strong> – <span data-i18n="resume.edu.bsc">BSc in Physics, University of Pavia, Italy</span><br>
+      <span data-i18n="resume.edu.bsc.thesis">Thesis: “Radiocarbon dating via 14C and comparison with other methods (thermoluminescence)”</span><br>
+      <span data-i18n="resume.edu.bsc.sup">Supervisor: Prof. Paola Salvini</span>
+    </li>
   </ul>
 
-  <h3>Hobbies and Interests</h3>
+
+  <h3 data-i18n="resume.skills.h">Skills</h3>
   <ul>
-    <li><strong>Creative:</strong> Writing and designing collaborative role-playing campaigns (Dungeons & Dragons), both as player and game master</li>
-    <li><strong>Music:</strong> Electric guitar, both solo and in band</li>
-    <li><strong>Teamwork:</strong> Board games and cooperative projects</li>
-    <li><strong>Well-being:</strong> Jogging, training, and home cooking</li>
+    <li><strong data-i18n="resume.skills.prog">Programming:</strong> <span data-i18n="resume.skills.prog.v">Python, SQL, Java, JavaScript, C++, HTML, CSS</span></li>
+    <li><strong data-i18n="resume.skills.data">AI &amp; Data:</strong> <span data-i18n="resume.skills.data.v">Machine Learning, Computer Vision, Neural Networks, Advanced Statistics, Data Analysis</span></li>
+    <li><strong data-i18n="resume.skills.physics">Physics:</strong> <span data-i18n="resume.skills.physics.v">Raman spectroscopy, SERS, Nuclear physics, Radiation protection, Condensed matter</span></li>
+    <li><strong data-i18n="resume.skills.lang">Languages:</strong> <span data-i18n="resume.skills.lang.v">Italian (native), English (C1), Spanish (basic)</span></li>
   </ul>
 
-  <h3>Career Objectives</h3>
+  <h3 data-i18n="resume.hobbies.h">Hobbies and Interests</h3>
   <ul>
-    <li><strong>Preferred sectors:</strong> Energy, biomedical, chemical-physical, mechanical and precision engineering</li>
-    <li><strong>Professional areas of interest:</strong> Engineering & Design, R&D, IP and Patents, Manufacturing, Quality Control</li>
-    <li><strong>Mobility:</strong> Open to relocation and international opportunities</li>
+    <li><strong data-i18n="resume.hobbies.creative">Creative:</strong> <span data-i18n="resume.hobbies.creative.v">Writing and designing collaborative role-playing campaigns (Dungeons &amp; Dragons), both as player and game master</span></li>
+    <li><strong data-i18n="resume.hobbies.music">Music:</strong> <span data-i18n="resume.hobbies.music.v">Electric guitar, both solo and in band</span></li>
+    <li><strong data-i18n="resume.hobbies.team">Teamwork:</strong> <span data-i18n="resume.hobbies.team.v">Board games and cooperative projects</span></li>
+    <li><strong data-i18n="resume.hobbies.well">Well-being:</strong> <span data-i18n="resume.hobbies.well.v">Jogging, training, and home cooking</span></li>
   </ul>
 
-  <h3>Portfolio</h3>
+  <h3 data-i18n="resume.career.h">Career Objectives</h3>
   <ul>
-    <li><strong>Master Thesis:</strong> “Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning”</li>
-    <li><strong>Bachelor Thesis:</strong> “Radiocarbon dating via 14C and comparison with other methods (thermoluminescence)”</li>
+    <li><strong data-i18n="resume.career.sectors">Preferred sectors:</strong> <span data-i18n="resume.career.sectors.v">Energy, biomedical, chemical-physical, mechanical and precision engineering</span></li>
+    <li><strong data-i18n="resume.career.areas">Professional areas of interest:</strong> <span data-i18n="resume.career.areas.v">Engineering &amp; Design, R&amp;D, IP and Patents, Manufacturing, Quality Control</span></li>
+    <li><strong data-i18n="resume.career.mob">Mobility:</strong> <span data-i18n="resume.career.mob.v">Open to relocation and international opportunities</span></li>
   </ul>
 
-  <h3>Disclaimer</h3>
-  <p>I hereby authorize the processing of my personal data included in this CV pursuant to Regulation (EU) 2016/679 (GDPR).</p>
+  <h3 data-i18n="resume.portfolio.h">Portfolio</h3>
+  <ul>
+    <li><strong data-i18n="resume.portfolio.master">Master Thesis:</strong> “Understanding and Classifying Domestic Microplastics through Raman Spectroscopy and Machine Learning”</li>
+    <li><strong data-i18n="resume.portfolio.bachelor">Bachelor Thesis:</strong> “Radiocarbon dating via 14C and comparison with other methods (thermoluminescence)”</li>
+  </ul>
+
+  <h3 data-i18n="resume.disclaimer.h">Disclaimer</h3>
+  <p data-i18n="resume.disclaimer.p">I hereby authorize the processing of my personal data included in this CV pursuant to Regulation (EU) 2016/679 (GDPR).</p>
 </main>
 
 
 <footer>
   <p>
-    © 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.<br>
-    Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>.
+    <span data-i18n="footer.rights">© 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.</span><br>
+    <span data-i18n="footer.licensed">Licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
   </p>
 </footer>
-
-<script>
-  const sidebar = document.getElementById('sidebar');
-  const hamburger = document.getElementById('hamburger');
-
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-  });
-
-  document.addEventListener('click', function(event) {
-    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
-      sidebar.classList.remove('open');
-    }
-  });
-
-  document.querySelectorAll('.sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        sidebar.classList.remove('open');
-        sidebar.classList.remove('expanded');
-      }
-    });
-  });
-
-  if (window.innerWidth > 768) {
-    sidebar.addEventListener('mouseenter', () => sidebar.classList.add('expanded'));
-    sidebar.addEventListener('mouseleave', () => sidebar.classList.remove('expanded'));
-  }
-</script>
-
+<script src="js/i18n.js" defer></script>
+<script src="js/reveal.js" defer></script>
+<script src="js/sidebar.js" defer></script>
 </body>
 </html>
