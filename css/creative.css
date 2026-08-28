@@ -170,9 +170,11 @@ main {
   text-decoration: none;
 }
 
-/* Paragrafi */
+/* Paragrafi: allineati a sinistra.
+   Il giustificato su colonne larghe produce spaziature irregolari. */
 p {
-  text-align: justify;
+  text-align: left;
+  max-width: 92ch;
 }
 
 /* D&D Subsections */
@@ -203,8 +205,8 @@ p {
 }
 
 .character-card img {
-  width: 80px;
-  height: 80px;
+  width: 128px;
+  height: 128px;
   object-fit: cover;
   border: 2px solid var(--accent);
 }
@@ -244,12 +246,21 @@ p {
 
 
 .underwater-rules {
+  position: relative;
   background-image: url("../images/bubbles.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode: overlay;
-  background-color: rgba(255, 255, 255, 0.15);
+  isolation: isolate;
+}
+
+/* velo scuro: senza, il testo sulla texture non e' leggibile */
+.underwater-rules::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16, 24, 32, 0.82), rgba(16, 24, 32, 0.92));
+  z-index: -1;
 }
 
 
@@ -411,6 +422,15 @@ footer p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .character-card img {
+    width: 104px;
+    height: 104px;
+  }
+
+  p {
+    max-width: none;
   }
 }
 

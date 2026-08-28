@@ -60,6 +60,8 @@
       <li data-i18n="skill.radioprot">Radiation protection</li>
       <li data-i18n="skill.matter">Condensed matter</li>
     </ul>
+    <p class="filter-hint" data-i18n="filter.hint">Click a skill to filter the projects below.</p>
+    <p id="filter-status" class="visually-hidden" role="status" aria-live="polite"></p>
   </section>
 
   <section class="reveal" id="projects">
@@ -101,7 +103,10 @@
             <li data-i18n="skill.stats">Advanced statistics</li>
             <li data-i18n="skill.python">Python</li>
           </ul>
-          <a href="pdf/Tesi_Magistrale_Canevari_v8.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+          <div class="project-actions">
+            <a href="progetti/microplastiche.html" class="project-link" data-i18n="project.explore">Explore project</a>
+            <a href="pdf/Tesi_Magistrale_Canevari_v8.pdf" class="project-link project-link--ghost" download data-i18n="pdf.download">Download PDF</a>
+          </div>
         </div>
       </article>
 
@@ -117,7 +122,10 @@
             <li data-i18n="skill.radiodating">Radiodating techniques</li>
             <li data-i18n="skill.nuclear">Nuclear physics</li>
           </ul>
-          <a href="pdf/tesi_triennale.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+          <div class="project-actions">
+            <a href="progetti/radiodatazione.html" class="project-link" data-i18n="project.explore">Explore project</a>
+            <a href="pdf/tesi_triennale.pdf" class="project-link project-link--ghost" download data-i18n="pdf.download">Download PDF</a>
+          </div>
         </div>
       </article>
 
@@ -134,7 +142,10 @@
             <li data-i18n="skill.stats">Advanced statistics</li>
             <li data-i18n="skill.python">Python</li>
           </ul>
-          <a href="pdf/Report_connect_four.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+          <div class="project-actions">
+            <a href="progetti/forza-quattro.html" class="project-link" data-i18n="project.explore">Explore project</a>
+            <a href="pdf/Report_connect_four.pdf" class="project-link project-link--ghost" download data-i18n="pdf.download">Download PDF</a>
+          </div>
         </div>
       </article>
 
@@ -152,7 +163,10 @@
             <li data-i18n="skill.raman">Raman spectroscopy</li>
             <li data-i18n="skill.sers">SERS</li>
           </ul>
-          <a href="pdf/vinland_map.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a>
+          <div class="project-actions">
+            <a href="progetti/vinland.html" class="project-link" data-i18n="project.explore">Explore project</a>
+            <a href="pdf/vinland_map.pdf" class="project-link project-link--ghost" download data-i18n="pdf.download">Download PDF</a>
+          </div>
         </div>
       </article>
 
@@ -169,14 +183,18 @@
             <li data-i18n="skill.radioprot">Radiation protection</li>
             <li data-i18n="skill.nuclear">Nuclear physics</li>
           </ul>
-          <!-- TODO: caricare pdf/bombe_sporche.pdf e sostituire questa riga con:
-               <a href="pdf/bombe_sporche.pdf" class="project-link" download data-i18n="pdf.download">Download PDF</a> -->
-          <p class="project-pending" data-i18n="pdf.soon">PDF coming soon.</p>
+          <div class="project-actions">
+            <a href="progetti/bombe-sporche.html" class="project-link" data-i18n="project.explore">Explore project</a>
+            <!-- TODO: quando pdf/bombe_sporche.pdf esiste, aggiungere qui:
+                 <a href="pdf/bombe_sporche.pdf" class="project-link project-link--ghost" download data-i18n="pdf.download">Download PDF</a> -->
+          </div>
         </div>
       </article>
 
     </div>
   </section>
+
+  
 
   <section class="reveal" id="creative-teaser">
     <div class="teaser">
@@ -214,6 +232,7 @@
 </footer>
 <script src="js/i18n.js" defer></script>
 <script src="js/reveal.js" defer></script>
+<script src="js/filter.js" defer></script>
 <script src="js/sidebar.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="mp.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Master thesis: classifying domestic microplastics with Raman spectroscopy and machine learning. Interactive Raman spectra of the recycling-code polymers." />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="../index.html"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="../index.html#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
+  <a href="../index.html#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
+  <a href="../resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="../creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
+</div>
+
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
+
+<header class="site-header project-header">
+  <p class="breadcrumb"><a href="../index.html#projects" data-i18n="mp.back">← Projects</a></p>
+  <h1 data-i18n="mp.h1">Domestic Microplastics</h1>
+  <p class="tagline" data-i18n="mp.tagline">Raman spectroscopy and machine learning to classify what our waste is made of</p>
+  <div class="header-actions">
+    <a href="../pdf/Tesi_Magistrale_Canevari_v8.pdf" class="btn btn-primary" download data-i18n="mp.download">Download the thesis (PDF)</a>
+  </div>
+</header>
+
+<main>
+  <section class="reveal" id="overview">
+    <h2 data-i18n="mp.about.h">What the thesis is about</h2>
+    <p class="lead" data-i18n="mp.about.p1">Microplastics are everywhere — in water, soil, air and food. Identifying which polymer a fragment is made of matters: different plastics degrade differently, carry different additives, and pose different risks. The problem is that identification is slow and requires an expert reading each spectrum.</p>
+    <p data-i18n="mp.about.p2">This thesis asks whether that reading can be automated. Raman spectroscopy gives every polymer a vibrational fingerprint; a machine learning model can learn to recognise those fingerprints — including on dirty, coloured, real-world fragments rather than clean laboratory standards.</p>
+
+    <h3 data-i18n="mp.results.h">Results</h3>
+    <ul class="stat-grid">
+      <li><span class="stat-value">11,700+</span><span class="stat-label" data-i18n="mp.stat.spectra">Raman spectra collected from real plastic waste</span></li>
+      <li><span class="stat-value">7</span><span class="stat-label" data-i18n="mp.stat.classes">polymer classes — the standard recycling codes 01–07</span></li>
+      <li><span class="stat-value">99.49%</span><span class="stat-label" data-i18n="mp.stat.accuracy">classification accuracy on the held-out test set</span></li>
+      <li><span class="stat-value">99.7%</span><span class="stat-label" data-i18n="mp.stat.cv">cross-validation accuracy</span></li>
+    </ul>
+
+    <p data-i18n="mp.about.p3">The classifier is a Support Vector Machine with a linear kernel, trained on 900 spectra per class from transparent samples plus 5,413 spectra from coloured fragments — pigments and dyes make the signal harder, which is exactly the point: the dataset had to look like the real world.</p>
+    <p data-i18n="mp.about.p4">Accuracy alone would not be enough. PCA and t-SNE were used to visualise how separable the classes really are, and the weights the SVM learned were compared against the known Raman bands of each polymer. They coincide: the model is keying on genuine chemical signatures, not on statistical artefacts of the dataset.</p>
+  </section>
+
+  <section class="reveal" id="explorer">
+    <h2 data-i18n="mp.explorer.h">Explore the spectra</h2>
+    <p data-i18n="mp.explorer.p">Each polymer has its own vibrational fingerprint. Switch between them and hover a peak to see which molecular motion produces it — these are the features the classifier learns to tell apart. Code 07 (“other plastics”) is not shown: it is a catch-all category with no single characteristic spectrum.</p>
+
+    <div id="spectra-explorer" class="spectra-explorer"></div>
+
+    <p class="raman-note" data-i18n="mp.explorer.note">Spectra reconstructed from peak positions reported in the literature (Nava, Frezzotti &amp; Leoni, <em>Applied Spectroscopy</em> 75(11), 2021), not from the experimental measurements of the thesis. They show where the diagnostic bands fall, not quantitative data.</p>
+  </section>
+
+  <section class="reveal" id="takeaway">
+    <h2 data-i18n="mp.takeaway.h">Why it matters</h2>
+    <p data-i18n="mp.takeaway.p">A screening tool that identifies polymers in seconds, from spectra of ordinary dirty fragments, makes large-scale environmental monitoring practical in a way that manual analysis never could be. The same pipeline extends to mixtures, blends and fragments embedded in other materials — tested here by adding a dedicated "ground" class and checking the model still holds up under ambiguity.</p>
+    <p class="next-project"><a href="../index.html#projects" data-i18n="mp.back.all">← All projects</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    <span data-i18n="footer.rights">© 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.</span><br>
+    <span data-i18n="footer.licensed">Licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
+  </p>
+</footer>
+
+<script src="../js/i18n.js" defer></script>
+<script src="../js/reveal.js" defer></script>
+<script src="../js/spectra.js" defer></script>
+<script src="../js/sidebar.js" defer></script>
+</body>
+</html>

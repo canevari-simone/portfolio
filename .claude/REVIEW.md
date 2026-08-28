@@ -422,3 +422,261 @@ Tutte e 6 le card hanno una foto da Wikimedia Commons con licenza verificata.
 Verifica finale: nessun overflow, **nessuna immagine rotta**, nessun nodo tradotto vuoto,
 a 500 e 1280 px su tutte e tre le pagine. 147 chiavi i18n, corrispondenza esatta.
 Cartella `images/` a 2,6 MB.
+
+---
+
+# Ottavo intervento — 2026-08-28 (spettro Raman, filtro, correzioni)
+
+## Correzioni da revisione visiva
+
+- **`resume.html`: ordine cronologico invertito.** Gen–Feb 2024 (Copernico) appariva sotto
+  Gen–Giu 2023 (Cardano). Corretto: Eucentre → Copernico → Cardano.
+- **`creative.html`: `text-align: justify`** su colonne larghe produceva "fiumi" di spazio
+  bianco. Passato ad allineamento a sinistra con `max-width` sui paragrafi.
+- **Texture a bolle illeggibile:** il testo del box "Meccaniche subacquee" era sopra la
+  foto senza contrasto sufficiente. Aggiunto uno pseudo-elemento con velo scuro.
+- **Ritratti D&D da 80px a 128px** (104px su mobile): erano troppo piccoli per illustrazioni.
+
+## Spettro Raman interattivo (`js/raman.js`)
+
+Il polimero scelto e' il **polietilene**: verificato in letteratura come il piu' abbondante
+nelle microplastiche (54,5% nelle acque costiere del Mediterraneo, fino al 75% in altri
+studi). I sei picchi e le assegnazioni vibrazionali vengono da fonti pubblicate:
+
+| cm⁻¹ | Assegnazione |
+| --- | --- |
+| 1063 | stiramento simmetrico C–C |
+| 1130 | stiramento asimmetrico C–C |
+| 1296 | torsione CH₂ |
+| 1440 | piegamento CH₂ — la banda piu' intensa e diagnostica |
+| 2848 | stiramento simmetrico CH₂ |
+| 2882 | stiramento asimmetrico CH₂ |
+
+Implementazione: SVG generato a runtime, somma di lorentziane, **nessuna libreria** (~5 KB).
+Accessibile da tastiera (`tabindex`, focus), bilingue, si ridisegna al cambio lingua.
+
+**Lo spettro porta una nota esplicita**: "ricostruito dalle posizioni dei picchi riportate
+in letteratura, non una misura sperimentale". Su un sito professionale un dato ricostruito
+presentato come misura sarebbe un dato falso.
+
+Le etichette 1063/1130 e 2848/2882 si sovrapponevano: risolto sfalsandole su due righe.
+
+## Filtro progetti (`js/filter.js`)
+
+Le chip delle competenze diventano filtri della griglia. Chip senza progetti corrispondenti
+(JavaScript, C++) sono attenuate e non cliccabili. Accessibile da tastiera, `Esc` azzera,
+live region per screen reader. Testato: "Machine Learning" riduce da 6 a 2 progetti.
+
+## Three.js: valutato e scartato
+
+L'utente ha chiesto se valesse la pena. **Sconsigliato**, con motivazione: ~600 KB di
+libreria, canvas WebGL che scalda la GPU, rischio di far sembrare il sito una demo tecnica
+invece di un portfolio; WebGL non e' garantito su macchine aziendali, quindi servirebbe
+comunque un fallback. Le interazioni proposte in alternativa (spettro, filtro) dimostrano
+competenze reali invece di decorare, a un decimo del costo.
+
+## Nota sulla verifica dell'overflow
+
+A 500px la sonda segnalava 15 elementi in overflow: sono l'SVG e i suoi figli **dentro il
+contenitore scrollabile** `.raman-host`, comportamento voluto. Verificato che
+`scrollWidth == clientWidth` sul documento e che il contenitore sta dentro il viewport:
+**overflow reali = 0**. Attenzione a non "correggere" questo falso positivo.
+
+## Nuovo file: `TODO.md`
+
+Idea dell'utente: dare a ogni progetto una pagina propria con un'interazione specifica
+per tipo di lavoro. Documentata con proposte per progetto, domande aperte (quali progetti,
+dati disponibili, vincolo NDA su Eucentre) e vincoli tecnici. Lo spettro Raman e' il
+prototipo del pattern.
+
+---
+
+# Nono intervento — 2026-08-28 (prima pagina di progetto)
+
+## `progetti/microplastiche.html` — completata
+
+Prima pagina del pattern "una pagina per progetto" definito in `TODO.md`.
+Struttura: introduzione → risultati in evidenza → esploratore interattivo → conclusione.
+
+**I dati vengono dalla tesi**, estratti dal PDF e verificati:
+oltre 11.700 spettri, 7 classi (codici di riciclo 01–07), SVM a kernel lineare,
+accuratezza 99,49% su test set e oltre 99,7% in cross-validation, 900 spettri per classe
+da campioni trasparenti + 5.413 da colorati.
+
+## Selettore di spettri (`js/spectra.js`)
+
+Sette tab (PET, HDPE, PVC, LDPE, PP, PS, Other): cambiando polimero cambia lo spettro,
+con i picchi interattivi e le assegnazioni vibrazionali. Navigabile con le frecce.
+
+**Due scelte non banali:**
+
+1. **HDPE e LDPE hanno lo stesso spettro di base** (sono entrambi polietilene). Si
+   distinguono per il rapporto di intensita' fra le bande a 2850 e 2883 cm⁻¹, legato alla
+   cristallinita'. Modellato correttamente invertendo il rapporto fra i due, e spiegato
+   nelle note: e' proprio il caso in cui un classificatore serve davvero.
+2. **La classe 07 non ha uno spettro caratteristico** — e' una categoria residuale
+   eterogenea. **Non ne e' stato inventato uno**: la card mostra un messaggio esplicito e
+   spiega perche' e' stata la classe piu' difficile e la piu' dispersa nella PCA.
+
+## Provenienza degli spettri — verificata prima di procedere
+
+La tesi **non contiene** tabelle di picchi per polimero e nella cartella **non ci sono
+dati grezzi**. Verificato, non assunto. Gli spettri sono quindi ricostruiti da:
+Nava, Frezzotti & Leoni, *Applied Spectroscopy* 75(11), 2021, Table II — **citata in
+pagina**, con nota esplicita che non sono le misure sperimentali della tesi.
+
+## TODO aggiornato con le 5 specifiche dell'utente
+
+Forza 4 (probabilita' di vittoria per colonna di apertura), Vinland (cronologia degli
+studi), bombe sporche (schermatura e dose), radiodatazione (confronto fra tecniche).
+
+**Due avvertenze annotate nel TODO:**
+- Forza 4: **verificare che il report contenga davvero probabilita' per colonna** prima
+  di costruire l'interazione. Se non ci sono, non inventarle.
+- Bombe sporche: presentare come **dose assorbita con soglie cliniche**, non come
+  "mortalita'". Un calcolatore di mortalita' su un sito professionale ha un tono sbagliato.
+
+## Verifiche
+
+232 chiavi i18n, corrispondenza esatta. Su tutte e quattro le pagine a 500px:
+nessun overflow, nessuna immagine rotta, nessun nodo tradotto vuoto, traduzione attiva.
+Le sei curve sono tutte distinte fra loro; la classe 07 non genera curva.
+
+---
+
+# Decimo intervento — 2026-08-28 (classe 07, spettro home, pagina Forza 4)
+
+## 1. Classe 07 rimossa dal selettore
+
+Su richiesta dell'utente. Rimosso il polimero, il ramo di codice per la lista vuota,
+le chiavi `poly.other`, `poly.other.note`, `spectra.empty`, e aggiornati i testi che
+dicevano "sette spettri". **La statistica "7 classi" resta corretta** nell'introduzione:
+il dataset ne aveva sette, l'esploratore ne mostra sei — e ora il testo lo dichiara.
+
+## 2. Spettro rimosso dalla home
+
+`js/raman.js` eliminato, sezione e script rimossi da `index.html`, e con essi 10 chiavi
+i18n diventate orfane. L'esploratore completo vive ora nella pagina della tesi.
+
+## 3. `progetti/forza-quattro.html` — completata
+
+**Dati veri**, estratti da `pdf/Report_connect_four.pdf` e dalla heatmap `images/colonne.JPG`
+fornita dall'utente:
+- MLP: 42 neuroni di input, 2 strati nascosti da 31 con ReLU, ottimizzatore Adam
+- accuratezze 89% (train) / 84% (validation) / 82% (test)
+- dataset sbilanciato: 66% R, 23% Y, 10% pareggio — citato perche' e' un bias reale
+- pesi riga 1: `[0.39, 0.27, 1.15, 1.07, 0.51, -0.40, -1.30]`
+
+Board 7x6 cliccabile: il gettone cade in fondo alla colonna scelta, appare il verdetto e
+sotto le barre di confronto di tutte e sette le colonne, con **lo zero al centro** cosi'
+che il segno resti leggibile.
+
+**Scelta importante:** i valori sono presentati come **pesi del modello**, non come
+"probabilita' di vittoria". Sono pesi appresi dalla rete: convertirli in percentuali
+richiederebbe una normalizzazione arbitraria e presenterebbe come misura qualcosa che il
+modello non ha mai prodotto. La pagina lo dichiara in nota. **Se l'utente preferisce le
+percentuali, va prima deciso con quale trasformazione e dichiarata come tale.**
+
+Il testo conclusivo nota che la rete ha riscoperto dai dati un risultato noto di teoria
+dei giochi (Forza 4 e' risolto: il primo giocatore vince solo aprendo al centro) — e' il
+punto piu' interessante del progetto.
+
+## Verifiche
+
+250 chiavi i18n, corrispondenza esatta. Cinque pagine a 500px: nessun overflow, nessuna
+immagine rotta, nessun nodo tradotto vuoto, traduzione attiva ovunque.
+
+---
+
+# Undicesimo intervento — 2026-08-28 (Vinland e radiodatazione)
+
+## `progetti/vinland.html`
+
+Cronologia di 10 eventi, interattiva. **Ogni data verificata** su Wikipedia e sull'annuncio
+Yale del 1 settembre 2021 (fonte primaria) prima di scriverla. Le stime che avevo messo
+nel TODO erano in parte sbagliate e sono state corrette:
+
+| Nel TODO | Verificato |
+| --- | --- |
+| comparsa "1946 ca." | **1957** |
+| McCrone "1974" | **1972** |
+| radiocarbonio "~1434" | **1423–1445** |
+| — | aggiunti 1966 (Smithsonian) e 1991 (secondo esame McCrone) |
+
+Dal comunicato Yale e' emerso anche il dettaglio decisivo del 2021: un'iscrizione sul
+retro, verosimilmente una nota del rilegatore, **sovrascritta con inchiostro al titanio**
+per far sembrare che la mappa appartenesse da sempre al volume medievale.
+
+Verificata anche la banda dell'anatasio a **143 cm⁻¹** (modo Eg, il piu' intenso) prima di
+citarla come fatto in pagina.
+
+Le date 1965/66/67 sono troppo ravvicinate per due sole corsie: implementate **quattro
+corsie** alternate sopra e sotto l'asse. Colore per verdetto (verde a favore, rosso contro,
+grigio contesto), cosi' si legge a colpo d'occhio come il consenso ha oscillato.
+
+## `progetti/radiodatazione.html`
+
+Slider logaritmico 50–60.000 anni; quattro metodi con banda di incertezza centrata
+sull'eta' vera e intervallo di calendario corrispondente.
+
+**Parametri dalla tesi**, estratti dal PDF: AMS fino a ~60.000 anni, precisione massima
+0,2% (≈16 anni). L'incertezza e' modellata come termine relativo + termine fisso:
+**semplificazione didattica dichiarata in pagina**, non la propagazione completa di un
+laboratorio.
+
+I metodi fuori dal proprio intervallo mostrano "non applicabile a questa eta'" invece di
+una banda inventata. Verificato: a ~200 anni sparisce la TL, a 60.000 spariscono ¹⁴C e
+dendrocronologia.
+
+## Verifiche
+
+Aggiunta una **verifica a runtime** piu' affidabile del confronto fra grep: cerca nel DOM
+renderizzato testi che siano rimasti uguali a una chiave i18n. Risultato: **0 chiavi non
+tradotte** su tutte e cinque le pagine, a 500 e 1280 px, nessun overflow, traduzione attiva.
+
+Nota: il confronto testuale delle chiavi produce falsi positivi per le chiavi composte a
+runtime (`'vl.e.' + ev.id + '.h'`, `m.key + '.short'`). La verifica a runtime e' quella
+che conta.
+
+---
+
+# Dodicesimo intervento — 2026-08-28 (bombe sporche: l'ultima pagina)
+
+## `progetti/bombe-sporche.html`
+
+Simulatore di schermatura: sorgente, schermo, persona a 1 m. Si sceglie tipo di radiazione
+(alfa/beta/gamma), materiale (aria, carta, acqua, calcestruzzo, alluminio, piombo) e
+spessore; il modello calcola la dose che arriva alla persona.
+
+**Fisica corretta, non approssimata:**
+- **Gamma**: attenuazione esponenziale `I = I₀·e^(−μx)` con coefficienti **NIST reali**
+  (X-Ray Mass Attenuation Coefficients) interpolati a **662 keV**, la riga del Cs-137.
+  Verifica: HVL del piombo = **0,54 cm**, coerente col valore noto di ~0,5 cm.
+- **Alfa e beta**: **non** usano l'esponenziale ma un **range finito**, oltre il quale non
+  passa nulla. E' fisicamente corretto ed e' il punto didattico centrale della pagina.
+
+Verificato a runtime: alfa fermata da 0,1 cm di carta (0%), beta da 1 cm di alluminio,
+gamma su 0,54 cm di piombo → **49,9%** (esattamente l'HVL), gamma su 10 cm di piombo →
+attenuato oltre 10.000 volte ma **non zero**.
+
+## Il tono, come concordato
+
+Presentato come **dose assorbita in mSv** con quattro soglie cliniche (limite popolazione
+1 mSv, lavoratori esposti 20 mSv, sindrome acuta 1000 mSv, LD50 senza trattamento 4000 mSv),
+**non come "mortalita'"**. Riquadro di avvertenza esplicito: illustrazione didattica, dose
+di riferimento arbitraria, non uno strumento di radioprotezione.
+
+Il testo introduttivo chiarisce anche che una bomba sporca **non e' un'arma nucleare** e che
+in scenari credibili il danno principale e' contaminazione e disruption, non le vittime da
+radiazione. La conclusione spiega l'inversione alfa: quasi innocua fuori dal corpo, fra le
+cose piu' pericolose una volta inalata.
+
+## Stato finale
+
+**Tutte e 5 le pagine di progetto completate.** Otto pagine totali nel sito.
+
+Verifica finale a 500 e 1280 px su tutte e otto: **0 chiavi non tradotte, 0 overflow,
+0 immagini rotte, traduzione EN/IT attiva, nessuno scroll orizzontale di pagina.**
+
+La card "bombe sporche" in home linka alla pagina ma non ha il pulsante PDF, perche'
+`pdf/bombe_sporche.pdf` non esiste ancora: c'e' un TODO nell'HTML che indica dove aggiungerlo.

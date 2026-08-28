@@ -17,6 +17,13 @@ Pubblicato con GitHub Pages: **https://canevari-simone.github.io/portfolio/**
 | `js/sidebar.js` | Logica sidebar/hamburger, condivisa dalle tre pagine |
 | `js/i18n.js` | Selettore lingua EN/IT: dizionario completo + motore di sostituzione |
 | `js/reveal.js` | Fade-in delle sezioni allo scroll (rispetta `prefers-reduced-motion`) |
+| `js/filter.js` | Filtro dei progetti per competenza (home) |
+| `progetti/*.html` | Una pagina per progetto, ciascuna con la propria interazione |
+| `js/spectra.js` | Selettore spettri Raman (pagina microplastiche) |
+| `js/connect4.js` | Board interattiva (pagina Forza 4) |
+| `js/timeline.js` | Cronologia degli studi (pagina Vinland) |
+| `js/dating.js` | Confronto fra tecniche di datazione (pagina radiodatazione) |
+| `js/shielding.js` | Simulatore di schermatura (pagina bombe sporche) |
 | `cv.tex` | **Sorgente LaTeX del CV.** Compilare con `pdflatex` (moderncv) e installare il PDF in `pdf/CV_Canevari.pdf` |
 
 ## Come si lavora qui
@@ -89,6 +96,20 @@ licenza lo richiede, la voce nella sezione crediti.
 **Non dedurre ne' inventare fonti.** L'URL di una pagina dove l'immagine e' stata trovata
 non e' la fonte: citare chi ridistribuisce non mette al riparo. I ritratti D&D in
 `creative.html` hanno origine ancora non documentata (vedi `CREDITS.md`).
+
+## Pagine di progetto
+
+Ogni progetto ha una pagina in `progetti/` con la stessa struttura: header con breadcrumb
+e link al PDF, introduzione + risultati in `.stat-grid`, sezione interattiva, conclusione.
+I percorsi sono relativi alla cartella superiore (`../css/`, `../js/`, `../pdf/`).
+
+**Regola che vale per tutte:** ogni dato mostrato deve essere o preso dal PDF del progetto,
+o da una fonte citata in pagina. Dove i dati sono ricostruiti (spettri Raman, incertezze
+di datazione, dose di schermatura) la pagina lo **dichiara esplicitamente** in una nota.
+Non aggiungere numeri senza fonte: su un sito professionale un dato inventato è il danno
+peggiore che si possa fare.
+
+Il file `TODO.md` traccia lo stato e le scelte fatte per ciascuna pagina.
 
 ## Aggiornare il CV
 

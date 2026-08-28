@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="vl.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Raman spectroscopy and the Vinland Map: sixty years of scientific analysis on one of the most contested documents in cartography." />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="../index.html"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="../index.html#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
+  <a href="../index.html#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
+  <a href="../resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="../creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
+</div>
+
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
+
+<header class="site-header project-header">
+  <p class="breadcrumb"><a href="../index.html#projects" data-i18n="mp.back">← Projects</a></p>
+  <h1 data-i18n="vl.h1">The Vinland Map</h1>
+  <p class="tagline" data-i18n="vl.tagline">Sixty years of spectroscopy on a map that claimed to show America before Columbus</p>
+  <div class="header-actions">
+    <a href="../pdf/vinland_map.pdf" class="btn btn-primary" download data-i18n="vl.download">Download the study (PDF)</a>
+  </div>
+</header>
+
+<main>
+  <section class="reveal" id="overview">
+    <h2 data-i18n="vl.about.h">What the study is about</h2>
+    <p class="lead" data-i18n="vl.about.p1">In 1965 Yale published a parchment map showing a landmass west of Greenland, labelled <em>Vinlanda Insula</em>. If genuine, it was the earliest known European depiction of America — drawn decades before Columbus sailed.</p>
+    <p data-i18n="vl.about.p2">It was not genuine. What makes the case worth studying is not the forgery itself but how it was exposed: not by historians arguing over handwriting, but by physicists and chemists reading the ink. My study looks at the role Raman spectroscopy played in that verdict.</p>
+
+    <h3 data-i18n="vl.key.h">The decisive evidence</h3>
+    <ul class="stat-grid">
+      <li><span class="stat-value">TiO₂</span><span class="stat-label" data-i18n="vl.stat.anatase">anatase in the ink — a pigment industrially produced only from the 1920s</span></li>
+      <li><span class="stat-value">1423–1445</span><span class="stat-label" data-i18n="vl.stat.parchment">radiocarbon date of the parchment: genuinely medieval</span></li>
+      <li><span class="stat-value">~60</span><span class="stat-label" data-i18n="vl.stat.years">years between publication and the final verdict</span></li>
+    </ul>
+
+    <p data-i18n="vl.about.p3">The parchment is real. The ink is not. A forger who obtains genuine medieval parchment defeats radiocarbon dating entirely — which is precisely why dating the <em>support</em> and dating the <em>writing</em> are two different problems, and why spectroscopy of the pigment turned out to be the decisive measurement.</p>
+    <p data-i18n="vl.about.p4">Raman spectroscopy identifies anatase unambiguously: it has a strong, narrow band at 143 cm⁻¹ that no medieval pigment produces. It is also non-destructive — you can point a laser at a priceless manuscript and take nothing away from it. For cultural heritage that is not a convenience, it is a precondition.</p>
+  </section>
+
+  <section class="reveal" id="timeline">
+    <h2 data-i18n="vl.tl.h">Sixty years of analysis</h2>
+    <p data-i18n="vl.tl.p">Each point is a study or a finding. Select one to read what it concluded — and notice how the verdict swung back and forth for decades before the evidence settled.</p>
+
+    <div id="vinland-timeline" class="tl-host"></div>
+
+    <p class="raman-note" data-i18n="vl.tl.note">Chronology compiled from the Vinland Map entry on Wikipedia and from Yale University's announcement of 1 September 2021.</p>
+  </section>
+
+  <section class="reveal" id="takeaway">
+    <h2 data-i18n="vl.takeaway.h">Why it matters</h2>
+    <p data-i18n="vl.takeaway.p1">A single measurement rarely settles anything. McCrone found anatase in 1972; a different team using a different technique found almost none in the 1980s; the argument ran for another thirty years. What eventually closed it was not one decisive experiment but the convergence of several independent methods on the same answer.</p>
+    <p data-i18n="vl.takeaway.p2">That is the part worth carrying over into any analytical work: a result that no one can reproduce, or that one technique alone supports, is a hypothesis rather than a conclusion.</p>
+    <p class="next-project"><a href="../index.html#projects" data-i18n="mp.back.all">← All projects</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    <span data-i18n="footer.rights">© 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.</span><br>
+    <span data-i18n="footer.licensed">Licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
+  </p>
+</footer>
+
+<script src="../js/i18n.js" defer></script>
+<script src="../js/reveal.js" defer></script>
+<script src="../js/timeline.js" defer></script>
+<script src="../js/sidebar.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="dt.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bachelor thesis: comparing radiocarbon dating and thermoluminescence, and what their error margins really mean." />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="../index.html"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="../index.html#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
+  <a href="../index.html#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
+  <a href="../resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="../creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
+</div>
+
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
+
+<header class="site-header project-header">
+  <p class="breadcrumb"><a href="../index.html#projects" data-i18n="mp.back">← Projects</a></p>
+  <h1 data-i18n="dt.h1">Dating Techniques</h1>
+  <p class="tagline" data-i18n="dt.tagline">How old is old? Comparing radiocarbon and thermoluminescence, and what their error bars mean</p>
+  <div class="header-actions">
+    <a href="../pdf/tesi_triennale.pdf" class="btn btn-primary" download data-i18n="dt.download">Download the thesis (PDF)</a>
+  </div>
+</header>
+
+<main>
+  <section class="reveal" id="overview">
+    <h2 data-i18n="dt.about.h">What the thesis is about</h2>
+    <p class="lead" data-i18n="dt.about.p1">Every dating technique answers the question "how old is this?" with a range, never a number. The width of that range decides what you can actually conclude — whether you can tell two archaeological layers apart, or whether the answer is simply "somewhere in this century".</p>
+    <p data-i18n="dt.about.p2">My bachelor thesis compares radiocarbon dating with thermoluminescence, applied to the same archaeological contexts. The two measure different things: radiocarbon measures when an organism stopped exchanging carbon with the atmosphere; thermoluminescence measures when a ceramic was last fired. When both are available, they cross-check each other.</p>
+
+    <h3 data-i18n="dt.key.h">The numbers that matter</h3>
+    <ul class="stat-grid">
+      <li><span class="stat-value">5,730 y</span><span class="stat-label" data-i18n="dt.stat.halflife">half-life of carbon-14 — the clock that makes the method work</span></li>
+      <li><span class="stat-value">60,000 y</span><span class="stat-label" data-i18n="dt.stat.max">practical limit of accelerator mass spectrometry</span></li>
+      <li><span class="stat-value">0.2%</span><span class="stat-label" data-i18n="dt.stat.precision">best achievable precision — about 16 years of uncertainty</span></li>
+    </ul>
+
+    <p data-i18n="dt.about.p3">Beyond about ten half-lives there is too little carbon-14 left to count against the background, and the method stops working. Thermoluminescence reaches much further back but pays for it with a far larger error, because the dose rate the sample absorbed while it was buried has to be reconstructed rather than measured directly — and that reconstruction is the dominant source of error.</p>
+  </section>
+
+  <section class="reveal" id="compare">
+    <h2 data-i18n="dt.compare.h">Same object, different answers</h2>
+    <p data-i18n="dt.compare.p">Set the true age of an object and see how each technique would date it. The bar is the interval each method would return — the wider it is, the less the result tells you.</p>
+
+    <div id="dating-compare" class="dt-host"></div>
+
+    <p class="raman-note" data-i18n="dt.compare.note">Uncertainties are modelled as a relative term plus a fixed one, using the orders of magnitude reported in the thesis and in standard literature. It is a teaching illustration, not the full error propagation a laboratory would perform on a real sample.</p>
+  </section>
+
+  <section class="reveal" id="takeaway">
+    <h2 data-i18n="dt.takeaway.h">Why it matters</h2>
+    <p data-i18n="dt.takeaway.p1">Move the slider to a few hundred years and thermoluminescence returns a range so wide it barely constrains anything, while radiocarbon is still sharp. Move it past fifty thousand and radiocarbon disappears entirely, leaving thermoluminescence as the only option available — imprecise, but not nothing.</p>
+    <p data-i18n="dt.takeaway.p2">There is no best technique, only a technique appropriate to the question and the material. That is the point the thesis argues, and it is why the two methods were applied to the same finds rather than treated as alternatives: agreement between independent methods is worth more than precision from either one alone.</p>
+    <p class="next-project"><a href="../index.html#projects" data-i18n="mp.back.all">← All projects</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    <span data-i18n="footer.rights">© 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.</span><br>
+    <span data-i18n="footer.licensed">Licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
+  </p>
+</footer>
+
+<script src="../js/i18n.js" defer></script>
+<script src="../js/reveal.js" defer></script>
+<script src="../js/dating.js" defer></script>
+<script src="../js/sidebar.js" defer></script>
+</body>
+</html>

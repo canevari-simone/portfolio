@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="sh.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Radiological dispersal devices: the physics of contamination, and an interactive illustration of how shielding attenuates alpha, beta and gamma radiation." />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="../index.html"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="../index.html#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
+  <a href="../index.html#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
+  <a href="../resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="../creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
+</div>
+
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
+
+<header class="site-header project-header">
+  <p class="breadcrumb"><a href="../index.html#projects" data-i18n="mp.back">← Projects</a></p>
+  <h1 data-i18n="sh.h1">Dirty Bombs</h1>
+  <p class="tagline" data-i18n="sh.tagline">Why the physics of a radiological dispersal device is mostly the physics of shielding</p>
+</header>
+
+<main>
+  <section class="reveal" id="overview">
+    <h2 data-i18n="sh.about.h">What the study is about</h2>
+    <p class="lead" data-i18n="sh.about.p1">A dirty bomb is not a nuclear weapon. There is no chain reaction and no nuclear explosion: it is conventional explosive wrapped around radioactive material, designed to scatter contamination over an area.</p>
+    <p data-i18n="sh.about.p2">That distinction matters, because it changes what the actual hazard is. In most credible scenarios the blast itself causes the casualties, while the radiological consequence is contamination, disruption and the cost of decontaminating an urban area — which is why these devices are sometimes described as weapons of disruption rather than destruction.</p>
+    <p data-i18n="sh.about.p3">My study looks at the physics behind that assessment: which radionuclides would matter, how the three types of ionising radiation behave in matter, and what actually stops them. The last question is the one with the most counter-intuitive answer.</p>
+  </section>
+
+  <section class="reveal" id="sim">
+    <h2 data-i18n="sh.sim.h">What stops what</h2>
+    <p data-i18n="sh.sim.p">Choose a type of radiation, a shielding material and a thickness, and see how much reaches the person a metre away. Alpha and beta particles have a finite range — past it, nothing gets through at all. Gamma rays never stop completely: they only get attenuated, which is a different problem entirely.</p>
+
+    <div id="shielding-sim" class="sh-host"></div>
+
+    <div class="sh-disclaimer">
+      <p data-i18n="sh.disclaimer"><strong>Teaching illustration.</strong> The reference dose is an arbitrary value chosen to make the scale readable, not the output of any real source. Attenuation coefficients are from the NIST tables interpolated at 662 keV (caesium-137); alpha and beta ranges are order-of-magnitude values from standard literature. This is not a radiation protection tool and must not be used to assess a real situation.</p>
+    </div>
+  </section>
+
+  <section class="reveal" id="takeaway">
+    <h2 data-i18n="sh.takeaway.h">Why it matters</h2>
+    <p data-i18n="sh.takeaway.p1">Try alpha with a sheet of paper: it stops completely. Alpha particles cannot penetrate the outer layer of dead skin, which makes an alpha emitter almost harmless outside the body — and among the most dangerous things there is once inhaled or ingested, because inside the body that same dense energy deposition happens directly in living tissue.</p>
+    <p data-i18n="sh.takeaway.p2">That inversion is the heart of radiation protection, and it is why the response to a radiological incident is about preventing inhalation and ingestion first, and about distance and shielding second. The exponential curve for gamma rays says something equally important: there is no thickness that gives you zero, only thicknesses that give you less.</p>
+    <p class="next-project"><a href="../index.html#projects" data-i18n="mp.back.all">← All projects</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    <span data-i18n="footer.rights">© 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.</span><br>
+    <span data-i18n="footer.licensed">Licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
+  </p>
+</footer>
+
+<script src="../js/i18n.js" defer></script>
+<script src="../js/reveal.js" defer></script>
+<script src="../js/shielding.js" defer></script>
+<script src="../js/sidebar.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="c4.title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Machine learning analysis of Connect Four: a neural network trained on tournament outcomes, and what it learned about the opening move." />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="../index.html"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
+  <a href="../index.html#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
+  <a href="../index.html#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
+  <a href="../resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
+  <a href="../creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
+</div>
+
+<button class="hamburger" id="hamburger" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
+
+<div class="lang-switch" role="group" aria-label="Language / Lingua">
+  <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">IT</button>
+</div>
+
+<header class="site-header project-header">
+  <p class="breadcrumb"><a href="../index.html#projects" data-i18n="mp.back">← Projects</a></p>
+  <h1 data-i18n="c4.h1">Connect Four</h1>
+  <p class="tagline" data-i18n="c4.tagline">What a neural network learns about a game it was never taught to play</p>
+  <div class="header-actions">
+    <a href="../pdf/Report_connect_four.pdf" class="btn btn-primary" download data-i18n="c4.download">Download the report (PDF)</a>
+  </div>
+</header>
+
+<main>
+  <section class="reveal" id="overview">
+    <h2 data-i18n="c4.about.h">What the project is about</h2>
+    <p class="lead" data-i18n="c4.about.p1">Given a Connect Four position, can a model predict who wins? Not by searching the game tree — by learning from thousands of finished games what a winning board looks like.</p>
+    <p data-i18n="c4.about.p2">The dataset is a set of board positions, each labelled with the eventual outcome: red wins, yellow wins, or draw. The first thing worth noticing is that the labels are badly unbalanced — around 66% red, 23% yellow, 10% draw — which means any model will be biased towards predicting a red win. That bias had to be accounted for rather than ignored.</p>
+
+    <h3 data-i18n="c4.results.h">The model</h3>
+    <ul class="stat-grid">
+      <li><span class="stat-value">42</span><span class="stat-label" data-i18n="c4.stat.inputs">input neurons — one per cell of the 7×6 grid</span></li>
+      <li><span class="stat-value">2 × 31</span><span class="stat-label" data-i18n="c4.stat.hidden">hidden layers with ReLU activation</span></li>
+      <li><span class="stat-value">89%</span><span class="stat-label" data-i18n="c4.stat.train">accuracy on the training set</span></li>
+      <li><span class="stat-value">82%</span><span class="stat-label" data-i18n="c4.stat.test">accuracy on the held-out test set</span></li>
+    </ul>
+
+    <p data-i18n="c4.about.p3">A Multi-Layer Perceptron, trained with the Adam optimiser and early stopping. The gap between training and test accuracy is small — the model generalises rather than memorising, even if 82% is modest by modern standards.</p>
+    <p data-i18n="c4.about.p4">The interesting part is not the accuracy. It is that the weights the network learned can be read back: laid out over the board, they show which squares the model came to consider important — and it converged on something Connect Four players already know.</p>
+  </section>
+
+  <section class="reveal" id="board">
+    <h2 data-i18n="c4.board.h">Where would you open?</h2>
+    <p data-i18n="c4.board.p">Pick a column for the first move and see what the network thinks of it. The values are the weights the model learned for the bottom row — the squares where a first piece actually lands.</p>
+
+    <div id="c4-board" class="c4-host"></div>
+
+    <p class="raman-note" data-i18n="c4.board.note">These are raw model weights read from the trained network, not measured win probabilities. Zero means neutral; the sign tells you whether the model associates that square with winning or losing positions.</p>
+  </section>
+
+  <section class="reveal" id="takeaway">
+    <h2 data-i18n="c4.takeaway.h">What it learned</h2>
+    <p data-i18n="c4.takeaway.p1">The network was never told the rules. It never searched ahead. It only saw finished boards and their outcomes — and from that alone it concluded that the centre columns matter most and the far right column is a liability.</p>
+    <p data-i18n="c4.takeaway.p2">That happens to be correct: Connect Four is a solved game, and the first player wins with perfect play only by opening in the centre. The model rediscovered a piece of game theory from data, which is a good illustration of what these methods do — and of why reading a model's weights is worth the effort, rather than stopping at its accuracy score.</p>
+    <p class="next-project"><a href="../index.html#projects" data-i18n="mp.back.all">← All projects</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    <span data-i18n="footer.rights">© 2025 Simone Canevari. All documents and content on this site are protected by intellectual property law.</span><br>
+    <span data-i18n="footer.licensed">Licensed under</span> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>.
+  </p>
+</footer>
+
+<script src="../js/i18n.js" defer></script>
+<script src="../js/reveal.js" defer></script>
+<script src="../js/connect4.js" defer></script>
+<script src="../js/sidebar.js" defer></script>
+</body>
+</html>
