@@ -2,9 +2,17 @@
 <html lang="en" data-i18n-title="index.title">
 <head>
   <meta charset="UTF-8" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Simone Canevari, applied physicist: Raman spectroscopy, machine learning, radiodating research, theses and projects." />
   <title>Simone Canevari - Portfolio</title>
+  <link rel="canonical" href="https://canevari-simone.github.io/portfolio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://canevari-simone.github.io/portfolio/" />
+  <meta property="og:title" content="Simone Canevari — Portfolio" />
+  <meta property="og:description" content="Portfolio of Simone Canevari, applied physicist: Raman spectroscopy, machine learning, radiodating research, theses and projects." />
+  <meta property="og:image" content="https://canevari-simone.github.io/portfolio/images/seismogram.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +20,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skip">Skip to content</a>
 
-<div class="sidebar" id="sidebar">
+<nav class="sidebar" id="sidebar" aria-label="Main">
   <a href="#home"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
   <a href="#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
   <a href="#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
   <a href="resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
   <a href="creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
-</div>
+</nav>
 
 <button class="hamburger" id="hamburger" type="button"
         aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
@@ -38,7 +47,7 @@
   </div>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
   <section class="reveal" id="home">
     <h2 class="section-anchor" data-i18n="index.about.h">About me</h2>
     <p class="lead" data-i18n="index.about.p">I'm an applied physicist and researcher at Fondazione Eucentre in Pavia, where I develop software and apply AI and machine learning to earthquake engineering, with a focus on computer vision. Before that, my academic work spanned Raman and SERS spectroscopy, machine learning on experimental data and nuclear physics — plus two years teaching physics in high schools.</p>

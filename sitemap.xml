@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/resume.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/progetti/microplastiche.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/progetti/forza-quattro.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/progetti/vinland.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/progetti/radiodatazione.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/progetti/bombe-sporche.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://canevari-simone.github.io/portfolio/creative.html</loc>
+    <priority>0.5</priority>
+  </url>
+</urlset>

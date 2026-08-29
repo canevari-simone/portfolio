@@ -14,3 +14,13 @@ desktop.ini
 # Temporanei
 *.tmp
 *~
+
+# Artefatti di compilazione LaTeX (il PDF si genera, non si versiona)
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+cv.pdf

@@ -680,3 +680,70 @@ Verifica finale a 500 e 1280 px su tutte e otto: **0 chiavi non tradotte, 0 over
 
 La card "bombe sporche" in home linka alla pagina ma non ha il pulsante PDF, perche'
 `pdf/bombe_sporche.pdf` non esiste ancora: c'e' un TODO nell'HTML che indica dove aggiungerlo.
+
+---
+
+# Audit completo — 2026-08-28
+
+Revisione con due obiettivi: qualita' professionale e sicurezza.
+
+## Sicurezza — situazione reale
+
+Il sito e' statico, senza backend, senza form, senza raccolta dati. La superficie di
+attacco e' minima. Verificato:
+
+| Controllo | Esito |
+| --- | --- |
+| `eval`, `new Function`, `document.write` | **assenti** |
+| `innerHTML` (8 occorrenze) | ricevono **solo stringhe dal dizionario i18n**, mai input utente |
+| Ingressi esterni | uno solo: `localStorage['preferred-lang']`, **validato contro whitelist** |
+| Parametri URL, `document.referrer`, `fetch` | **non usati** |
+| `target="_blank"` senza `rel="noopener"` | **nessuno** |
+| Form / input di testo | **nessuno** |
+| id duplicati | **nessuno** |
+
+**Conclusione: nessuna vulnerabilita' sfruttabile.** Gli `innerHTML` sono il punto da
+sorvegliare se un giorno entrasse un input esterno.
+
+## Problemi trovati e corretti
+
+1. **7 artefatti LaTeX** (`main (3).aux`, `.log`, `.fls`, `.pdf`...) erano nella cartella e
+   sarebbero finiti pubblicati. Il `.log` di LaTeX puo' contenere percorsi assoluti della
+   macchina. **Rimossi**, e aggiunti a `.gitignore`.
+2. **Bug HTML in `creative.html`**: `<section class="reveal" id="home" class="about-creative">`
+   aveva **due attributi `class`** — il secondo veniva ignorato dal browser, quindi
+   `.about-creative` non si applicava. Corretto.
+3. **Sidebar senza landmark**: era un `<div>`. Ora `<nav aria-label="Main">` su tutte
+   le 8 pagine — gli screen reader la annunciano come navigazione.
+4. **Nessuno skip link**: chi naviga da tastiera doveva attraversare la sidebar a ogni
+   pagina. Aggiunto, visibile solo al focus.
+5. **`.project-pending` e `.raman-empty`**: regole CSS morte, rimosse.
+6. **Mancavano `robots.txt` e `sitemap.xml`**: creati con tutte e 8 le URL.
+7. **Nessun Open Graph**: condividendo un link su LinkedIn non compariva anteprima.
+   Aggiunti `og:*`, `twitter:card` e `canonical` su tutte le pagine.
+8. **`<meta name="referrer">`** aggiunto: limita cosa i siti esterni vedono della
+   provenienza del visitatore.
+
+## Falsi positivi da non "correggere"
+
+- Il grep segnala ~47 classi CSS "mai usate": sono applicate dai generatori SVG via
+  `el('circle', {class: 'tl-dot'})`. **Sono vive.** Solo due erano davvero morte.
+- `.project-tags` e `.raman-axis-label` appaiono due volte in `style.css`: non sono
+  duplicati ma pattern base + override. Corretti cosi'.
+
+## Decisioni lasciate all'utente (in `TODO.md`)
+
+1. **Google Fonts**: `fonts.googleapis.com` riceve l'IP di ogni visitatore — questione
+   GDPR (LG Munchen I, 2022). I font sono SIL OFL, quindi self-hostabili. Il compromesso
+   e' fra privacy e manutenzione (6 file binari da gestire a mano su un sito senza build).
+   **Non deciso da me**: e' un trade-off reale, non un bug.
+2. **`i18n.js` monolitico** (77 KB, ~39 dei quali inutili per singola pagina). Non critico
+   grazie alla cache; spezzarlo aggiungerebbe complessita' a un sito che si mantiene da solo.
+
+## Cosa funziona bene
+
+Struttura dei titoli senza salti, ogni controllo ha un nome accessibile, tutte le immagini
+hanno `alt`, `loading="lazy"` sulle immagini delle card, nessun overflow orizzontale a
+nessuna larghezza, 8 pagine bilingui con dizionario coerente, zero dipendenze esterne
+oltre ai font, tutte le interazioni navigabili da tastiera, `prefers-reduced-motion`
+rispettato.

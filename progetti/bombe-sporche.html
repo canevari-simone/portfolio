@@ -2,8 +2,16 @@
 <html lang="en" data-i18n-title="sh.title">
 <head>
   <meta charset="UTF-8" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Radiological dispersal devices: the physics of contamination, and an interactive illustration of how shielding attenuates alpha, beta and gamma radiation." />
+  <link rel="canonical" href="https://canevari-simone.github.io/portfolio/progetti/bombe-sporche.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://canevari-simone.github.io/portfolio/progetti/bombe-sporche.html" />
+  <meta property="og:title" content="Dirty Bombs — Simone Canevari" />
+  <meta property="og:description" content="Radiological dispersal devices: the physics of contamination, and an interactive illustration of how shielding attenuates alpha, beta and gamma radiation." />
+  <meta property="og:image" content="https://canevari-simone.github.io/portfolio/images/nuclear-waste.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,14 +19,15 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content" data-i18n="a11y.skip">Skip to content</a>
 
-<div class="sidebar" id="sidebar">
+<nav class="sidebar" id="sidebar" aria-label="Main">
   <a href="../index.html"><span class="icon" aria-hidden="true">🏠</span><span class="label" data-i18n="nav.home">Home</span></a>
   <a href="../index.html#projects"><span class="icon" aria-hidden="true">📂</span><span class="label" data-i18n="nav.projects">Projects &amp; Theses</span></a>
   <a href="../index.html#contacts"><span class="icon" aria-hidden="true">📧</span><span class="label" data-i18n="nav.contacts">Contacts</span></a>
   <a href="../resume.html"><span class="icon" aria-hidden="true">📄</span><span class="label" data-i18n="nav.resume">Resume</span></a>
   <a href="../creative.html"><span class="icon" aria-hidden="true">✨</span><span class="label" data-i18n="nav.creative">Personal interests</span></a>
-</div>
+</nav>
 
 <button class="hamburger" id="hamburger" type="button"
         aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">&#9776;</button>
@@ -34,7 +43,7 @@
   <p class="tagline" data-i18n="sh.tagline">Why the physics of a radiological dispersal device is mostly the physics of shielding</p>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
   <section class="reveal" id="overview">
     <h2 data-i18n="sh.about.h">What the study is about</h2>
     <p class="lead" data-i18n="sh.about.p1">A dirty bomb is not a nuclear weapon. There is no chain reaction and no nuclear explosion: it is conventional explosive wrapped around radioactive material, designed to scatter contamination over an area.</p>

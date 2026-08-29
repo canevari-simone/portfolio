@@ -24,6 +24,7 @@ Pubblicato con GitHub Pages: **https://canevari-simone.github.io/portfolio/**
 | `js/timeline.js` | Cronologia degli studi (pagina Vinland) |
 | `js/dating.js` | Confronto fra tecniche di datazione (pagina radiodatazione) |
 | `js/shielding.js` | Simulatore di schermatura (pagina bombe sporche) |
+| `robots.txt`, `sitemap.xml` | SEO: indicizzazione e mappa del sito |
 | `cv.tex` | **Sorgente LaTeX del CV.** Compilare con `pdflatex` (moderncv) e installare il PDF in `pdf/CV_Canevari.pdf` |
 
 ## Come si lavora qui
@@ -130,6 +131,27 @@ per questo. Aggiungendo contenuto, verificare con `pdfinfo cv.pdf | grep Pages`.
 
 Quando cambia il CV vanno aggiornati **in parallelo** anche `resume.html` (che ne e' la
 versione web) e le chiavi `resume.*` in `js/i18n.js`. Sono tre punti da tenere allineati.
+
+## Sicurezza e privacy
+
+Il sito e' statico e senza form: non c'e' backend, non c'e' database, non si raccolgono dati.
+Le superfici di attacco reali sono poche, ma vanno mantenute cosi':
+
+- **Nessun `eval`, `new Function`, `document.write`.** Non introdurli.
+- Gli `innerHTML` nei moduli JS ricevono **solo stringhe dal dizionario i18n**, mai input
+  dell'utente. Se un giorno arriva un input esterno (parametro URL, campo di testo),
+  passare a `textContent` o sanificare.
+- `localStorage` legge solo `preferred-lang`, **validato contro una whitelist**.
+  Mantenere la validazione: e' l'unico ingresso esterno del sito.
+- Tutti i link esterni hanno `rel="noopener noreferrer"`. Aggiungendone, mantenerlo.
+- `<meta name="referrer" content="strict-origin-when-cross-origin">` su tutte le pagine.
+- **Gli artefatti LaTeX non si versionano** (`.aux`, `.log`, `.fls`...): sono in `.gitignore`.
+  Il `.log` puo' contenere percorsi assoluti della macchina di chi compila.
+
+**Nota su Google Fonts:** i font sono caricati da `fonts.googleapis.com`, che riceve l'IP
+di ogni visitatore. E' un punto discusso in ambito GDPR (sentenza LG Munchen I, 2022).
+Poppins e Spectral sono SIL OFL, quindi si possono ospitare localmente: e' una scelta
+aperta, documentata in `TODO.md`.
 
 ## Cose da non fare
 

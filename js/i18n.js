@@ -27,6 +27,7 @@
       en: '© 2025 Simone Canevari. Creative content and texts on this page are protected by copyright and shared under a',
       it: '© 2025 Simone Canevari. I contenuti creativi e i testi di questa pagina sono protetti da copyright e condivisi con licenza'
     },
+    'a11y.skip': { en: 'Skip to content', it: 'Vai al contenuto' },
     'pdf.download': { en: 'Download PDF', it: 'Scarica PDF' },
     'project.explore': { en: 'Explore project', it: 'Esplora il progetto' },
 

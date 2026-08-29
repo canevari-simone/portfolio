@@ -330,12 +330,6 @@ main section + section {
     transform: translateY(-1px);
 }
 
-.project-pending {
-    margin-top: auto;
-    font-size: 0.88rem !important;
-    color: var(--muted) !important;
-    font-style: italic;
-}
 
 /* Teaser lato personale */
 .teaser {
@@ -1013,13 +1007,6 @@ footer a:hover {
     min-height: 3em;
 }
 
-.raman-empty {
-    fill: var(--muted);
-    font-size: 14px;
-    text-anchor: middle;
-    font-family: inherit;
-    font-style: italic;
-}
 
 @media (max-width: 768px) {
     .poly-tab {
@@ -1853,4 +1840,26 @@ footer a:hover {
     .sh-th-value {
         min-width: 76px;
     }
+}
+
+/* Salta al contenuto: visibile solo quando riceve il focus da tastiera */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1200;
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 8px;
+    top: 8px;
+}
+
+#main-content:focus {
+    outline: none;
 }

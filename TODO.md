@@ -171,3 +171,38 @@ dichiarata in pagina.
 - **Navigazione**: ogni pagina ha un ritorno alla home e il link al PDF completo.
 - **i18n**: ogni pagina aggiunge stringhe. Con sei pagine `js/i18n.js` diventa grosso,
   valutare se spezzarlo per pagina.
+
+
+---
+
+# Decisioni aperte dopo l'audit del 2026-08-28
+
+## 1. Google Fonts: self-hosting?
+
+I font (Poppins, Spectral) sono caricati da `fonts.googleapis.com`. Google riceve **IP,
+User-Agent e Referer di ogni visitatore**. Una sentenza del LG Munchen I (2022) ha
+stabilito che questo costituisce trasferimento di dati personali senza base giuridica.
+
+Le licenze sono **SIL OFL**, quindi ospitare i file localmente e' pienamente consentito.
+
+| | Ospitare localmente | Lasciare Google |
+| --- | --- | --- |
+| Privacy | nessun dato a terzi | IP dei visitatori a Google |
+| Performance | piu' veloce (una connessione in meno) | dipende dalla cache del browser |
+| Manutenzione | 6 file `.woff2` da aggiornare a mano | zero |
+| Peso repo | +150 KB circa | zero |
+
+**Da decidere.** Per un sito personale il rischio pratico e' basso, ma se un giorno il
+sito venisse usato in contesto professionale europeo, il self-hosting e' la scelta pulita.
+
+## 2. `js/i18n.js` monolitico
+
+Il dizionario contiene le stringhe di **tutte e otto le pagine** (77 KB). Ogni pagina ne
+carica ~39 KB che non usera' mai.
+
+Non e' critico: il file e' servito dalla cache del browser una sola volta per l'intera
+navigazione, e 77 KB restano nella norma. Ma se le pagine crescono ancora, conviene
+spezzarlo in `i18n-common.js` + un file per pagina.
+
+**Non farlo ora senza motivo**: aggiungerebbe otto file e complessita' a un sito che
+attualmente si mantiene da solo.
